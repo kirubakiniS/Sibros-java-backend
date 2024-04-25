@@ -950,6 +950,176 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
         
 }
     
+// public String getPackageDeploymentStatus(String rolloutID) throws IOException, InterruptedException {
+//    	
+//    	Map<String, String> headers = new HashMap<>();
+//        headers.put("X-Master-Api-Key", XmasterApiKey); // Replace YOUR_ACCESS_TOKEN with your actual access token
+//        headers.put("X-Master-Api-Secret", XmasterApiSecret);
+//        HttpRequest request = HttpRequest.newBuilder()
+//                .uri(URI.create("https://api.prod-p-ap.sibros.tech/core/v2/rollouts/"+rolloutID+"/deployments"))
+//                .headers(headers.entrySet().stream()
+//                        .map(e -> new AbstractMap.SimpleEntry<>(e.getKey(), e.getValue()))
+//                        .flatMap(e -> Stream.of(e.getKey(), e.getValue())) // FlatMap to ensure alternating key-value pairs
+//                        .toArray(String[]::new))
+//                .GET()
+//
+//                .build();
+//
+//        // Create HttpClient
+//        HttpClient client = HttpClient.newHttpClient();
+//
+//        // Send the request and retrieve response
+//        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+//        String responseDetails =  response.body();
+//        
+//        
+//        
+//        
+//       
+//        
+//        return responseDetails;
+//        
+//}
+ 
+ public String getPackageDeploymentStatus(String packageID) throws IOException, InterruptedException {
+	 
+	 String rolloutID = getPackageRolloutIdLog(packageID);
+ 	
+ 	Map<String, String> headers = new HashMap<>();
+     headers.put("X-Master-Api-Key", XmasterApiKey); // Replace YOUR_ACCESS_TOKEN with your actual access token
+     headers.put("X-Master-Api-Secret", XmasterApiSecret);
+     HttpRequest request = HttpRequest.newBuilder()
+             .uri(URI.create("https://api.prod-p-ap.sibros.tech/core/v2/rollouts/"+rolloutID+"/deployments"))
+             .headers(headers.entrySet().stream()
+                     .map(e -> new AbstractMap.SimpleEntry<>(e.getKey(), e.getValue()))
+                     .flatMap(e -> Stream.of(e.getKey(), e.getValue())) // FlatMap to ensure alternating key-value pairs
+                     .toArray(String[]::new))
+             .GET()
+
+             .build();
+
+     // Create HttpClient
+     HttpClient client = HttpClient.newHttpClient();
+
+     // Send the request and retrieve response
+     HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+     String responseDetails =  response.body();
+     
+     List<Deployment> componentLists = new ArrayList<>();
+     
+     ObjectMapper objectMapper = new ObjectMapper();
+     JsonNode jsonNode = objectMapper.readTree(responseDetails);
+     
+     JsonNode controllersArray = jsonNode.get("results");
+   
+     if (controllersArray != null && controllersArray.isArray()) {
+         for (JsonNode controller : controllersArray) {
+             String deploymentID = controller.get("deploymentID").asText();
+             String deviceID = controller.get("deviceID").asText();
+             String packageIDs = controller.get("packageID").asText();
+             String deploymentType = controller.get("deploymentType").asText();
+             String startTime = controller.get("startTime").asText();
+             String endTime = controller.get("endTime").asText();
+             String deploymentStatus = controller.get("deploymentStatus").asText();
+             String rolloutIDs = controller.get("rolloutID").asText();
+           
+             
+            String deviceDetais  = getDeviceID(deviceID);
+            
+   
+         
+         
+            
+            ObjectMapper objectMapperMap = new ObjectMapper();
+            JsonNode jsonNodeMap = objectMapperMap.readTree(deviceDetais);
+            
+            String vinNumber = jsonNodeMap.get("deviceSerialNumber").asText();
+           // String fileName = jsonNodeMap.get("file").get("fileName").asText();
+           // String fileSizeBytes = jsonNodeMap.get("file").get("fileSizeBytes").asText();
+           // String version = jsonNodeMap.get("version").asText();
+            
+          
+            
+            Deployment component = new Deployment(deploymentID, deviceID, packageIDs, deploymentType, startTime,endTime, vinNumber,deploymentStatus,rolloutIDs);
+            componentLists.add(component);
+            
+           
+            
+            
+            
+     }
+     } 
+     
+     ObjectMapper objectMapperDetails = new ObjectMapper();
+     String json = objectMapperDetails.writeValueAsString(componentLists);
+     
+     return json;
+     
+}
+ 
+ 
+ 
+ public String getDeviceID(String deviceID) throws IOException, InterruptedException {
+
+     Map<String, String> headers = new HashMap<>();
+     headers.put("X-Master-Api-Key", XmasterApiKey); // Replace YOUR_ACCESS_TOKEN with your actual access token
+     headers.put("X-Master-Api-Secret", XmasterApiSecret);
+     HttpRequest request = HttpRequest.newBuilder()
+             .uri(URI.create("https://api.prod-p-ap.sibros.tech/core/v2/devices/"+deviceID+""))
+             .headers(headers.entrySet().stream()
+                     .map(e -> new AbstractMap.SimpleEntry<>(e.getKey(), e.getValue()))
+                     .flatMap(e -> Stream.of(e.getKey(), e.getValue())) // FlatMap to ensure alternating key-value pairs
+                     .toArray(String[]::new))
+             .GET()
+
+             .build();
+
+     // Create HttpClient
+     HttpClient client = HttpClient.newHttpClient();
+
+     // Send the request and retrieve response
+     HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+     return response.body();
+ }
+ 
+ public String getPackageRolloutIdLog(String packageID) throws IOException, InterruptedException {
+
+     Map<String, String> headers = new HashMap<>();
+     headers.put("X-Master-Api-Key", XmasterApiKey); // Replace YOUR_ACCESS_TOKEN with your actual access token
+     headers.put("X-Master-Api-Secret", XmasterApiSecret);
+     HttpRequest request = HttpRequest.newBuilder()
+             .uri(URI.create("https://api.prod-p-ap.sibros.tech/core/v2/packages/"+packageID+"/rollouts"))
+             .headers(headers.entrySet().stream()
+                     .map(e -> new AbstractMap.SimpleEntry<>(e.getKey(), e.getValue()))
+                     .flatMap(e -> Stream.of(e.getKey(), e.getValue())) // FlatMap to ensure alternating key-value pairs
+                     .toArray(String[]::new))
+             .GET()
+
+             .build();
+
+     // Create HttpClient
+     HttpClient client = HttpClient.newHttpClient();
+
+     // Send the request and retrieve response
+     HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+     
+     String responseDetails = response.body();
+     
+     
+     ObjectMapper objectMapperRevision = new ObjectMapper();
+     JsonNode jsonNodeRevision = objectMapperRevision.readTree(responseDetails);
+
+     // Code to extract "id" entities from the JSON response
+     JsonNode hardwareRevisionsArray = jsonNodeRevision.get("results");
+  
+     
+     JsonNode lastObject = hardwareRevisionsArray.get(0);
+     
+     String rolloutID = lastObject.get("rolloutID").asText();
+     
+     
+     return rolloutID ;
+ }
     
     
     public class Component {
@@ -960,6 +1130,7 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
         private String fileName;
         private String imageSize;
         private String currentVersion;
+        
 
         public Component(String componentID, String abbreviation, String version, String imageId, String fileName, String imageSize, String currentVersion) {
             this.componentID = componentID;
@@ -997,6 +1168,68 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
         public String getCurrentVersion() {
             return currentVersion;
         }
+        
+    }
+    
+    
+    
+    public class Deployment {
+        private String deploymentID;
+        private String deviceID;
+        private String packageID;
+        private String deploymentType;
+        private String startTime;
+        private String endTime;
+        private String vinNumber;
+        private String deploymentStatus;
+        private String rolloutID;
+
+        public Deployment(String deploymentID, String deviceID, String packageID, String deploymentType, String startTime, String endTime, String vinNumber, String deploymentStatus, String rolloutID) {
+            this.deploymentID = deploymentID;
+            this.deviceID = deviceID;
+            this.packageID = packageID;
+            this.deploymentType = deploymentType;
+            this.startTime = startTime;
+            this.endTime = endTime;
+            this.vinNumber = vinNumber;
+            this.deploymentStatus = deploymentStatus;
+            this.rolloutID = rolloutID;
+        }
+
+        // Getters
+        public String getDeploymentID() {
+            return deploymentID;
+        }
+
+        public String getDeviceID() {
+            return deviceID;
+        }
+
+        public String getPackageID() {
+            return packageID;
+        }
+
+        public String getDeploymentType() {
+            return deploymentType;
+        }
+
+        public String getStartTime() {
+            return startTime;
+        }
+        public String getEndTime() {
+            return endTime;
+        }
+        public String getVinNumber() {
+            return vinNumber;
+        }
+        public String getDeploymentStatus() {
+            return deploymentStatus;
+        }
+        public String getRolloutID() {
+            return rolloutID;
+        }
+
+
         
     }
 }

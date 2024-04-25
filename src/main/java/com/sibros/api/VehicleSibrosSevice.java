@@ -13,6 +13,8 @@ public interface VehicleSibrosSevice {
     String startRollout(String packageID) throws IOException, InterruptedException;
     String getRolloutStatusData(String rolloutID) throws IOException, InterruptedException;
     String getPackageImageDetails(String packageID) throws IOException, InterruptedException;
+    String getPackageDeploymentStatus(String packageID) throws IOException, InterruptedException;
+   // String getPackageRolloutIdLog(String packageID) throws IOException, InterruptedException;
 
 
 

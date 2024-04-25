@@ -53,6 +53,16 @@ public class VehicleSibrosController
     public String getPackageDetails(@RequestParam String packageID) throws IOException, InterruptedException {
         return  VehicleSibrosSevice.getPackageImageDetails(packageID);
     }
+    
+    @GetMapping(value = "/getPackageDeploymentStatus")
+    public String getPackageDeploymentStatus(@RequestParam String packageID) throws IOException, InterruptedException {
+        return  VehicleSibrosSevice.getPackageDeploymentStatus(packageID);
+    }
+    
+//    @GetMapping(value = "/getPackageRolloutIdLog")
+//    public String getPackageRolloutIdLog(@RequestParam String packageID) throws IOException, InterruptedException {
+//        return  VehicleSibrosSevice.getPackageRolloutIdLog(packageID);
+//    }
 
 
 
