@@ -104,7 +104,7 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
         String requestBody = "{\n" +
                 "  \"commandId\": 200,\n" +
                 "  \"deviceId\": \"2817f819-2fef-494a-ac3a-8adf1ccd72ec\",\n" +
-                "  \"expiresBy\": \"2024-04-26T10:30:51.827053Z\",\n" +
+                "  \"expiresBy\": \"2024-06-26T10:30:51.827053Z\",\n" +
                 "  \"payload\": {\n" +
                 "    \"ecuAddress\": \"" + value + "\",\n" +
                 "    \"hexString\": \"19027F\"\n" +
@@ -549,7 +549,7 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
     }
     
     
-    @GetMapping("packageManifestEntries")
+
     public String packageManifestEntries(String packageIdDetails,String imageRegionIds) throws IOException, InterruptedException {
 
         Map<String, String> headers = new HashMap<>();
@@ -607,7 +607,7 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
     
     // GET ECU Details
     
-    @GetMapping("getPackageImageDetails")
+
     public String  getPackageImageDetails(@RequestParam String packageID) throws IOException, InterruptedException {
 
         String reasonBody = getDeviceModel();
@@ -1232,4 +1232,103 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
 
         
     }
+    
+    public String getDeploymentId(String rolloutID) throws IOException, InterruptedException {
+
+        Map<String, String> headers = new HashMap<>();
+        headers.put("X-Master-Api-Key", XmasterApiKey); // Replace YOUR_ACCESS_TOKEN with your actual access token
+        headers.put("X-Master-Api-Secret", XmasterApiSecret);
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://api.prod-p-ap.sibros.tech/core/v2/rollouts/"+rolloutID+"/deployments"))
+                .headers(headers.entrySet().stream()
+                        .map(e -> new AbstractMap.SimpleEntry<>(e.getKey(), e.getValue()))
+                        .flatMap(e -> Stream.of(e.getKey(), e.getValue())) // FlatMap to ensure alternating key-value pairs
+                        .toArray(String[]::new))
+                .GET()
+
+                .build();
+
+        // Create HttpClient
+        HttpClient client = HttpClient.newHttpClient();
+
+        // Send the request and retrieve response
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        
+        String responseDetails = response.body();
+        
+        
+        ObjectMapper objectMapperRevision = new ObjectMapper();
+        JsonNode jsonNodeRevision = objectMapperRevision.readTree(responseDetails);
+
+        // Code to extract "id" entities from the JSON response
+        JsonNode hardwareRevisionsArray = jsonNodeRevision.get("results");
+     
+        
+        JsonNode lastObject = hardwareRevisionsArray.get(0);
+        
+        String deploymentID = lastObject.get("deploymentID").asText();
+        
+        
+        return deploymentID ;
+    }
+    
+    
+    public String getPackageRolloutDeploymentLog(String packageID) throws IOException, InterruptedException {
+   	 
+   	 String rolloutID = getPackageRolloutIdLog(packageID);
+   	 
+   	 String deploymentId = getDeploymentId(rolloutID);
+   	 
+   	 System.out.println("rolloutID"+rolloutID);
+   	 System.out.println("deploymentId"+deploymentId);
+    	
+    	Map<String, String> headers = new HashMap<>();
+        headers.put("X-Master-Api-Key", XmasterApiKey); // Replace YOUR_ACCESS_TOKEN with your actual access token
+        headers.put("X-Master-Api-Secret", XmasterApiSecret);
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://api.prod-p-ap.sibros.tech/core/v2/deployments/"+deploymentId+"/logs"))
+                .headers(headers.entrySet().stream()
+                        .map(e -> new AbstractMap.SimpleEntry<>(e.getKey(), e.getValue()))
+                        .flatMap(e -> Stream.of(e.getKey(), e.getValue())) // FlatMap to ensure alternating key-value pairs
+                        .toArray(String[]::new))
+                .GET()
+
+                .build();
+
+        // Create HttpClient
+        HttpClient client = HttpClient.newHttpClient();
+
+        // Send the request and retrieve response
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        String responseDetails =  response.body();
+        
+        
+        ObjectMapper objectMapper = new ObjectMapper();
+        JsonNode jsonNode = objectMapper.readTree(responseDetails);
+        
+        JsonNode controllersArray = jsonNode.get("results");
+      
+        List<JsonNode> filteredLogs = new ArrayList<>();
+        for (JsonNode logNode : controllersArray) {
+            if ("ECU".equals(logNode.get("componentType").asText())) {
+                filteredLogs.add(logNode);
+            }
+        }
+        
+        
+       // ObjectMapper objectMapperDetails = new ObjectMapper();
+      //  String json = objectMapperDetails.writeValueAsString(filteredLogs);
+        
+      //  System.out.println("json"+json);
+        
+        System.out.println("filteredLogs"+filteredLogs);
+        
+       // System.out.println("Filtered Logs:");
+      //  for (JsonNode filteredLog : filteredLogs) {
+        //    System.out.println(filteredLog);
+      //  }
+        
+        return "ok";
+        
+   }
 }
