@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
+import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
@@ -60,7 +60,34 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
 
         // Send the request and retrieve response
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-        return response.body();
+        
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        // Read the JSON string into a JsonNode
+        JsonNode rootNode = objectMapper.readTree(response.body());
+
+        // Get the "results" array node
+        JsonNode resultsArrayNode = rootNode.get("results");
+
+        // Loop through the array to modify each object
+        for (JsonNode deviceNode : resultsArrayNode) {
+            // Add the new value "anotherKey": "anotherValue"
+           
+            
+            ObjectNode deviceObject = (ObjectNode) deviceNode;
+            // Add the new field "anotherKey" with value "anotherValue"
+            deviceObject.put("Battery Vlotage", "12.1 volts");
+            deviceObject.put("Vehicle Speed", "30 km/h");
+            deviceObject.put("Engine Speed", "1000 rpm");
+            deviceObject.put("Odometer", "26335 kmph/mph");
+            deviceObject.put("Brake petal position", "Pressed");
+        }
+
+        // Convert the modified JsonNode back to a JSON string
+        String modifiedResponseBody = objectMapper.writeValueAsString(rootNode);
+        
+        
+        return modifiedResponseBody;
     }
 
 
@@ -237,7 +264,7 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
         keyValueMap.put("HCM","07C5");
         keyValueMap.put("PCM","07C6");
         keyValueMap.put("THC","07C7");
-
+        int count = 0;
         for (Map.Entry<String, String> entry : keyValueMap.entrySet()) {
             String key = entry.getKey();
             String value = entry.getValue();
@@ -267,6 +294,7 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
             // Send the request and retrieve response
             HttpClient client = HttpClient.newHttpClient();
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+            
             if (response.body() == null || response.body().equals("{\"results\":null}")) {
                 System.out.println("Not Null");
             } else {
@@ -275,8 +303,10 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
                 String statusDetails = jsonNodeapi.get("results").get(0).get("status").asText();
 
                 List<VehicleSibrosDtcData> dtcDataList = new ArrayList<>();
+                
 
                 if (statusDetails.equals("COMPLETED")) {
+                	count++;
                     ObjectMapper mapper = new ObjectMapper();
                     JsonNode jsonNodepayload = mapper.readTree(response.body());
 
@@ -313,7 +343,13 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
                 dataMap.put("ecuName", dtcData.getEcuName());
                 dataMap.put("diagnosticTroubleCode", dtcData.getDiagnosticTroubleCode());
                 if(dtcData.getDiagnosticTroubleCode()!= null){
+                	if(dtcData.getDiagnosticTroubleCode().equalsIgnoreCase("9008480")) {
+                		dataMap.put("description", "Wheel speed sensor failure");
+                	}else if(dtcData.getDiagnosticTroubleCode().equalsIgnoreCase("8983905")) {
+                		dataMap.put("description", "Wheel slip plausibility error");
+                	}else{
                     dataMap.put("description", "Description Not Found");
+                	}
                 }else{
                     dataMap.put("description", dtcData.getDescription());
                 }
@@ -323,6 +359,7 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
             });
             jsonResponseMap.put(ecuName, dataList);
         });
+        jsonResponseMapResponse.put("count", count);
         jsonResponseMapResponse.put("data",jsonResponseMap);
         jsonResponseMapResponse.put("message", "ECU Diagnostic Trouble Codes Retrieved Successfully");
         jsonResponseMapResponse.put("status", 200);
@@ -1273,7 +1310,7 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
     }
     
     
-    public String getPackageRolloutDeploymentLog(String packageID) throws IOException, InterruptedException {
+    public String getPackageRolloutDeploymentLog(String packageID, String componentID) throws IOException, InterruptedException {
    	 
    	 String rolloutID = getPackageRolloutIdLog(packageID);
    	 
@@ -1310,7 +1347,7 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
       
         List<JsonNode> filteredLogs = new ArrayList<>();
         for (JsonNode logNode : controllersArray) {
-            if ("ECU".equals(logNode.get("componentType").asText())) {
+            if (componentID.equals(logNode.get("text").asText().split(",")[1].trim())) {
                 filteredLogs.add(logNode);
             }
         }
@@ -1328,7 +1365,10 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
         //    System.out.println(filteredLog);
       //  }
         
-        return "ok";
+        ObjectMapper objectMapperDetails = new ObjectMapper();
+        String json = objectMapperDetails.writeValueAsString(filteredLogs);
+        
+        return json;
         
    }
 }
