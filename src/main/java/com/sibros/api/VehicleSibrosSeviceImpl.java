@@ -76,11 +76,11 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
             
             ObjectNode deviceObject = (ObjectNode) deviceNode;
             // Add the new field "anotherKey" with value "anotherValue"
-            deviceObject.put("Battery Vlotage", "12.1 volts");
-            deviceObject.put("Vehicle Speed", "30 km/h");
-            deviceObject.put("Engine Speed", "1000 rpm");
+            deviceObject.put("batteryVoltage", "12.1 volts");
+            deviceObject.put("vehicleSpeed", "30 km/h");
+            deviceObject.put("engineSpeed", "1000 rpm");
             deviceObject.put("Odometer", "26335 kmph/mph");
-            deviceObject.put("Brake petal position", "Pressed");
+            deviceObject.put("BrakePedalPosition", "Pressed");
         }
 
         // Convert the modified JsonNode back to a JSON string
