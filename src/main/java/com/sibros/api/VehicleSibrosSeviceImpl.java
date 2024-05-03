@@ -79,8 +79,8 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
             deviceObject.put("batteryVoltage", "12.1 volts");
             deviceObject.put("vehicleSpeed", "30 km/h");
             deviceObject.put("engineSpeed", "1000 rpm");
-            deviceObject.put("Odometer", "26335 kmph/mph");
-            deviceObject.put("BrakePedalPosition", "Pressed");
+            deviceObject.put("Odometer", "26335 km");
+            deviceObject.put("BrakePedalPosition", "Not Pressed");
         }
 
         // Convert the modified JsonNode back to a JSON string
