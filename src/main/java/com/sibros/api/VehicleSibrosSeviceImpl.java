@@ -685,7 +685,18 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
                JsonNode jsonNodeMap = objectMapperMap.readTree(imageObject);
                
                String imageId = jsonNodeMap.get("imageId").asText();
-               String fileName = jsonNodeMap.get("file").get("fileName").asText();
+               
+               
+               
+               String str = jsonNodeMap.get("file").get("fileName").asText();
+               String[] parts = str.split("\\.");
+               String fileName;
+               if(parts[1].equals("hex")) {
+            	   fileName = str.replace(".hex", ".bin");
+               }else {
+            	   fileName = str;
+               }
+               
                String fileSizeBytes = jsonNodeMap.get("file").get("fileSizeBytes").asText();
                String version = jsonNodeMap.get("version").asText();
                
