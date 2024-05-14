@@ -318,9 +318,10 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
                     JsonNode jsonArrayNode = mappers.readTree(jsonArray);
 
                     for (JsonNode node : jsonArrayNode) {
-                        if (node.has("DTC")) {
-                            String dtcValue = node.get("DTC").toString();
-                            VehicleSibrosDtcData dtcData = new VehicleSibrosDtcData(key, dtcValue, null, "Active fault");
+                        if (node.has("label") && node.get("label").asText().equals("DTC")) {
+                           // String dtcValue = node.get("DTC").toString();
+                            int dtcValue = node.get("value").asInt();
+                            VehicleSibrosDtcData dtcData = new VehicleSibrosDtcData(key, String.valueOf(dtcValue), null, "Active fault");
                             dtcDataList.add(dtcData);
                         }
                     }
