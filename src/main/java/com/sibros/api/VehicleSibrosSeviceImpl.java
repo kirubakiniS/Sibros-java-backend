@@ -78,8 +78,8 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
             // Add the new field "anotherKey" with value "anotherValue"
             deviceObject.put("batteryVoltage", "12.1 volts");
             deviceObject.put("vehicleSpeed", "30 km/h");
-            deviceObject.put("engineSpeed", "1000 rpm");
-            deviceObject.put("Odometer", "26335 kmph/mph");
+            deviceObject.put("engineSpeed", "95%");
+            deviceObject.put("Odometer", "100%");
             deviceObject.put("BrakePedalPosition", "Pressed");
         }
 
