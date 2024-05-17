@@ -9,6 +9,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.File;
+import java.io.*;
 
 
 @RestController
@@ -108,6 +109,30 @@ public class VehicleSibrosController
             e.printStackTrace();
         }
 		return decryptedString.toString();
+    }
+    
+    @GetMapping(value = "/getPackageRolloutDeploymentLogss")
+    public static void decryptFlashFileDownload() {
+        // Directory path
+        String inputFile = "C:/Users/2301-00023/Downloads/Sibros_BB_30042024/swfl_0000bd43_001_003_254.bin";
+        String outputFile = "C:/Users/2301-00023/Downloads/Sibros_BB_30042024/output.hex";
+
+        try (InputStream inputStream = new FileInputStream(inputFile);
+                OutputStream outputStream = new FileOutputStream(outputFile)) {
+
+               int byteRead;
+               while ((byteRead = inputStream.read()) != -1) {
+                   String hexByte = Integer.toHexString(byteRead & 0xFF); // Convert byte to hexadecimal
+                   if (hexByte.length() == 1) {
+                       // Pad single digit hexadecimal with leading zero
+                       hexByte = "0" + hexByte;
+                   }
+                   outputStream.write(hexByte.getBytes());
+               }
+           } catch (IOException e) {
+               e.printStackTrace();
+           }
+		
     }
     
 

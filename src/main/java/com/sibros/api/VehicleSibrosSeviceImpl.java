@@ -68,23 +68,37 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
 
         // Get the "results" array node
         JsonNode resultsArrayNode = rootNode.get("results");
-
-        // Loop through the array to modify each object
-        for (JsonNode deviceNode : resultsArrayNode) {
-            // Add the new value "anotherKey": "anotherValue"
-           
-            
-            ObjectNode deviceObject = (ObjectNode) deviceNode;
-            // Add the new field "anotherKey" with value "anotherValue"
+        
+        JsonNode secondObject = null;
+        
+        if (resultsArrayNode.isArray()) {
+            // Get the second object from the array (index 1)
+            secondObject = resultsArrayNode.get(1);
+            // Now you can work with the second object
+            ObjectNode deviceObject = (ObjectNode) secondObject;
             deviceObject.put("batteryVoltage", "12.1 volts");
             deviceObject.put("vehicleSpeed", "30 km/h");
-            deviceObject.put("engineSpeed", "95%");
-            deviceObject.put("Odometer", "100%");
+            deviceObject.put("engineSpeed", "100%");
+            deviceObject.put("Odometer", "95%");
             deviceObject.put("BrakePedalPosition", "Pressed");
         }
 
+//        // Loop through the array to modify each object
+//        for (JsonNode deviceNode : resultsArrayNode) {
+//            // Add the new value "anotherKey": "anotherValue"
+//           
+//            
+//            ObjectNode deviceObject = (ObjectNode) deviceNode;
+//            // Add the new field "anotherKey" with value "anotherValue"
+//            deviceObject.put("batteryVoltage", "12.1 volts");
+//            deviceObject.put("vehicleSpeed", "30 km/h");
+//            deviceObject.put("engineSpeed", "95%");
+//            deviceObject.put("Odometer", "100%");
+//            deviceObject.put("BrakePedalPosition", "Pressed");
+//        }
+
         // Convert the modified JsonNode back to a JSON string
-        String modifiedResponseBody = objectMapper.writeValueAsString(rootNode);
+        String modifiedResponseBody = objectMapper.writeValueAsString(secondObject);
         
         
         return modifiedResponseBody;
@@ -98,7 +112,7 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
         ObjectMapper objectMapper = new ObjectMapper();
         JsonNode jsonNode = objectMapper.readTree(reasonBody);
         // Extract deviceModelID
-        String deviceModelID = jsonNode.get("results").get(0).get("deviceModelID").asText();
+        String deviceModelID = jsonNode.get("deviceModelID").asText();
 
         Map<String, String> headers = new HashMap<>();
         headers.put("X-Master-Api-Key", XmasterApiKey);
@@ -369,12 +383,23 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
     }
 
     public String getDevicePackageData() throws IOException, InterruptedException {
+    	
+    	
+    	 String reasonBody = getDevice();
+
+         ObjectMapper objectMapper = new ObjectMapper();
+         JsonNode jsonNode = objectMapper.readTree(reasonBody);
+         // Extract deviceModelID
+         String deviceModelID = jsonNode.get("deviceModelID").asText();
+    	
+    	
 
         Map<String, String> headers = new HashMap<>();
         headers.put("X-Master-Api-Key", XmasterApiKey); // Replace YOUR_ACCESS_TOKEN with your actual access token
         headers.put("X-Master-Api-Secret", XmasterApiSecret);
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://api.prod-p-ap.sibros.tech/core/v2/packages"))
+              //  .uri(URI.create("https://api.prod-p-ap.sibros.tech/core/v2/packages"))
+        	.uri(URI.create("https://api.prod-p-ap.sibros.tech/core/v2/device-models/" + deviceModelID + "/packages"))
                 .headers(headers.entrySet().stream()
                         .map(e -> new AbstractMap.SimpleEntry<>(e.getKey(), e.getValue()))
                         .flatMap(e -> Stream.of(e.getKey(), e.getValue())) // FlatMap to ensure alternating key-value pairs
