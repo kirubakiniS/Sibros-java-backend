@@ -699,6 +699,7 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
                
                
                String imageRegionCurrentVersion = getCurrentVersion(count);
+             //String imageRegionCurrentVersion = "Testing";
                count++;
                
                String imageIdPackageManifest = packageManifestEntries(packageID,imageRegionIdId);
@@ -904,21 +905,23 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
   //  @GetMapping("getPackageDeployedId")
     public String getCurrentVersion(int count) throws IOException, InterruptedException {
     	String version = "";
-    	String getPackageDeployedId = getPackageDeployedId();
-    	
-    	if(!getPackageDeployedId.equalsIgnoreCase("")) {
     	String reasonBody = getDeviceModel();
     	
-    	 ObjectMapper objectMapper = new ObjectMapper();
-            JsonNode jsonNode = objectMapper.readTree(reasonBody);
-            
-            JsonNode controllersArray = jsonNode.get("controllers");
-            JsonNode controller = controllersArray.get(count);
-            //if (controllersArray != null && controllersArray.isArray()) {
-               // for (JsonNode controller : controllersArray) {
-                    String id = controller.get("id").asText();
+   	 ObjectMapper objectMapper = new ObjectMapper();
+           JsonNode jsonNode = objectMapper.readTree(reasonBody);
+           
+           JsonNode controllersArray = jsonNode.get("controllers");
+           JsonNode controller = controllersArray.get(count);
+           //if (controllersArray != null && controllersArray.isArray()) {
+              // for (JsonNode controller : controllersArray) {
+                   String id = controller.get("id").asText();
+                   String deviceModelId = controller.get("deviceModelID").asText();
+    	         String getPackageDeployedId = getPackageDeployedId(deviceModelId);
+    	
+    	
+    	
                    
-                   
+                    if(!getPackageDeployedId.equalsIgnoreCase("")) {
                     
                    String revisionid =  getHardwareRevisions(id);
                   
@@ -960,15 +963,16 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
     
     
    
-    public String getPackageDeployedId() throws IOException, InterruptedException {
+    public String getPackageDeployedId(String deviceModelId) throws IOException, InterruptedException {
     	
     	String packageDeployedId = "";
+    	
     	
     	Map<String, String> headers = new HashMap<>();
         headers.put("X-Master-Api-Key", XmasterApiKey); // Replace YOUR_ACCESS_TOKEN with your actual access token
         headers.put("X-Master-Api-Secret", XmasterApiSecret);
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://api.prod-p-ap.sibros.tech/core/v2/packages"))
+                .uri(URI.create("https://api.prod-p-ap.sibros.tech/core/v2/device-models/"+deviceModelId+"/packages"))
                 .headers(headers.entrySet().stream()
                         .map(e -> new AbstractMap.SimpleEntry<>(e.getKey(), e.getValue()))
                         .flatMap(e -> Stream.of(e.getKey(), e.getValue())) // FlatMap to ensure alternating key-value pairs
