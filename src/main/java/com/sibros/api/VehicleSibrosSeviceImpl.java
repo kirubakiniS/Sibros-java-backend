@@ -1412,4 +1412,175 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
         return json;
         
    }
+    
+    
+    public String  getOfflineDeviceDetailsData() throws IOException, InterruptedException {
+        String packageId = getOfflineDevicePackageData();
+        
+        
+        Map<String, String> headers = new HashMap<>();
+        headers.put("X-Master-Api-Key", XmasterApiKey); // Replace YOUR_ACCESS_TOKEN with your actual access token
+        headers.put("X-Master-Api-Secret", XmasterApiSecret);
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://api.prod-p-ap.sibros.tech/core/v2/packages/"+packageId+"/images"))
+                .headers(headers.entrySet().stream()
+                        .map(e -> new AbstractMap.SimpleEntry<>(e.getKey(), e.getValue()))
+                        .flatMap(e -> Stream.of(e.getKey(), e.getValue())) // FlatMap to ensure alternating key-value pairs
+                        .toArray(String[]::new))
+                .GET()
+
+                .build();
+
+        // Create HttpClient
+        HttpClient client = HttpClient.newHttpClient();
+
+        // Send the request and retrieve response
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        String responseDetails =  response.body();
+        
+       
+        
+        return responseDetails;
+        
+        
+       // System.out.println("reasonBody"+reasonBody);
+             
+        
+        
+      //  return reasonBody;
+    }
+    
+    
+    public String getOfflineDevice() throws IOException, InterruptedException {
+
+        Map<String, String> headers = new HashMap<>();
+        headers.put("X-Master-Api-Key", XmasterApiKey); // Replace YOUR_ACCESS_TOKEN with your actual access token
+        headers.put("X-Master-Api-Secret", XmasterApiSecret);
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://api.prod-p-ap.sibros.tech/core/v2/devices"))
+                .headers(headers.entrySet().stream()
+                        .map(e -> new AbstractMap.SimpleEntry<>(e.getKey(), e.getValue()))
+                        .flatMap(e -> Stream.of(e.getKey(), e.getValue())) // FlatMap to ensure alternating key-value pairs
+                        .toArray(String[]::new))
+                .GET()
+
+                .build();
+
+        // Create HttpClient
+        HttpClient client = HttpClient.newHttpClient();
+
+        // Send the request and retrieve response
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        // Read the JSON string into a JsonNode
+        JsonNode rootNode = objectMapper.readTree(response.body());
+
+        // Get the "results" array node
+        JsonNode resultsArrayNode = rootNode.get("results");
+        
+        JsonNode secondObject = null;
+        
+        if (resultsArrayNode.isArray()) {
+            // Get the second object from the array (index 1)
+            secondObject = resultsArrayNode.get(0);
+            // Now you can work with the second object
+            ObjectNode deviceObject = (ObjectNode) secondObject;
+            deviceObject.put("batteryVoltage", "12.1 volts");
+            deviceObject.put("vehicleSpeed", "30 km/h");
+            deviceObject.put("engineSpeed", "100%");
+            deviceObject.put("Odometer", "95%");
+            deviceObject.put("BrakePedalPosition", "Pressed");
+        }
+
+//        // Loop through the array to modify each object
+//        for (JsonNode deviceNode : resultsArrayNode) {
+//            // Add the new value "anotherKey": "anotherValue"
+//           
+//            
+//            ObjectNode deviceObject = (ObjectNode) deviceNode;
+//            // Add the new field "anotherKey" with value "anotherValue"
+//            deviceObject.put("batteryVoltage", "12.1 volts");
+//            deviceObject.put("vehicleSpeed", "30 km/h");
+//            deviceObject.put("engineSpeed", "95%");
+//            deviceObject.put("Odometer", "100%");
+//            deviceObject.put("BrakePedalPosition", "Pressed");
+//        }
+
+        // Convert the modified JsonNode back to a JSON string
+        String modifiedResponseBody = objectMapper.writeValueAsString(secondObject);
+        
+        
+        return modifiedResponseBody;
+    }
+    
+    
+    public String getOfflineDevicePackageData() throws IOException, InterruptedException {
+    	
+    	String packageDeployedId = "";
+    	
+    	
+   	 String reasonBody = getOfflineDevice();
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        JsonNode jsonNode = objectMapper.readTree(reasonBody);
+        // Extract deviceModelID
+        String deviceModelID = jsonNode.get("deviceModelID").asText();
+   	
+   	
+
+       Map<String, String> headers = new HashMap<>();
+       headers.put("X-Master-Api-Key", XmasterApiKey); // Replace YOUR_ACCESS_TOKEN with your actual access token
+       headers.put("X-Master-Api-Secret", XmasterApiSecret);
+       HttpRequest request = HttpRequest.newBuilder()
+             //  .uri(URI.create("https://api.prod-p-ap.sibros.tech/core/v2/packages"))
+       	.uri(URI.create("https://api.prod-p-ap.sibros.tech/core/v2/device-models/" + deviceModelID + "/packages"))
+               .headers(headers.entrySet().stream()
+                       .map(e -> new AbstractMap.SimpleEntry<>(e.getKey(), e.getValue()))
+                       .flatMap(e -> Stream.of(e.getKey(), e.getValue())) // FlatMap to ensure alternating key-value pairs
+                       .toArray(String[]::new))
+               .GET()
+
+               .build();
+
+       // Create HttpClient
+       HttpClient client = HttpClient.newHttpClient();
+
+       // Send the request and retrieve response
+       HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+       
+       
+       String responseDetails = response.body();
+       
+       
+       
+       ObjectMapper objectMapperRevision = new ObjectMapper();
+       JsonNode jsonNodeRevision = objectMapperRevision.readTree(responseDetails);
+
+       // Code to extract "id" entities from the JSON response
+       JsonNode hardwareRevisionsArray = jsonNodeRevision.get("results");
+       if (hardwareRevisionsArray != null && hardwareRevisionsArray.isArray()) {
+           for (JsonNode hardwareRevisions : hardwareRevisionsArray) {
+           	String packageDeployedStatus = hardwareRevisions.get("packageStatus").asText();
+               //System.out.println("hardwareRevisionsID: " + hardwareRevisionsid);
+           	if(packageDeployedStatus.equals("APPROVED")) {
+           		
+           		packageDeployedId = hardwareRevisions.get("packageID").asText();
+           		break;
+           	}else {
+           		packageDeployedId = "";
+           		
+           	}
+           	
+               }
+           }
+       
+       
+       return packageDeployedId ;
+   }
+    
+    
+    
+    
 }
