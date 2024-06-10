@@ -15,6 +15,7 @@ public interface VehicleSibrosSevice {
     String getPackageImageDetails(String packageID) throws IOException, InterruptedException;
     String getPackageDeploymentStatus(String packageID) throws IOException, InterruptedException;
     String getPackageRolloutDeploymentLog(String packageID, String componentID) throws IOException, InterruptedException;
+    String getOfflineDeviceDetailsData() throws IOException, InterruptedException;
 
 
 
