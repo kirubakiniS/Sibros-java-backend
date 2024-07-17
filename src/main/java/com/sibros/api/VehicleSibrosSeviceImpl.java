@@ -76,10 +76,10 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
             secondObject = resultsArrayNode.get(1);
             // Now you can work with the second object
             ObjectNode deviceObject = (ObjectNode) secondObject;
-            deviceObject.put("batteryVoltage", "12.1 volts");
-            deviceObject.put("vehicleSpeed", "30 km/h");
-            deviceObject.put("engineSpeed", "100%");
-            deviceObject.put("Odometer", "95%");
+            deviceObject.put("batteryVoltage", "13.6 volts");
+            deviceObject.put("vehicleSpeed", "40.0 km/h");
+            deviceObject.put("engineSpeed", "2000.0 rpm");
+            deviceObject.put("Odometer", "26335.0 km");
             deviceObject.put("BrakePedalPosition", "Pressed");
         }
 
