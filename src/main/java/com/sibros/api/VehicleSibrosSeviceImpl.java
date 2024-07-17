@@ -78,8 +78,8 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
             ObjectNode deviceObject = (ObjectNode) secondObject;
             deviceObject.put("batteryVoltage", "13.6 volts");
             deviceObject.put("vehicleSpeed", "40.0 km/h");
-            deviceObject.put("engineSpeed", "2000.0 rpm");
-            deviceObject.put("Odometer", "26335.0 km");
+            deviceObject.put("engineSpeed", "95%");
+            deviceObject.put("Odometer", "100%");
             deviceObject.put("BrakePedalPosition", "Pressed");
         }
 
