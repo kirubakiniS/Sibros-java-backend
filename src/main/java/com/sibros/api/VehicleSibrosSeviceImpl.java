@@ -1103,6 +1103,8 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
              String deploymentStatus = null;
              if(controller.get("deploymentStatus").asText().equals("UPDATE_FAILED") || controller.get("deploymentStatus").asText().equals("UPDATE_COMPLETED")) {
              deploymentStatus = "UPDATE_COMPLETED";
+             }else {
+             deploymentStatus = controller.get("deploymentStatus").asText(); 
              }
              String rolloutIDs = controller.get("rolloutID").asText();
            
