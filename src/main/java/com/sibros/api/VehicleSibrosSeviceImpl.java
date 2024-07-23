@@ -1089,8 +1089,10 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
      JsonNode jsonNode = objectMapper.readTree(responseDetails);
      
      JsonNode controllersArray = jsonNode.get("results");
+     
    
      if (controllersArray != null && controllersArray.isArray()) {
+    	 
          for (JsonNode controller : controllersArray) {
              String deploymentID = controller.get("deploymentID").asText();
              String deviceID = controller.get("deviceID").asText();
@@ -1098,7 +1100,10 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
              String deploymentType = controller.get("deploymentType").asText();
              String startTime = controller.get("startTime").asText();
              String endTime = controller.get("endTime").asText();
-             String deploymentStatus = controller.get("deploymentStatus").asText();
+             String deploymentStatus = null;
+             if(controller.get("deploymentStatus").asText().equals("UPDATE_FAILED") || controller.get("deploymentStatus").asText().equals("UPDATE_COMPLETED")) {
+             deploymentStatus = "UPDATE_COMPLETED";
+             }
              String rolloutIDs = controller.get("rolloutID").asText();
            
              
