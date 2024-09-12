@@ -144,8 +144,8 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
         // Prepare request body
         String requestBody = "{\n" +
                 "  \"commandId\": 200,\n" +
-                "  \"deviceId\": \"2817f819-2fef-494a-ac3a-8adf1ccd72ec\",\n" +
-                "  \"expiresBy\": \"2024-07-30T10:30:51.827053Z\",\n" +
+                "  \"deviceId\": \"6c1c8314-8707-4452-938a-29ed1be363b7\",\n" +
+                "  \"expiresBy\": \"2024-09-30T10:30:51.827053Z\",\n" +
                 "  \"payload\": {\n" +
                 "    \"ecuAddress\": \"" + value + "\",\n" +
                 "    \"hexString\": \"19027F\"\n" +
@@ -308,15 +308,16 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
             // Send the request and retrieve response
             HttpClient client = HttpClient.newHttpClient();
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-            
-            if (response.body() == null || response.body().equals("{\"results\":null}")) {
+            List<VehicleSibrosDtcData> dtcDataList = new ArrayList<>();
+            if (response.body() == null || response.body().equals("{\"results\":null}\n")) {
                 System.out.println("Not Null");
+                VehicleSibrosDtcData dtcData = new VehicleSibrosDtcData(key, null, null, "ECU Not Detected");
+                dtcDataList.add(dtcData);
             } else {
                 ObjectMapper objectMapperapi = new ObjectMapper();
                 JsonNode jsonNodeapi = objectMapperapi.readTree(response.body());
                 String statusDetails = jsonNodeapi.get("results").get(0).get("status").asText();
 
-                List<VehicleSibrosDtcData> dtcDataList = new ArrayList<>();
                 
 
                 if (statusDetails.equals("COMPLETED")) {
@@ -344,8 +345,9 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
                     dtcDataList.add(dtcData);
                 }
 
-                dtcDataMap.put(key, dtcDataList);
+                
             }
+            dtcDataMap.put(key, dtcDataList);
         }
 
         // Convert dtcDataMap to the desired JSON response format
@@ -442,9 +444,9 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
                 "  \"companyID\": \"468df435-c8da-4013-bc62-14f5e69b6f70\",\n" +
                 "  \"desiredState\": null,\n" +
                 "  \"deviceGroupIDs\": null,\n" +
-                "  \"deviceModelID\": \"7cfc32bf-b09c-4454-a2d3-a6d2c7c309e8\",\n" +
+                "  \"deviceModelID\": \"e03a1d98-7133-4177-a2c5-85e78baf9f79\",\n" +
                 "  \"deviceIDs\": [\n" +
-                "                \"2817f819-2fef-494a-ac3a-8adf1ccd72ec\"\n" +
+                "                \"6c1c8314-8707-4452-938a-29ed1be363b7\"\n" +
                 "            ],\n" +
                 "  \"ownerID\": \"7ce452c7-0627-4385-a986-c6a89f4ddb34\",\n" +
                 "  \"packageID\": \"" + packageID + "\",\n" +
