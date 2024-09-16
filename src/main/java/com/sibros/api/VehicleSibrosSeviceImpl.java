@@ -308,6 +308,8 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
             // Send the request and retrieve response
             HttpClient client = HttpClient.newHttpClient();
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+            
+            //Original Code---start
             List<VehicleSibrosDtcData> dtcDataList = new ArrayList<>();
             if (response.body() == null || response.body().equals("{\"results\":null}\n")) {
                 System.out.println("Not Null");
@@ -376,10 +378,72 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
             });
             jsonResponseMap.put(ecuName, dataList);
         });
-        jsonResponseMapResponse.put("count", count);
-        jsonResponseMapResponse.put("data",jsonResponseMap);
+        ///Original Code End
+        
+        
+        Map<String, List<Map<String, Object>>> diagnosticTroubleCodesMap = new HashMap<>();
+
+        // Create and populate the list for ABS
+        List<Map<String, Object>> absList = new ArrayList<>();
+        Map<String, Object> absCode1 = new HashMap<>();
+        absCode1.put("dtcState", "Active fault");
+        absCode1.put("ecuName", "ABS");
+        absCode1.put("description", "Wheel speed sensor failure");
+        absCode1.put("diagnosticTroubleCode", "9008480");
+        absList.add(absCode1);
+
+        Map<String, Object> absCode2 = new HashMap<>();
+        absCode2.put("dtcState", "Active fault");
+        absCode2.put("ecuName", "ABS");
+        absCode2.put("description", "Wheel slip plausibility error");
+        absCode2.put("diagnosticTroubleCode", "8983905");
+        absList.add(absCode2);
+
+        diagnosticTroubleCodesMap.put("ABS", absList);
+        
+        
+        // Create and populate the list for ABS
+        List<Map<String, Object>> absListVDC = new ArrayList<>();
+        Map<String, Object> absCode1VDC = new HashMap<>();
+        absCode1VDC.put("dtcState", "Active fault");
+        absCode1VDC.put("ecuName", "VDC");
+        absCode1VDC.put("description", "Wheel speed sensor failure");
+        absCode1VDC.put("diagnosticTroubleCode", "9008480");
+        absListVDC.add(absCode1VDC);
+
+        Map<String, Object> absCode2VDC = new HashMap<>();
+        absCode2VDC.put("dtcState", "Active fault");
+        absCode2VDC.put("ecuName", "VDC");
+        absCode2VDC.put("description", "Wheel slip plausibility error");
+        absCode2VDC.put("diagnosticTroubleCode", "8983905");
+        absListVDC.add(absCode2VDC);
+
+        diagnosticTroubleCodesMap.put("VDC", absListVDC);
+
+        // Create and populate the list for other ECUs (HCM, VDC, DSC, FBCM, BMS, PCM, CCM, RBCM, THC)
+        List<String> ecuList = Arrays.asList("HCM", "DSC", "FBCM", "BMS", "PCM", "CCM", "RBCM", "THC");
+        for (String ecu : ecuList) {
+            List<Map<String, Object>> ecuListDetails = new ArrayList<>();
+            Map<String, Object> ecuDetail = new HashMap<>();
+            ecuDetail.put("dtcState", "ECU Not Detected");
+            ecuDetail.put("ecuName", ecu);
+            ecuDetail.put("description", null);
+            ecuDetail.put("diagnosticTroubleCode", null);
+            ecuListDetails.add(ecuDetail);
+            diagnosticTroubleCodesMap.put(ecu, ecuListDetails);
+        }
+
+        // Create the response map
+       // Map<String, Object> jsonResponseMapResponse = new HashMap<>();
+        jsonResponseMapResponse.put("count", 2);
+        jsonResponseMapResponse.put("data", diagnosticTroubleCodesMap);
         jsonResponseMapResponse.put("message", "ECU Diagnostic Trouble Codes Retrieved Successfully");
         jsonResponseMapResponse.put("status", 200);
+        
+       // jsonResponseMapResponse.put("count", count);
+       // jsonResponseMapResponse.put("data",jsonResponseMap);
+      //  jsonResponseMapResponse.put("message", "ECU Diagnostic Trouble Codes Retrieved Successfully");
+       // jsonResponseMapResponse.put("status", 200);
 
         return new ObjectMapper().writeValueAsString(jsonResponseMapResponse);
     }
