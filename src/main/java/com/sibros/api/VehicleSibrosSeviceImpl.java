@@ -73,7 +73,7 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
         
         if (resultsArrayNode.isArray()) {
             // Get the second object from the array (index 1)
-            secondObject = resultsArrayNode.get(1);
+            secondObject = resultsArrayNode.get(3);
             // Now you can work with the second object
             ObjectNode deviceObject = (ObjectNode) secondObject;
             deviceObject.put("batteryVoltage", "13.6 volts");
