@@ -145,7 +145,7 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
         String requestBody = "{\n" +
                 "  \"commandId\": 200,\n" +
                 "  \"deviceId\": \"6c1c8314-8707-4452-938a-29ed1be363b7\",\n" +
-                "  \"expiresBy\": \"2024-09-30T10:30:51.827053Z\",\n" +
+                "  \"expiresBy\": \"2024-10-30T10:30:51.827053Z\",\n" +
                 "  \"payload\": {\n" +
                 "    \"ecuAddress\": \"" + value + "\",\n" +
                 "    \"hexString\": \"19027F\"\n" +
