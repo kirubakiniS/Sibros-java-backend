@@ -145,7 +145,7 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
         String requestBody = "{\n" +
                 "  \"commandId\": 200,\n" +
                 "  \"deviceId\": \"6c1c8314-8707-4452-938a-29ed1be363b7\",\n" +
-                "  \"expiresBy\": \"2024-10-30T10:30:51.827053Z\",\n" +
+                "  \"expiresBy\": \"2025-11-30T10:30:51.827053Z\",\n" +
                 "  \"payload\": {\n" +
                 "    \"ecuAddress\": \"" + value + "\",\n" +
                 "    \"hexString\": \"19027F\"\n" +
@@ -287,7 +287,7 @@ public class VehicleSibrosSeviceImpl implements VehicleSibrosSevice {
 
             ObjectMapper objectMapper = new ObjectMapper();
             JsonNode jsonNode = objectMapper.readTree(responseData);
-            String commandRequestId = jsonNode.get("results").get("commandRequestId").asText();
+            String commandRequestId = jsonNode.get("result").get("commandRequestId").asText();
             TimeUnit.SECONDS.sleep(2);
 
             // Make the second API call to get command responses
