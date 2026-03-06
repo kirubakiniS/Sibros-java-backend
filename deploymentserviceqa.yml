@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vehicle-stack-communication-java-deployment-dtd-qa
+  namespace: dtd-dev
+  labels:
+    app: vehicle-stack-communication-java-dtd-qa
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vehicle-stack-communication-java-dtd-qa
+  template:
+    metadata:
+      labels:
+        app: vehicle-stack-communication-java-dtd-qa
+    spec:
+      containers:
+        - name: vehicle-stack-communication-javaserver-dtd-qa
+          image: acrbbk8s.azurecr.io/acrbbk8s/vehicle-stack-communication-dtd-qa:latest
+          ports:
+            - containerPort: 8084
+
+
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: vehicle-stack-communication-java-service-dtd-qa
+  namespace: dtd-dev
+spec:
+  selector:
+    app: vehicle-stack-communication-java-dtd-qa
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      port: 8084

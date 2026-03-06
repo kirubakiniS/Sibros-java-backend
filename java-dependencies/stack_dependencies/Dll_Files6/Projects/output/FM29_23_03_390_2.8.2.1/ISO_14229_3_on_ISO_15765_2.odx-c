@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ODX MODEL-VERSION="2.2.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="odx220.xsd">
+    <!--
+<ODX MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx220.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ODX MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	-->
+    <COMPARAM-SPEC ID="ISO_14229_3_on_ISO_15765_2" OID="05d9304a-0d17-422b-bb8b-86ddb06fcb76">
+        <SHORT-NAME>ISO_14229_3_on_ISO_15765_2</SHORT-NAME>
+        <LONG-NAME TI="TI_1341390319">ISO 14229-3 on ISO 15765-2</LONG-NAME>
+        <DESC TI="TI_1576667981">
+            <p>ISO UDS on CAN (ISO 14229-3 is the successor of ISO 15765-3 with identical features and functions)</p>
+        </DESC>
+        <ADMIN-DATA>
+            <LANGUAGE>en-UK</LANGUAGE>
+            <DOC-REVISIONS>
+                <DOC-REVISION>
+                    <TEAM-MEMBER-REF ID-REF="ISO_14229_3_on_ISO_15765_2.ISO.Joint_COMPARAM_Group"/>
+                    <REVISION-LABEL>1.0.0</REVISION-LABEL>
+                    <STATE>Release</STATE>
+                    <DATE>2009-04-17T00:00:00</DATE>
+                    <MODIFICATIONS>
+                        <MODIFICATION>
+                            <CHANGE>No changes</CHANGE>
+                            <REASON>Official version</REASON>
+                        </MODIFICATION>
+                    </MODIFICATIONS>
+                </DOC-REVISION>
+            </DOC-REVISIONS>
+        </ADMIN-DATA>
+        <COMPANY-DATAS>
+            <COMPANY-DATA ID="ISO_14229_3_on_ISO_15765_2.ISO" OID="b2716a81-7e93-464c-9e12-7baa96103423">
+                <SHORT-NAME>ISO</SHORT-NAME>
+                <LONG-NAME TI="TI_1244325102">International Organization for Standardization (ISO)</LONG-NAME>
+                <TEAM-MEMBERS>
+                    <TEAM-MEMBER
+                        ID="ISO_14229_3_on_ISO_15765_2.ISO.Joint_COMPARAM_Group" OID="add27afc-2e36-4f1c-9646-1224f79bf2da">
+                        <SHORT-NAME>Joint_COMPARAM_Group</SHORT-NAME>
+                        <LONG-NAME TI="TI_1579392334">Joint COMPARAM-Group</LONG-NAME>
+                        <ADDRESS>Arnikastrasse 2</ADDRESS>
+                        <ZIP>85635</ZIP>
+                        <CITY>Hoehenkirchen</CITY>
+                        <PHONE>+49 8102 895317</PHONE>
+                        <FAX>+49 8102 895310</FAX>
+                        <EMAIL>info@asam.net</EMAIL>
+                    </TEAM-MEMBER>
+                </TEAM-MEMBERS>
+                <COMPANY-SPECIFIC-INFO>
+                    <RELATED-DOCS>
+                        <RELATED-DOC>
+                            <XDOC>
+                                <SHORT-NAME>ISO_22900_2</SHORT-NAME>
+                                <LONG-NAME TI="TI_418403823">ISO 22900-2</LONG-NAME>
+                                <NUMBER>2.2.0</NUMBER>
+                                <STATE>Release</STATE>
+                                <DATE>2009-01-27T00:00:00</DATE>
+                                <PUBLISHER>ISO</PUBLISHER>
+                            </XDOC>
+                        </RELATED-DOC>
+                        <RELATED-DOC>
+                            <XDOC>
+                                <SHORT-NAME>ISO_22901_1</SHORT-NAME>
+                                <LONG-NAME TI="TI_1963359431">ISO 22901-1</LONG-NAME>
+                                <NUMBER>2.2.0</NUMBER>
+                                <STATE>Release</STATE>
+                                <DATE>2008-11-06T00:00:00</DATE>
+                                <PUBLISHER>ISO</PUBLISHER>
+                            </XDOC>
+                        </RELATED-DOC>
+                    </RELATED-DOCS>
+                </COMPANY-SPECIFIC-INFO>
+            </COMPANY-DATA>
+        </COMPANY-DATAS>
+        <PROT-STACKS>
+            <PROT-STACK
+                ID="ISO_14229_3_on_ISO_15765_2_on_ISO_11898_2_DWCAN" OID="d65fa0b8-3ee1-4625-bd8e-e085a47b9cd3">
+                <SHORT-NAME>ISO_14229_3_on_ISO_15765_2_on_ISO_11898_2_DWCAN</SHORT-NAME>
+                <LONG-NAME TI="TI_1872339310">ISO 14229-3 on ISO 15765-2 on ISO 11898-2 DWCAN</LONG-NAME>
+                <DESC TI="TI_648641366">
+                    <p>protocol ISO_14229_3_on_ISO_15765_2 on physical layer ISO_11898_2_DWCAN</p>
+                </DESC>
+                <!-- ISO_14229_3_on_ISO_15765_2 available in MDF since D-PDU-API 3.6.81 -->
+                <PDU-PROTOCOL-TYPE>ISO_14229_3_on_ISO_15765_2</PDU-PROTOCOL-TYPE>
+                <PHYSICAL-LINK-TYPE>ISO_11898_2_DWCAN</PHYSICAL-LINK-TYPE>
+                <!--APP-->
+                <!--TRANS-->
+                <!--PHYS-->
+                <COMPARAM-SUBSET-REFS>
+                    <COMPARAM-SUBSET-REF DOCREF="ISO_14229_3"
+                        DOCTYPE="COMPARAM-SUBSET" ID-REF="ISO_14229_3"/>
+                    <COMPARAM-SUBSET-REF DOCREF="ISO_15765_2"
+                        DOCTYPE="COMPARAM-SUBSET" ID-REF="ISO_15765_2"/>
+                    <COMPARAM-SUBSET-REF DOCREF="ISO_11898_2_DWCAN"
+                        DOCTYPE="COMPARAM-SUBSET" ID-REF="ISO_11898_2_DWCAN"/>
+                </COMPARAM-SUBSET-REFS>
+            </PROT-STACK>
+        </PROT-STACKS>
+    </COMPARAM-SPEC>
+</ODX>

@@ -1,0 +1,601 @@
+[17:04:40.625] [INFO ] MCDSystem::createMCDSystem - Creating a new MCDSystem instance.
+[17:04:40.630] [INFO ] MCDSystem::MCDSystem - MVCI Diagnostic System initialized.
+[17:04:40.633] [INFO ] MCDInterface::readPduApiInfo - Reading PDU API information from registry and RDF file...
+[17:04:40.633] [INFO ] MCDInterface::readPduApiInfo - RDF file path: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\rdf.xml
+[17:04:40.652] [INFO ] MCDInterface::readPduApiInfo - Parsed RDF Info - ShortName: BB DPDU API$, Supplier: BlueBinaries, Lib URI: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[17:04:40.654] [INFO ] MCDSystem::prepareVciAccessLayer - Initializing VCI access layer for supplier: BlueBinaries
+[17:04:40.868] [INFO ] DPDUWrapper::loadDLL - DLL loaded successfully: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[17:04:40.874] [ERROR] MCDSystem::prepareVciAccessLayer - PDUConstruct failed: 1
+[17:04:53. 41] [INFO ] DPDUWrapper::~DPDUWrapper - D-PDU DLL unloaded.
+[17:05:21.662] [INFO ] MCDSystem::createMCDSystem - Creating a new MCDSystem instance.
+[17:05:21.662] [INFO ] MCDSystem::MCDSystem - MVCI Diagnostic System initialized.
+[17:05:44.523] [INFO ] MCDInterface::readPduApiInfo - Reading PDU API information from registry and RDF file...
+[17:05:44.523] [INFO ] MCDInterface::readPduApiInfo - RDF file path: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\rdf.xml
+[17:05:44.525] [INFO ] MCDInterface::readPduApiInfo - Parsed RDF Info - ShortName: BB DPDU API$, Supplier: BlueBinaries, Lib URI: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[17:05:50.434] [INFO ] MCDSystem::prepareVciAccessLayer - Initializing VCI access layer for supplier: BlueBinaries
+[17:05:50.446] [INFO ] DPDUWrapper::loadDLL - DLL loaded successfully: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[17:05:50.447] [ERROR] MCDSystem::prepareVciAccessLayer - PDUConstruct failed: 1
+[17:38:50.842] [INFO ] MCDSystem::createMCDSystem - Creating a new MCDSystem instance.
+[17:38:50.847] [INFO ] MCDSystem::MCDSystem - MVCI Diagnostic System initialized.
+[17:38:58.296] [INFO ] MCDInterface::readPduApiInfo - Reading PDU API information from registry and RDF file...
+[17:38:58.296] [INFO ] MCDInterface::readPduApiInfo - RDF file path: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\rdf.xml
+[17:38:58.299] [INFO ] MCDInterface::readPduApiInfo - Parsed RDF Info - ShortName: BB DPDU API$, Supplier: BlueBinaries, Lib URI: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[17:39:05.126] [INFO ] MCDSystem::prepareVciAccessLayer - Initializing VCI access layer for supplier: BlueBinaries
+[17:39:05.158] [INFO ] DPDUWrapper::loadDLL - DLL loaded successfully: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[17:39:05.160] [ERROR] MCDSystem::prepareVciAccessLayer - PDUConstruct failed: 1
+[17:40:06.326] [INFO ] MCDSystem::createMCDSystem - Creating a new MCDSystem instance.
+[17:40:06.326] [INFO ] MCDSystem::MCDSystem - MVCI Diagnostic System initialized.
+[17:40:09.499] [INFO ] MCDInterface::readPduApiInfo - Reading PDU API information from registry and RDF file...
+[17:40:09.499] [INFO ] MCDInterface::readPduApiInfo - RDF file path: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\rdf.xml
+[17:40:09.501] [INFO ] MCDInterface::readPduApiInfo - Parsed RDF Info - ShortName: BB DPDU API$, Supplier: BlueBinaries, Lib URI: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[17:40:10.607] [INFO ] MCDSystem::prepareVciAccessLayer - Initializing VCI access layer for supplier: BlueBinaries
+[17:40:10.617] [INFO ] DPDUWrapper::loadDLL - DLL loaded successfully: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[17:40:10.627] [INFO ] MCDSystem::prepareVciAccessLayer - VCI access layer initialized successfully
+[17:40:43.183] [INFO ] MCDProject::MCDProject - Initializing project: ./Projects/FM29_23_03_390_2.8.2.1.pdx
+[17:40:43.183] [INFO ] MCDProject::MCDProject - Output directory resolved to: ./Projects\output
+[17:40:43.183] [INFO ] MCDProject::loadData - Extracting PDX file: ./Projects/FM29_23_03_390_2.8.2.1.pdx
+[17:40:43.580] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ACU.odx-d
+[17:40:43.580] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ADAS.odx-d
+[17:40:43.580] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_AMPHA.odx-d
+[17:40:43.580] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_AMPSO.odx-d
+[17:40:43.580] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_BCM.odx-d
+[17:40:43.580] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_BMS.odx-d
+[17:40:43.580] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CIM.odx-d
+[17:40:43.580] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CMRR_FL.odx-d
+[17:40:43.580] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CMRR_FR.odx-d
+[17:40:43.580] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CMRR_RL.odx-d
+[17:40:43.580] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CMRR_RR.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_DSMC.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ECC.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_EPS.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_EPS2.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ESP.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_FCM.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_GW.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_iBooster.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ICC.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_MCU_F.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_MCU_R.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_MFSS.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_MRR.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_OHC.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PDU.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PKC.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PLGM.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PSM.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PVIU.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PWC_L.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PWC_R.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_RAC.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_SCM.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_TBOX.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_TRM.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_VCU.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_VSP.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDS.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDSECUConfi.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDSFlash.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDSFunctClass.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDSGener.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\FG_UDSOnCAN.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ODX_RS_DOP_LIB.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ODX_RS_UNIT_LIB.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\PR_ISOUDSOnCAN.odx-d
+[17:40:43.581] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\PR_ISOUDSOnCANFD.odx-d
+[17:40:43.582] [INFO ] MCDDbFunctionDictionary::MCDDbFunctionDictionary - Dictionary created.
+[17:46:11.968] [INFO ] DPDUWrapper::~DPDUWrapper - D-PDU DLL unloaded.
+[17:57:40.837] [INFO ] MCDSystem::createMCDSystem - Creating a new MCDSystem instance.
+[17:57:40.837] [INFO ] MCDSystem::MCDSystem - MVCI Diagnostic System initialized.
+[17:57:40.839] [INFO ] MCDInterface::readPduApiInfo - Reading PDU API information from registry and RDF file...
+[17:57:40.840] [INFO ] MCDInterface::readPduApiInfo - RDF file path: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\rdf.xml
+[17:57:40.841] [INFO ] MCDInterface::readPduApiInfo - Parsed RDF Info - ShortName: BB DPDU API$, Supplier: BlueBinaries, Lib URI: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[17:57:40.842] [INFO ] MCDSystem::prepareVciAccessLayer - Initializing VCI access layer for supplier: BlueBinaries
+[17:57:40.853] [INFO ] DPDUWrapper::loadDLL - DLL loaded successfully: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[17:57:40.855] [INFO ] MCDSystem::prepareVciAccessLayer - VCI access layer initialized successfully
+[17:57:42.305] [INFO ] MCDProject::MCDProject - Initializing project: ./Projects/FM29_23_03_390_2.8.2.1.pdx
+[17:57:42.305] [INFO ] MCDProject::MCDProject - Output directory resolved to: ./Projects\output
+[17:57:42.305] [INFO ] MCDProject::loadData - Extracting PDX file: ./Projects/FM29_23_03_390_2.8.2.1.pdx
+[17:57:42.307] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ACU.odx-d
+[17:57:42.307] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ADAS.odx-d
+[17:57:42.307] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_AMPHA.odx-d
+[17:57:42.307] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_AMPSO.odx-d
+[17:57:42.307] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_BCM.odx-d
+[17:57:42.307] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_BMS.odx-d
+[17:57:42.307] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CIM.odx-d
+[17:57:42.307] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CMRR_FL.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CMRR_FR.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CMRR_RL.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CMRR_RR.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_DSMC.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ECC.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_EPS.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_EPS2.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ESP.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_FCM.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_GW.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_iBooster.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ICC.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_MCU_F.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_MCU_R.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_MFSS.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_MRR.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_OHC.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PDU.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PKC.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PLGM.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PSM.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PVIU.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PWC_L.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PWC_R.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_RAC.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_SCM.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_TBOX.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_TRM.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_VCU.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_VSP.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDS.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDSECUConfi.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDSFlash.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDSFunctClass.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDSGener.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\FG_UDSOnCAN.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ODX_RS_DOP_LIB.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ODX_RS_UNIT_LIB.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\PR_ISOUDSOnCAN.odx-d
+[17:57:42.308] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\PR_ISOUDSOnCANFD.odx-d
+[17:57:42.308] [INFO ] MCDDbFunctionDictionary::MCDDbFunctionDictionary - Dictionary created.
+[17:59:36. 58] [INFO ] MCDSystem::createMCDSystem - Creating a new MCDSystem instance.
+[17:59:36. 59] [INFO ] MCDSystem::MCDSystem - MVCI Diagnostic System initialized.
+[17:59:36. 61] [INFO ] MCDInterface::readPduApiInfo - Reading PDU API information from registry and RDF file...
+[17:59:36. 61] [INFO ] MCDInterface::readPduApiInfo - RDF file path: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\rdf.xml
+[17:59:36. 63] [INFO ] MCDInterface::readPduApiInfo - Parsed RDF Info - ShortName: BB DPDU API$, Supplier: BlueBinaries, Lib URI: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[17:59:36. 64] [INFO ] MCDSystem::prepareVciAccessLayer - Initializing VCI access layer for supplier: BlueBinaries
+[17:59:36. 75] [INFO ] DPDUWrapper::loadDLL - DLL loaded successfully: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[17:59:36. 76] [INFO ] MCDSystem::prepareVciAccessLayer - VCI access layer initialized successfully
+[17:59:37.125] [INFO ] MCDProject::MCDProject - Initializing project: ./Projects/FM29_23_03_390_2.8.2.1.pdx
+[17:59:37.125] [INFO ] MCDProject::MCDProject - Output directory resolved to: ./Projects\output
+[17:59:37.125] [INFO ] MCDProject::loadData - Extracting PDX file: ./Projects/FM29_23_03_390_2.8.2.1.pdx
+[17:59:37.127] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ACU.odx-d
+[17:59:37.127] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ADAS.odx-d
+[17:59:37.127] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_AMPHA.odx-d
+[17:59:37.127] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_AMPSO.odx-d
+[17:59:37.127] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_BCM.odx-d
+[17:59:37.127] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_BMS.odx-d
+[17:59:37.127] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CIM.odx-d
+[17:59:37.127] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CMRR_FL.odx-d
+[17:59:37.127] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CMRR_FR.odx-d
+[17:59:37.127] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CMRR_RL.odx-d
+[17:59:37.127] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CMRR_RR.odx-d
+[17:59:37.127] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_DSMC.odx-d
+[17:59:37.127] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ECC.odx-d
+[17:59:37.127] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_EPS.odx-d
+[17:59:37.127] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_EPS2.odx-d
+[17:59:37.127] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ESP.odx-d
+[17:59:37.127] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_FCM.odx-d
+[17:59:37.127] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_GW.odx-d
+[17:59:37.127] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_iBooster.odx-d
+[17:59:37.127] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ICC.odx-d
+[17:59:37.127] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_MCU_F.odx-d
+[17:59:37.127] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_MCU_R.odx-d
+[17:59:37.127] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_MFSS.odx-d
+[17:59:37.127] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_MRR.odx-d
+[17:59:37.127] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_OHC.odx-d
+[17:59:37.127] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PDU.odx-d
+[17:59:37.128] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PKC.odx-d
+[17:59:37.128] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PLGM.odx-d
+[17:59:37.128] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PSM.odx-d
+[17:59:37.128] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PVIU.odx-d
+[17:59:37.128] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PWC_L.odx-d
+[17:59:37.128] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PWC_R.odx-d
+[17:59:37.128] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_RAC.odx-d
+[17:59:37.128] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_SCM.odx-d
+[17:59:37.128] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_TBOX.odx-d
+[17:59:37.128] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_TRM.odx-d
+[17:59:37.128] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_VCU.odx-d
+[17:59:37.128] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_VSP.odx-d
+[17:59:37.128] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDS.odx-d
+[17:59:37.128] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDSECUConfi.odx-d
+[17:59:37.128] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDSFlash.odx-d
+[17:59:37.128] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDSFunctClass.odx-d
+[17:59:37.128] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDSGener.odx-d
+[17:59:37.128] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\FG_UDSOnCAN.odx-d
+[17:59:37.128] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ODX_RS_DOP_LIB.odx-d
+[17:59:37.128] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ODX_RS_UNIT_LIB.odx-d
+[17:59:37.128] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\PR_ISOUDSOnCAN.odx-d
+[17:59:37.128] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\PR_ISOUDSOnCANFD.odx-d
+[17:59:37.128] [INFO ] MCDDbFunctionDictionary::MCDDbFunctionDictionary - Dictionary created.
+[17:59:51.493] [INFO ] MCDDbFunctionDictionary::MCDDbFunctionDictionary - Dictionary created.
+[17:59:51.493] [INFO ] MCDLogicalLink::MCDLogicalLink - Logical Link created for ECU file: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_BCM.odx-d
+[17:59:51.494] [INFO ] MCDDbFunctionDictionary::clearDataIdentifiers - Cleared DataIdentifiers.
+[17:59:51.494] [INFO ] MCDDbFunctionDictionary::clearDiagnosticServices - Cleared DiagnosticServices.
+[17:59:51.494] [INFO ] MCDDbFunctionDictionary::clearDTCs - Cleared DTCs.
+[17:59:51.711] [INFO ] MCDDbFunctionDictionary::setDataIdentifiers - Set 1072 DataIdentifiers.
+[17:59:51.711] [INFO ] MCDDbFunctionDictionary::setDTCs - Set 219 DTCs.
+[17:59:55.523] [INFO ] MCDInterface::MCDInterface - Interface 'VCI_1' created.
+[17:59:56. 40] [INFO ] MCDInterface::getCurrentInterface - Getting current interface modules...
+[17:59:56. 88] [INFO ] MCDInterface::getCurrentInterface - Loaded Module - Handle: 0x51, TypeID: 0xFF, Vendor: PCAN-USB, Status: 0x8063
+[17:59:57.806] [INFO ] MCDLogicalLink::connect - Connected successfully for ECU file: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_BCM.odx-d, ComLogicalLink handle=4294967295
+[17:59:59.361] [INFO ] MCDInterface::~MCDInterface - Interface 'VCI_1' destroyed.
+[18:00:27. 44] [INFO ] MCDDiagComPrimitive::MCDDiagComPrimitive - Diagnostic Service 'DiagnosticSession' created. Dictionary: 000001ED800FB768
+[18:00:27.241] [INFO ] MCDDiagComPrimitive::startEventListener - Event listener started.
+[18:00:27.466] [INFO ] MCDDiagComPrimitive::executeService - Sending diagnostic request for 'DiagnosticSession': 02 10 01 00 00 00 00 00 
+[18:00:32.206] [INFO ] MCDDiagComPrimitive::getNextResponse - Received diagnostic response: 06 50 01 07 D0 01 2C 00 
+[18:00:48.634] [INFO ] MCDDiagComPrimitive::startEventListener - Event listener stopped.
+[18:00:48.878] [INFO ] MCDDiagComPrimitive::~MCDDiagComPrimitive - Diagnostic Service 'DiagnosticSession' destroyed.
+[18:11:48.753] [INFO ] MCDSystem::createMCDSystem - Creating a new MCDSystem instance.
+[18:11:48.753] [INFO ] MCDSystem::MCDSystem - MVCI Diagnostic System initialized.
+[18:11:48.756] [INFO ] MCDInterface::readPduApiInfo - Reading PDU API information from registry and RDF file...
+[18:11:48.756] [INFO ] MCDInterface::readPduApiInfo - RDF file path: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\rdf.xml
+[18:11:48.757] [INFO ] MCDInterface::readPduApiInfo - Parsed RDF Info - ShortName: BB DPDU API$, Supplier: BlueBinaries, Lib URI: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[18:11:48.759] [INFO ] MCDSystem::prepareVciAccessLayer - Initializing VCI access layer for supplier: BlueBinaries
+[18:11:48.768] [INFO ] DPDUWrapper::loadDLL - DLL loaded successfully: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[18:11:48.769] [INFO ] MCDSystem::prepareVciAccessLayer - VCI access layer initialized successfully
+[18:11:48.774] [INFO ] MCDProject::MCDProject - Initializing project: ./Projects/FM29_23_03_390_2.8.2.1.pdx
+[18:11:48.774] [INFO ] MCDProject::MCDProject - Output directory resolved to: ./Projects\output
+[18:11:48.774] [INFO ] MCDProject::loadData - Extracting PDX file: ./Projects/FM29_23_03_390_2.8.2.1.pdx
+[18:11:48.777] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ACU.odx-d
+[18:11:48.777] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ADAS.odx-d
+[18:11:48.777] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_AMPHA.odx-d
+[18:11:48.777] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_AMPSO.odx-d
+[18:11:48.777] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_BCM.odx-d
+[18:11:48.777] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_BMS.odx-d
+[18:11:48.777] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CIM.odx-d
+[18:11:48.777] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CMRR_FL.odx-d
+[18:11:48.777] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CMRR_FR.odx-d
+[18:11:48.777] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CMRR_RL.odx-d
+[18:11:48.777] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CMRR_RR.odx-d
+[18:11:48.777] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_DSMC.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ECC.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_EPS.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_EPS2.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ESP.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_FCM.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_GW.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_iBooster.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ICC.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_MCU_F.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_MCU_R.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_MFSS.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_MRR.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_OHC.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PDU.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PKC.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PLGM.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PSM.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PVIU.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PWC_L.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PWC_R.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_RAC.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_SCM.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_TBOX.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_TRM.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_VCU.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_VSP.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDS.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDSECUConfi.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDSFlash.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDSFunctClass.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDSGener.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\FG_UDSOnCAN.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ODX_RS_DOP_LIB.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ODX_RS_UNIT_LIB.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\PR_ISOUDSOnCAN.odx-d
+[18:11:48.778] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\PR_ISOUDSOnCANFD.odx-d
+[18:11:48.778] [INFO ] MCDDbFunctionDictionary::MCDDbFunctionDictionary - Dictionary created.
+[18:11:53.469] [INFO ] MCDDbFunctionDictionary::MCDDbFunctionDictionary - Dictionary created.
+[18:11:53.469] [INFO ] MCDLogicalLink::MCDLogicalLink - Logical Link created for ECU file: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_BCM.odx-d
+[18:11:53.469] [INFO ] MCDDbFunctionDictionary::clearDataIdentifiers - Cleared DataIdentifiers.
+[18:11:53.469] [INFO ] MCDDbFunctionDictionary::clearDiagnosticServices - Cleared DiagnosticServices.
+[18:11:53.469] [INFO ] MCDDbFunctionDictionary::clearDTCs - Cleared DTCs.
+[18:11:53.685] [INFO ] MCDDbFunctionDictionary::setDataIdentifiers - Set 1072 DataIdentifiers.
+[18:11:53.686] [INFO ] MCDDbFunctionDictionary::setDTCs - Set 219 DTCs.
+[18:11:53.688] [INFO ] MCDInterface::MCDInterface - Interface 'VCI_1' created.
+[18:11:53.689] [INFO ] MCDInterface::getCurrentInterface - Getting current interface modules...
+[18:11:53.731] [INFO ] MCDInterface::getCurrentInterface - Loaded Module - Handle: 0x51, TypeID: 0xFF, Vendor: PCAN-USB, Status: 0x8063
+[18:11:53.818] [INFO ] MCDLogicalLink::connect - Connected successfully for ECU file: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_BCM.odx-d, ComLogicalLink handle=4294967295
+[18:11:53.818] [INFO ] MCDInterface::~MCDInterface - Interface 'VCI_1' destroyed.
+[18:11:59.415] [INFO ] MCDDbFunctionDictionary::MCDDbFunctionDictionary - Dictionary created.
+[18:11:59.415] [INFO ] MCDLogicalLink::MCDLogicalLink - Logical Link created for ECU file: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_BCM.odx-d
+[18:11:59.415] [INFO ] MCDDbFunctionDictionary::clearDataIdentifiers - Cleared DataIdentifiers.
+[18:11:59.415] [INFO ] MCDDbFunctionDictionary::clearDiagnosticServices - Cleared DiagnosticServices.
+[18:11:59.415] [INFO ] MCDDbFunctionDictionary::clearDTCs - Cleared DTCs.
+[18:11:59.648] [INFO ] MCDDbFunctionDictionary::setDataIdentifiers - Set 1072 DataIdentifiers.
+[18:11:59.648] [INFO ] MCDDbFunctionDictionary::setDTCs - Set 219 DTCs.
+[18:11:59.650] [INFO ] MCDInterface::MCDInterface - Interface 'VCI_1' created.
+[18:11:59.650] [INFO ] MCDInterface::getCurrentInterface - Getting current interface modules...
+[18:11:59.689] [INFO ] MCDInterface::getCurrentInterface - Loaded Module - Handle: 0x51, TypeID: 0xFF, Vendor: PCAN-USB, Status: 0x8063
+[18:11:59.746] [ERROR] MCDLogicalLink::Moduleconnect - PDUModuleConnect failed for './Projects\output\FM29_23_03_390_2.8.2.1\BV_BCM.odx-d': Error 1
+[18:11:59.755] [ERROR] MCDLogicalLink::connect - Exception while connecting for './Projects\output\FM29_23_03_390_2.8.2.1\BV_BCM.odx-d': PDUConnect failed: 1
+[18:12:19. 91] [INFO ] MCDSystem::createMCDSystem - Creating a new MCDSystem instance.
+[18:12:19. 92] [INFO ] MCDSystem::MCDSystem - MVCI Diagnostic System initialized.
+[18:12:19. 93] [INFO ] MCDInterface::readPduApiInfo - Reading PDU API information from registry and RDF file...
+[18:12:19. 93] [INFO ] MCDInterface::readPduApiInfo - RDF file path: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\rdf.xml
+[18:12:19. 94] [INFO ] MCDInterface::readPduApiInfo - Parsed RDF Info - ShortName: BB DPDU API$, Supplier: BlueBinaries, Lib URI: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[18:12:19. 95] [INFO ] MCDSystem::prepareVciAccessLayer - Initializing VCI access layer for supplier: BlueBinaries
+[18:12:19.105] [INFO ] DPDUWrapper::loadDLL - DLL loaded successfully: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[18:12:19.107] [INFO ] MCDSystem::prepareVciAccessLayer - VCI access layer initialized successfully
+[18:12:19.111] [INFO ] MCDProject::MCDProject - Initializing project: ./Projects/FM29_23_03_390_2.8.2.1.pdx
+[18:12:19.111] [INFO ] MCDProject::MCDProject - Output directory resolved to: ./Projects\output
+[18:12:19.111] [INFO ] MCDProject::loadData - Extracting PDX file: ./Projects/FM29_23_03_390_2.8.2.1.pdx
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ACU.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ADAS.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_AMPHA.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_AMPSO.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_BCM.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_BMS.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CIM.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CMRR_FL.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CMRR_FR.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CMRR_RL.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CMRR_RR.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_DSMC.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ECC.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_EPS.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_EPS2.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ESP.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_FCM.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_GW.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_iBooster.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ICC.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_MCU_F.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_MCU_R.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_MFSS.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_MRR.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_OHC.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PDU.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PKC.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PLGM.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PSM.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PVIU.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PWC_L.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PWC_R.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_RAC.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_SCM.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_TBOX.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_TRM.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_VCU.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_VSP.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDS.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDSECUConfi.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDSFlash.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDSFunctClass.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDSGener.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\FG_UDSOnCAN.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ODX_RS_DOP_LIB.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ODX_RS_UNIT_LIB.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\PR_ISOUDSOnCAN.odx-d
+[18:12:19.113] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\PR_ISOUDSOnCANFD.odx-d
+[18:12:19.113] [INFO ] MCDDbFunctionDictionary::MCDDbFunctionDictionary - Dictionary created.
+[18:12:37. 25] [INFO ] MCDDbFunctionDictionary::MCDDbFunctionDictionary - Dictionary created.
+[18:12:37. 25] [INFO ] MCDLogicalLink::MCDLogicalLink - Logical Link created for ECU file: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_BCM.odx-d
+[18:12:37. 25] [INFO ] MCDDbFunctionDictionary::clearDataIdentifiers - Cleared DataIdentifiers.
+[18:12:37. 25] [INFO ] MCDDbFunctionDictionary::clearDiagnosticServices - Cleared DiagnosticServices.
+[18:12:37. 25] [INFO ] MCDDbFunctionDictionary::clearDTCs - Cleared DTCs.
+[18:12:37.242] [INFO ] MCDDbFunctionDictionary::setDataIdentifiers - Set 1072 DataIdentifiers.
+[18:12:37.242] [INFO ] MCDDbFunctionDictionary::setDTCs - Set 219 DTCs.
+[18:12:40.440] [INFO ] MCDInterface::MCDInterface - Interface 'VCI_1' created.
+[18:12:41. 18] [INFO ] MCDInterface::getCurrentInterface - Getting current interface modules...
+[18:12:41. 57] [INFO ] MCDInterface::getCurrentInterface - Loaded Module - Handle: 0x51, TypeID: 0xFF, Vendor: PCAN-USB, Status: 0x8063
+[18:12:43.733] [INFO ] MCDLogicalLink::connect - Connected successfully for ECU file: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_BCM.odx-d, ComLogicalLink handle=4294967295
+[18:12:45.599] [INFO ] MCDInterface::~MCDInterface - Interface 'VCI_1' destroyed.
+[18:13:24.276] [INFO ] MCDSystem::createMCDSystem - Creating a new MCDSystem instance.
+[18:13:24.277] [INFO ] MCDSystem::MCDSystem - MVCI Diagnostic System initialized.
+[18:13:24.279] [INFO ] MCDInterface::readPduApiInfo - Reading PDU API information from registry and RDF file...
+[18:13:24.279] [INFO ] MCDInterface::readPduApiInfo - RDF file path: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\rdf.xml
+[18:13:24.280] [INFO ] MCDInterface::readPduApiInfo - Parsed RDF Info - ShortName: BB DPDU API$, Supplier: BlueBinaries, Lib URI: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[18:13:24.281] [INFO ] MCDSystem::prepareVciAccessLayer - Initializing VCI access layer for supplier: BlueBinaries
+[18:13:24.291] [INFO ] DPDUWrapper::loadDLL - DLL loaded successfully: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[18:13:24.292] [INFO ] MCDSystem::prepareVciAccessLayer - VCI access layer initialized successfully
+[18:13:24.297] [INFO ] MCDProject::MCDProject - Initializing project: ./Projects/FM29_23_03_390_2.8.2.1.pdx
+[18:13:24.297] [INFO ] MCDProject::MCDProject - Output directory resolved to: ./Projects\output
+[18:13:24.297] [INFO ] MCDProject::loadData - Extracting PDX file: ./Projects/FM29_23_03_390_2.8.2.1.pdx
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ACU.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ADAS.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_AMPHA.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_AMPSO.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_BCM.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_BMS.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CIM.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CMRR_FL.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CMRR_FR.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CMRR_RL.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CMRR_RR.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_DSMC.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ECC.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_EPS.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_EPS2.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ESP.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_FCM.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_GW.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_iBooster.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ICC.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_MCU_F.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_MCU_R.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_MFSS.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_MRR.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_OHC.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PDU.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PKC.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PLGM.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PSM.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PVIU.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PWC_L.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PWC_R.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_RAC.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_SCM.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_TBOX.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_TRM.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_VCU.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_VSP.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDS.odx-d
+[18:13:24.299] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDSECUConfi.odx-d
+[18:13:24.300] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDSFlash.odx-d
+[18:13:24.300] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDSFunctClass.odx-d
+[18:13:24.300] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDSGener.odx-d
+[18:13:24.300] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\FG_UDSOnCAN.odx-d
+[18:13:24.300] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ODX_RS_DOP_LIB.odx-d
+[18:13:24.300] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ODX_RS_UNIT_LIB.odx-d
+[18:13:24.300] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\PR_ISOUDSOnCAN.odx-d
+[18:13:24.300] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\PR_ISOUDSOnCANFD.odx-d
+[18:13:24.300] [INFO ] MCDDbFunctionDictionary::MCDDbFunctionDictionary - Dictionary created.
+[18:13:25. 99] [INFO ] MCDDbFunctionDictionary::MCDDbFunctionDictionary - Dictionary created.
+[18:13:25. 99] [INFO ] MCDLogicalLink::MCDLogicalLink - Logical Link created for ECU file: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_BCM.odx-d
+[18:13:25. 99] [INFO ] MCDDbFunctionDictionary::clearDataIdentifiers - Cleared DataIdentifiers.
+[18:13:25. 99] [INFO ] MCDDbFunctionDictionary::clearDiagnosticServices - Cleared DiagnosticServices.
+[18:13:25. 99] [INFO ] MCDDbFunctionDictionary::clearDTCs - Cleared DTCs.
+[18:13:25.323] [INFO ] MCDDbFunctionDictionary::setDataIdentifiers - Set 1072 DataIdentifiers.
+[18:13:25.324] [INFO ] MCDDbFunctionDictionary::setDTCs - Set 219 DTCs.
+[18:13:25.326] [INFO ] MCDInterface::MCDInterface - Interface 'VCI_1' created.
+[18:13:25.326] [INFO ] MCDInterface::getCurrentInterface - Getting current interface modules...
+[18:13:25.368] [INFO ] MCDInterface::getCurrentInterface - Loaded Module - Handle: 0x51, TypeID: 0xFF, Vendor: PCAN-USB, Status: 0x8063
+[18:13:25.459] [INFO ] MCDLogicalLink::connect - Connected successfully for ECU file: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_BCM.odx-d, ComLogicalLink handle=4294967295
+[18:13:25.460] [INFO ] MCDInterface::~MCDInterface - Interface 'VCI_1' destroyed.
+[18:13:27.677] [INFO ] MCDDiagComPrimitive::MCDDiagComPrimitive - Diagnostic Service 'DiagnosticSession' created. Dictionary: 0000025AF0B93588
+[18:13:27.678] [INFO ] MCDDiagComPrimitive::startEventListener - Event listener started.
+[18:13:27.679] [INFO ] MCDDiagComPrimitive::executeService - Sending diagnostic request for 'DiagnosticSession': 02 10 01 00 00 00 00 00 
+[18:13:27.882] [INFO ] MCDDiagComPrimitive::getNextResponse - Received diagnostic response: 06 50 01 07 D0 01 2C 00 
+[18:13:27.885] [INFO ] MCDDiagComPrimitive::startEventListener - Event listener stopped.
+[18:13:27.885] [INFO ] MCDDiagComPrimitive::~MCDDiagComPrimitive - Diagnostic Service 'DiagnosticSession' destroyed.
+[18:13:38.891] [INFO ] DPDUWrapper::~DPDUWrapper - D-PDU DLL unloaded.
+[17:02:34. 25] [INFO ] MCDSystem::createMCDSystem - Creating a new MCDSystem instance.
+[17:02:34. 28] [INFO ] MCDSystem::MCDSystem - MVCI Diagnostic System initialized.
+[17:02:34. 31] [INFO ] MCDInterface::readPduApiInfo - Reading PDU API information from registry and RDF file...
+[17:02:34. 31] [INFO ] MCDInterface::readPduApiInfo - RDF file path: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\rdf.xml
+[17:02:34. 34] [INFO ] MCDInterface::readPduApiInfo - Parsed RDF Info - ShortName: BB DPDU API$, Supplier: BlueBinaries, Lib URI: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[17:02:34. 36] [INFO ] MCDSystem::prepareVciAccessLayer - Initializing VCI access layer for supplier: BlueBinaries
+[17:02:34. 62] [INFO ] DPDUWrapper::loadDLL - DLL loaded successfully: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[17:02:34. 66] [INFO ] MCDSystem::prepareVciAccessLayer - VCI access layer initialized successfully
+[17:02:51.836] [INFO ] MCDSystem::createMCDSystem - Creating a new MCDSystem instance.
+[17:02:51.836] [INFO ] MCDSystem::MCDSystem - MVCI Diagnostic System initialized.
+[17:02:53.905] [INFO ] MCDInterface::readPduApiInfo - Reading PDU API information from registry and RDF file...
+[17:02:53.905] [INFO ] MCDInterface::readPduApiInfo - RDF file path: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\rdf.xml
+[17:02:53.906] [INFO ] MCDInterface::readPduApiInfo - Parsed RDF Info - ShortName: BB DPDU API$, Supplier: BlueBinaries, Lib URI: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[17:02:54.597] [INFO ] MCDSystem::prepareVciAccessLayer - Initializing VCI access layer for supplier: BlueBinaries
+[17:02:54.605] [INFO ] DPDUWrapper::loadDLL - DLL loaded successfully: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[17:02:54.608] [INFO ] MCDSystem::prepareVciAccessLayer - VCI access layer initialized successfully
+[17:46:02.573] [INFO ] MCDSystem::createMCDSystem - Creating a new MCDSystem instance.
+[17:46:02.575] [INFO ] MCDSystem::MCDSystem - MVCI Diagnostic System initialized.
+[17:46:02.578] [INFO ] MCDInterface::readPduApiInfo - Reading PDU API information from registry and RDF file...
+[17:46:02.578] [INFO ] MCDInterface::readPduApiInfo - RDF file path: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\rdf.xml
+[17:46:02.580] [INFO ] MCDInterface::readPduApiInfo - Parsed RDF Info - ShortName: BB DPDU API$, Supplier: BlueBinaries, Lib URI: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[17:46:02.582] [INFO ] MCDSystem::prepareVciAccessLayer - Initializing VCI access layer for supplier: BlueBinaries
+[17:46:02.609] [INFO ] DPDUWrapper::loadDLL - DLL loaded successfully: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[17:46:02.617] [INFO ] MCDSystem::prepareVciAccessLayer - VCI access layer initialized successfully
+[17:46:27.474] [INFO ] MCDSystem::createMCDSystem - Creating a new MCDSystem instance.
+[17:46:27.475] [INFO ] MCDSystem::MCDSystem - MVCI Diagnostic System initialized.
+[17:46:27.478] [INFO ] MCDInterface::readPduApiInfo - Reading PDU API information from registry and RDF file...
+[17:46:27.478] [INFO ] MCDInterface::readPduApiInfo - RDF file path: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\rdf.xml
+[17:46:27.480] [INFO ] MCDInterface::readPduApiInfo - Parsed RDF Info - ShortName: BB DPDU API$, Supplier: BlueBinaries, Lib URI: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[17:46:27.482] [INFO ] MCDSystem::prepareVciAccessLayer - Initializing VCI access layer for supplier: BlueBinaries
+[17:46:27.508] [INFO ] DPDUWrapper::loadDLL - DLL loaded successfully: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[17:46:27.510] [INFO ] MCDSystem::prepareVciAccessLayer - VCI access layer initialized successfully
+[17:46:50.118] [INFO ] MCDSystem::createMCDSystem - Creating a new MCDSystem instance.
+[17:46:50.119] [INFO ] MCDSystem::MCDSystem - MVCI Diagnostic System initialized.
+[17:47:04.701] [INFO ] MCDInterface::readPduApiInfo - Reading PDU API information from registry and RDF file...
+[17:47:04.701] [INFO ] MCDInterface::readPduApiInfo - RDF file path: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\rdf.xml
+[17:47:04.702] [INFO ] MCDInterface::readPduApiInfo - Parsed RDF Info - ShortName: BB DPDU API$, Supplier: BlueBinaries, Lib URI: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[17:47:06.958] [INFO ] MCDSystem::prepareVciAccessLayer - Initializing VCI access layer for supplier: BlueBinaries
+[17:47:06.973] [INFO ] DPDUWrapper::loadDLL - DLL loaded successfully: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[17:47:06.974] [INFO ] MCDSystem::prepareVciAccessLayer - VCI access layer initialized successfully
+[11:20:39.543] [INFO ] MCDSystem::createMCDSystem - Creating a new MCDSystem instance.
+[11:20:39.545] [INFO ] MCDSystem::MCDSystem - MVCI Diagnostic System initialized.
+[11:20:39.550] [INFO ] MCDInterface::readPduApiInfo - Reading PDU API information from registry and RDF file...
+[11:20:39.551] [INFO ] MCDInterface::readPduApiInfo - RDF file path: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\rdf.xml
+[11:20:39.594] [INFO ] MCDInterface::readPduApiInfo - Parsed RDF Info - ShortName: BB DPDU API$, Supplier: BlueBinaries, Lib URI: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[11:20:39.599] [INFO ] MCDSystem::prepareVciAccessLayer - Initializing VCI access layer for supplier: BlueBinaries
+[11:20:39.859] [INFO ] DPDUWrapper::loadDLL - DLL loaded successfully: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[11:20:39.888] [INFO ] MCDSystem::prepareVciAccessLayer - VCI access layer initialized successfully
+[11:22:38.555] [INFO ] MCDSystem::createMCDSystem - Creating a new MCDSystem instance.
+[11:22:38.555] [INFO ] MCDSystem::MCDSystem - MVCI Diagnostic System initialized.
+[11:22:38.556] [INFO ] MCDInterface::readPduApiInfo - Reading PDU API information from registry and RDF file...
+[11:22:38.556] [INFO ] MCDInterface::readPduApiInfo - RDF file path: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\rdf.xml
+[11:22:38.558] [INFO ] MCDInterface::readPduApiInfo - Parsed RDF Info - ShortName: BB DPDU API$, Supplier: BlueBinaries, Lib URI: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[11:22:38.560] [INFO ] MCDSystem::prepareVciAccessLayer - Initializing VCI access layer for supplier: BlueBinaries
+[11:22:38.572] [INFO ] DPDUWrapper::loadDLL - DLL loaded successfully: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[11:22:38.574] [INFO ] MCDSystem::prepareVciAccessLayer - VCI access layer initialized successfully
+[11:27:51.971] [INFO ] MCDSystem::createMCDSystem - Creating a new MCDSystem instance.
+[11:27:51.974] [INFO ] MCDSystem::MCDSystem - MVCI Diagnostic System initialized.
+[11:27:51.977] [INFO ] MCDInterface::readPduApiInfo - Reading PDU API information from registry and RDF file...
+[11:27:51.977] [INFO ] MCDInterface::readPduApiInfo - RDF file path: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\rdf.xml
+[11:27:51.981] [INFO ] MCDInterface::readPduApiInfo - Parsed RDF Info - ShortName: BB DPDU API$, Supplier: BlueBinaries, Lib URI: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[11:27:51.983] [INFO ] MCDSystem::prepareVciAccessLayer - Initializing VCI access layer for supplier: BlueBinaries
+[11:27:52. 19] [INFO ] DPDUWrapper::loadDLL - DLL loaded successfully: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[11:27:52. 23] [INFO ] MCDSystem::prepareVciAccessLayer - VCI access layer initialized successfully
+[11:30:05. 69] [INFO ] MCDSystem::createMCDSystem - Creating a new MCDSystem instance.
+[11:30:05. 74] [INFO ] MCDSystem::MCDSystem - MVCI Diagnostic System initialized.
+[11:30:05. 79] [INFO ] MCDInterface::readPduApiInfo - Reading PDU API information from registry and RDF file...
+[11:30:05. 79] [INFO ] MCDInterface::readPduApiInfo - RDF file path: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\rdf.xml
+[11:30:05. 84] [INFO ] MCDInterface::readPduApiInfo - Parsed RDF Info - ShortName: BB DPDU API$, Supplier: BlueBinaries, Lib URI: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[11:30:05. 85] [INFO ] MCDSystem::prepareVciAccessLayer - Initializing VCI access layer for supplier: BlueBinaries
+[11:30:05.126] [INFO ] DPDUWrapper::loadDLL - DLL loaded successfully: C:\Program Files (x86)\BlueBinaries\D-PDUSetup\BluPlus.PDU.Core.dll
+[11:30:05.129] [INFO ] MCDSystem::prepareVciAccessLayer - VCI access layer initialized successfully
+[11:30:08.257] [INFO ] MCDProject::MCDProject - Initializing project: ./Projects/FM29_23_03_390_2.8.2.1.pdx
+[11:30:08.258] [INFO ] MCDProject::MCDProject - Output directory resolved to: ./Projects\output
+[11:30:08.258] [INFO ] MCDProject::loadData - Extracting PDX file: ./Projects/FM29_23_03_390_2.8.2.1.pdx
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ACU.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ADAS.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_AMPHA.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_AMPSO.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_BCM.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_BMS.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CIM.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CMRR_FL.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CMRR_FR.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CMRR_RL.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_CMRR_RR.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_DSMC.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ECC.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_EPS.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_EPS2.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ESP.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_FCM.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_GW.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_iBooster.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_ICC.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_MCU_F.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_MCU_R.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_MFSS.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_MRR.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_OHC.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PDU.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PKC.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PLGM.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PSM.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PVIU.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PWC_L.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_PWC_R.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_RAC.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_SCM.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_TBOX.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_TRM.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_VCU.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_VSP.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDS.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDSECUConfi.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDSFlash.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDSFunctClass.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ES_UDSGener.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\FG_UDSOnCAN.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ODX_RS_DOP_LIB.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\ODX_RS_UNIT_LIB.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\PR_ISOUDSOnCAN.odx-d
+[11:30:08.301] [INFO ] MCDProject::loadData - ODX File Found: ./Projects\output\FM29_23_03_390_2.8.2.1\PR_ISOUDSOnCANFD.odx-d
+[11:30:08.302] [INFO ] MCDDbFunctionDictionary::MCDDbFunctionDictionary - Dictionary created.
+[11:30:18.719] [INFO ] MCDDbFunctionDictionary::MCDDbFunctionDictionary - Dictionary created.
+[11:30:18.719] [INFO ] MCDLogicalLink::MCDLogicalLink - Logical Link created for ECU file: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_BCM.odx-d
+[11:30:18.720] [INFO ] MCDDbFunctionDictionary::clearDataIdentifiers - Cleared DataIdentifiers.
+[11:30:18.720] [INFO ] MCDDbFunctionDictionary::clearDiagnosticServices - Cleared DiagnosticServices.
+[11:30:18.720] [INFO ] MCDDbFunctionDictionary::clearDTCs - Cleared DTCs.
+[11:30:19.117] [INFO ] MCDDbFunctionDictionary::setDataIdentifiers - Set 1072 DataIdentifiers.
+[11:30:19.118] [INFO ] MCDDbFunctionDictionary::setDTCs - Set 219 DTCs.
+[11:30:19.121] [INFO ] MCDInterface::MCDInterface - Interface 'VCI_1' created.
+[11:30:19.122] [INFO ] MCDInterface::getCurrentInterface - Getting current interface modules...
+[11:30:19.172] [INFO ] MCDInterface::getCurrentInterface - Loaded Module - Handle: 0x51, TypeID: 0xFF, Vendor: PCAN-USB, Status: 0x8063
+[11:30:19.270] [INFO ] MCDLogicalLink::connect - Connected successfully for ECU file: ./Projects\output\FM29_23_03_390_2.8.2.1\BV_BCM.odx-d, ComLogicalLink handle=4294967295
+[11:30:19.271] [INFO ] MCDInterface::~MCDInterface - Interface 'VCI_1' destroyed.
+[11:30:22.596] [INFO ] MCDDiagComPrimitive::MCDDiagComPrimitive - Diagnostic Service 'DiagnosticSession' created. Dictionary: 00000203025B0358
+[11:30:22.596] [INFO ] MCDDiagComPrimitive::startEventListener - Event listener started.
+[11:30:22.601] [INFO ] MCDDiagComPrimitive::executeService - Sending diagnostic request for 'DiagnosticSession': 02 10 01 00 00 00 00 00 
+[11:30:22.803] [INFO ] MCDDiagComPrimitive::getNextResponse - Received diagnostic response: 06 50 01 07 D0 01 2C 00 
+[11:30:22.808] [INFO ] MCDDiagComPrimitive::startEventListener - Event listener stopped.
+[11:30:22.809] [INFO ] MCDDiagComPrimitive::~MCDDiagComPrimitive - Diagnostic Service 'DiagnosticSession' destroyed.

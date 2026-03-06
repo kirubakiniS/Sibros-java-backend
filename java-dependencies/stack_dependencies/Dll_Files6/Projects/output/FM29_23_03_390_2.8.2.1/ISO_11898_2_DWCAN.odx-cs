@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ODX MODEL-VERSION="2.2.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="odx.xsd">
+    <!--
+<ODX MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx220.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ODX MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	-->
+    <COMPARAM-SUBSET CATEGORY="PHYS" ID="ISO_11898_2_DWCAN" OID="90b1256e-7d6d-4a48-bd78-292d77d1ae66">
+        <SHORT-NAME>ISO_11898_2_DWCAN</SHORT-NAME>
+        <LONG-NAME TI="TI_1683367358">ISO 11898-2 DWCAN</LONG-NAME>
+        <ADMIN-DATA>
+            <LANGUAGE>en-UK</LANGUAGE>
+            <DOC-REVISIONS>
+                <DOC-REVISION>
+                    <TEAM-MEMBER-REF ID-REF="ISO_11898_2_DWCAN.ISO.Joint_COMPARAM_Group"/>
+                    <REVISION-LABEL>1.0.0</REVISION-LABEL>
+                    <STATE>Release</STATE>
+                    <DATE>2009-04-17T00:00:00</DATE>
+                    <MODIFICATIONS>
+                        <MODIFICATION>
+                            <CHANGE>No changes</CHANGE>
+                            <REASON>Official version</REASON>
+                        </MODIFICATION>
+                    </MODIFICATIONS>
+                </DOC-REVISION>
+            </DOC-REVISIONS>
+        </ADMIN-DATA>
+        <COMPANY-DATAS>
+            <COMPANY-DATA ID="ISO_11898_2_DWCAN.ISO" OID="1194b891-9d5f-4289-a517-8d87c471dca3">
+                <SHORT-NAME>ISO</SHORT-NAME>
+                <LONG-NAME TI="TI_1244325102">International Organization for Standardization (ISO)</LONG-NAME>
+                <TEAM-MEMBERS>
+                    <TEAM-MEMBER
+                        ID="ISO_11898_2_DWCAN.ISO.Joint_COMPARAM_Group" OID="50054685-e463-40fd-a76b-ccd367d505d5">
+                        <SHORT-NAME>Joint_COMPARAM_Group</SHORT-NAME>
+                        <LONG-NAME TI="TI_1579392334">Joint COMPARAM-Group</LONG-NAME>
+                        <ADDRESS>Arnikastrasse 2</ADDRESS>
+                        <ZIP>85635</ZIP>
+                        <CITY>Hoehenkirchen</CITY>
+                        <PHONE>+49 8102 895317</PHONE>
+                        <FAX>+49 8102 895310</FAX>
+                        <EMAIL>info@asam.net</EMAIL>
+                    </TEAM-MEMBER>
+                </TEAM-MEMBERS>
+                <COMPANY-SPECIFIC-INFO>
+                    <RELATED-DOCS>
+                        <RELATED-DOC>
+                            <XDOC>
+                                <SHORT-NAME>ISO_22900_2</SHORT-NAME>
+                                <LONG-NAME TI="TI_418403823">ISO 22900-2</LONG-NAME>
+                                <NUMBER>2.2.0</NUMBER>
+                                <STATE>Release</STATE>
+                                <DATE>2009-01-27T00:00:00</DATE>
+                                <PUBLISHER>ISO</PUBLISHER>
+                            </XDOC>
+                        </RELATED-DOC>
+                        <RELATED-DOC>
+                            <XDOC>
+                                <SHORT-NAME>ISO_22901_1</SHORT-NAME>
+                                <LONG-NAME TI="TI_1963359431">ISO 22901-1</LONG-NAME>
+                                <NUMBER>2.2.0</NUMBER>
+                                <STATE>Release</STATE>
+                                <DATE>2008-11-06T00:00:00</DATE>
+                                <PUBLISHER>ISO</PUBLISHER>
+                            </XDOC>
+                        </RELATED-DOC>
+                    </RELATED-DOCS>
+                </COMPANY-SPECIFIC-INFO>
+            </COMPANY-DATA>
+        </COMPANY-DATAS>
+        <COMPARAMS>
+            <COMPARAM CPTYPE="STANDARD" CPUSAGE="ECU-COMM"
+                ID="ISO_11898_2_DWCAN.CP_Baudrate"
+                OID="1c569e78-9cf1-48bb-ab3e-ac1c341c9380" PARAM-CLASS="BUSTYPE">
+                <SHORT-NAME>CP_Baudrate</SHORT-NAME>
+                <LONG-NAME TI="TI_391332638">CP_Baudrate</LONG-NAME>
+                <DESC TI="TI_1303566141">
+                    <p>Represents the desired baud rate.</p>
+                    <p>If the desired baud rate cannot be achieved within the tolerance of the protocol, the interface will remain at the previous baud rate.</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>500000</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT32_Baud"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="STANDARD" CPUSAGE="TESTER"
+                ID="ISO_11898_2_DWCAN.CP_BitSamplePoint"
+                OID="e7b7a73b-691a-40ff-bc12-780d9296aa42" PARAM-CLASS="BUSTYPE">
+                <SHORT-NAME>CP_BitSamplePoint</SHORT-NAME>
+                <LONG-NAME TI="TI_1516905184">CP_BitSamplePoint</LONG-NAME>
+                <DESC TI="TI_317308427">
+                    <p>This sets the desired bit sample point as a percentage of the bit time.</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>80</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT7_0_100_PerCent"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="OPTIONAL" CPUSAGE="TESTER"
+                ID="ISO_11898_2_DWCAN.CP_CanBaudrateRecord"
+                OID="e8f9ccd7-dd4b-4b9d-8c27-2becc976d73f" PARAM-CLASS="BUSTYPE">
+                <SHORT-NAME>CP_CanBaudrateRecord</SHORT-NAME>
+                <LONG-NAME TI="TI_1247851519">CP_CanBaudrateRecord</LONG-NAME>
+                <DESC TI="TI_632001143">
+                    <p>List of baud rates to use during an OBD CAN initialization sequence</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>0007A1200003D090</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_BYTEFIELD_0_48_END_OF_PDU"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="OPTIONAL" CPUSAGE="ECU-COMM"
+                ID="ISO_11898_2_DWCAN.CP_ListenOnly"
+                OID="1b040005-983c-4a70-8c1d-37551c587f9a" PARAM-CLASS="BUSTYPE">
+                <SHORT-NAME>CP_ListenOnly</SHORT-NAME>
+                <LONG-NAME TI="TI_376225324">CP_ListenOnly</LONG-NAME>
+                <DESC TI="TI_1039779262">
+                    <p>Enable a Listen Only mode on the Com Logical Link</p>
+                    <p>This will cause the link to no longer acknowledge received frames on the CAN Network.</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>Disabled</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="TEXTTABLE_UINT1_Disabled_Enabled"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="STANDARD" CPUSAGE="TESTER"
+                ID="ISO_11898_2_DWCAN.CP_SamplesPerBit"
+                OID="58f052a7-4aa1-47de-a612-b8c5ffcb8405" PARAM-CLASS="BUSTYPE">
+                <SHORT-NAME>CP_SamplesPerBit</SHORT-NAME>
+                <LONG-NAME TI="TI_149049521">CP_SamplesPerBit</LONG-NAME>
+                <DESC TI="TI_673493911">
+                    <p>Number of samples per bit</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>1-Sample</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="TEXTTABLE_UINT1_SamplesPerBit"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="STANDARD" CPUSAGE="TESTER"
+                ID="ISO_11898_2_DWCAN.CP_SyncJumpWidth"
+                OID="ad2354a4-725a-43ea-b635-f255e7105a9d" PARAM-CLASS="BUSTYPE">
+                <SHORT-NAME>CP_SyncJumpWidth</SHORT-NAME>
+                <LONG-NAME TI="TI_1426075715">CP_SyncJumpWidth</LONG-NAME>
+                <DESC TI="TI_1030814303">
+                    <p>This sets the desired synchronization jump width as a percentage of the bit time.</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>15</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT7_0_100_PerCent"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="OPTIONAL" CPUSAGE="TESTER"
+                ID="ISO_11898_2_DWCAN.CP_TerminationType"
+                OID="737d374f-c301-4330-bfc8-64e9c40feef0" PARAM-CLASS="BUSTYPE">
+                <SHORT-NAME>CP_TerminationType</SHORT-NAME>
+                <LONG-NAME TI="TI_1476354134">CP_TerminationType</LONG-NAME>
+                <DESC TI="TI_14066206">
+                    <p>CAN termination settings</p>
+                    <p>This ComParam can be used to manually change the termination being used on the vehicle bus line.</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>No termination</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="TEXTTABLE_UINT3_0_4_TerminationType"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="OPTIONAL" CPUSAGE="TESTER"
+                ID="ISO_11898_2_DWCAN.CP_CANFDBaudrate"
+                OID="c26a0fff-6c35-4779-b32a-b71db0f16dfa" PARAM-CLASS="BUSTYPE">
+                <SHORT-NAME>CP_CANFDBaudrate</SHORT-NAME>
+                <LONG-NAME TI="TI_1335591270">CP_CANFDBaudrate</LONG-NAME>
+                <DESC TI="TI_248136007">
+                    <p>Baudrate to be used during the hight bit‐<br/>rate phase of the CANFD frame <br/>transmission/reception. <br/>A value of “0” indicates that CP_Baudrate value will also <br/>be used for the high bitrate of CAN FD. <br/>NOTE Value of ComParam <br/>CP_CANFDTxMaxDataLength controls whether CANFD <br/>is used for TX or not. </p>
+                    <p>Type: PDU_PT_UNUM32 Range: [0x0; 0xFFFFFFFF] Resolution: 1 bps Default: 0</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>2000000</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT32_4byte"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="OPTIONAL" CPUSAGE="TESTER"
+                ID="ISO_11898_2_DWCAN.CP_CANFDBitSamplePoint"
+                OID="cdbdd7a9-2c96-4e31-927f-733b29c7fe33" PARAM-CLASS="BUSTYPE">
+                <SHORT-NAME>CP_CANFDBitSamplePoint</SHORT-NAME>
+                <LONG-NAME TI="TI_1168347896">CP_CANFDBitSamplePoint</LONG-NAME>
+                <DESC TI="TI_1184338864">
+                    <p>This sets the desired bit sample point as a <br/>percentage of the bit time to be used during the hight <br/>bit‐rate phase of the CANFD frame <br/>transmission/reception.</p>
+                    <p>Type: PDU_PT_UNUM32 Range: [0; 100] Resolution: 1 % Default: 80 %</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>80</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT7_0_100_PerCent"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="OPTIONAL" CPUSAGE="TESTER"
+                ID="ISO_11898_2_DWCAN.CP_CANFDSyncJumpWidth"
+                OID="3ee69067-915d-4d1b-afd3-3f8014f333aa" PARAM-CLASS="BUSTYPE">
+                <SHORT-NAME>CP_CANFDSyncJumpWidth</SHORT-NAME>
+                <LONG-NAME TI="TI_1838425659">CP_CANFDSyncJumpWidth</LONG-NAME>
+                <DESC TI="TI_2017371551">
+                    <p>This sets the desired synchronization <br/>jump width as a percentage of the bit time to be used <br/>during the hight bit‐rate phase of the CANFD frame <br/>transmission/reception.</p>
+                    <p>Type: PDU_PT_UNUM32 <br/>Range: [0; 100] <br/>Resolution: 1 % Default: 15%</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>15</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT7_0_100_PerCent"/>
+            </COMPARAM>
+        </COMPARAMS>
+        <DATA-OBJECT-PROPS>
+            <DATA-OBJECT-PROP ID="IDENTICAL_BYTEFIELD_0_48_END_OF_PDU" OID="48cda786-1d58-47be-a7ff-7e6292e324d4">
+                <SHORT-NAME>IDENTICAL_BYTEFIELD_0_48_END_OF_PDU</SHORT-NAME>
+                <LONG-NAME TI="TI_1257753587">IDENTICAL_BYTEFIELD_0_48_END_OF_PDU</LONG-NAME>
+                <COMPU-METHOD>
+                    <CATEGORY>IDENTICAL</CATEGORY>
+                </COMPU-METHOD>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_BYTEFIELD"
+                    TERMINATION="END-OF-PDU" xsi:type="MIN-MAX-LENGTH-TYPE">
+                    <MAX-LENGTH>48</MAX-LENGTH>
+                    <MIN-LENGTH>0</MIN-LENGTH>
+                </DIAG-CODED-TYPE>
+                <PHYSICAL-TYPE BASE-DATA-TYPE="A_BYTEFIELD"/>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="IDENTICAL_UINT32_Baud" OID="846ba9ff-edfb-4185-9ef8-a48d04aa96f7">
+                <SHORT-NAME>IDENTICAL_UINT32_Baud</SHORT-NAME>
+                <LONG-NAME TI="TI_1173306020">IDENTICAL_UINT32_Baud</LONG-NAME>
+                <COMPU-METHOD>
+                    <CATEGORY>IDENTICAL</CATEGORY>
+                </COMPU-METHOD>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                    <BIT-LENGTH>32</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+                <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32"/>
+                <UNIT-REF ID-REF="Baud"/>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="IDENTICAL_UINT7_0_100_PerCent" OID="ac6e9594-f2c8-4656-b7bd-cc52d87e7943">
+                <SHORT-NAME>IDENTICAL_UINT7_0_100_PerCent</SHORT-NAME>
+                <LONG-NAME TI="TI_1717898952">IDENTICAL_UINT7_0_100_PerCent</LONG-NAME>
+                <COMPU-METHOD>
+                    <CATEGORY>IDENTICAL</CATEGORY>
+                </COMPU-METHOD>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                    <BIT-LENGTH>32</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+                <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32"/>
+                <INTERNAL-CONSTR>
+                    <LOWER-LIMIT>0</LOWER-LIMIT>
+                    <UPPER-LIMIT>100</UPPER-LIMIT>
+                </INTERNAL-CONSTR>
+                <UNIT-REF ID-REF="PerCent"/>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="TEXTTABLE_UINT1_Disabled_Enabled" OID="04f4e81f-c5a9-4b83-8d7a-c643744f713e">
+                <SHORT-NAME>TEXTTABLE_UINT1_Disabled_Enabled</SHORT-NAME>
+                <LONG-NAME TI="TI_842726693">TEXTTABLE_UINT1_Disabled_Enabled</LONG-NAME>
+                <COMPU-METHOD>
+                    <CATEGORY>TEXTTABLE</CATEGORY>
+                    <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                            <COMPU-SCALE>
+                                <LOWER-LIMIT>0</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_693788921">Disabled</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <LOWER-LIMIT>1</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1673717936">Enabled</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                        </COMPU-SCALES>
+                    </COMPU-INTERNAL-TO-PHYS>
+                </COMPU-METHOD>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                    <BIT-LENGTH>32</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+                <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING"/>
+                <INTERNAL-CONSTR>
+                    <LOWER-LIMIT>0</LOWER-LIMIT>
+                    <UPPER-LIMIT>1</UPPER-LIMIT>
+                </INTERNAL-CONSTR>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="TEXTTABLE_UINT1_SamplesPerBit" OID="c6fa9f9d-a126-48cd-8bbf-f8a8173c69e5">
+                <SHORT-NAME>TEXTTABLE_UINT1_SamplesPerBit</SHORT-NAME>
+                <LONG-NAME TI="TI_88794441">TEXTTABLE_UINT1_SamplesPerBit</LONG-NAME>
+                <COMPU-METHOD>
+                    <CATEGORY>TEXTTABLE</CATEGORY>
+                    <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                            <COMPU-SCALE>
+                                <DESC TI="TI_54115905">
+                                    <p>1 sample per bit</p>
+                                </DESC>
+                                <LOWER-LIMIT>0</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1463628204">1-Sample</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <DESC TI="TI_1106995921">
+                                    <p>3 samples per bit</p>
+                                </DESC>
+                                <LOWER-LIMIT>1</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_270178829">3-Sample</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                        </COMPU-SCALES>
+                    </COMPU-INTERNAL-TO-PHYS>
+                </COMPU-METHOD>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                    <BIT-LENGTH>32</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+                <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING"/>
+                <INTERNAL-CONSTR>
+                    <LOWER-LIMIT>0</LOWER-LIMIT>
+                    <UPPER-LIMIT>1</UPPER-LIMIT>
+                </INTERNAL-CONSTR>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="TEXTTABLE_UINT3_0_4_TerminationType" OID="fe8f7526-d1fe-435b-8501-9deb272062b7">
+                <SHORT-NAME>TEXTTABLE_UINT3_0_4_TerminationType</SHORT-NAME>
+                <LONG-NAME TI="TI_923563497">TEXTTABLE_UINT3_0_4_TerminationType</LONG-NAME>
+                <COMPU-METHOD>
+                    <CATEGORY>TEXTTABLE</CATEGORY>
+                    <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                            <COMPU-SCALE>
+                                <LOWER-LIMIT>0</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1065749678">No termination</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <LOWER-LIMIT>1</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1535978480">AC termination</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <LOWER-LIMIT>2</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_552962699">60 Ohm termination</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <LOWER-LIMIT>3</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1059183391">120 Ohm termination</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <LOWER-LIMIT>4</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_674238125">SWCAN termination</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                        </COMPU-SCALES>
+                    </COMPU-INTERNAL-TO-PHYS>
+                </COMPU-METHOD>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                    <BIT-LENGTH>32</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+                <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING"/>
+                <INTERNAL-CONSTR>
+                    <LOWER-LIMIT>0</LOWER-LIMIT>
+                    <UPPER-LIMIT>4</UPPER-LIMIT>
+                </INTERNAL-CONSTR>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="IDENTICAL_UINT32_4byte" OID="871d95af-f293-491d-a464-e9d46de655ea">
+                <SHORT-NAME>IDENTICAL_UINT32_4byte</SHORT-NAME>
+                <LONG-NAME TI="TI_2042018297">IDENTICAL_UINT32_4byte</LONG-NAME>
+                <COMPU-METHOD>
+                    <CATEGORY>IDENTICAL</CATEGORY>
+                </COMPU-METHOD>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                    <BIT-LENGTH>32</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+                <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32" DISPLAY-RADIX="DEC"/>
+            </DATA-OBJECT-PROP>
+        </DATA-OBJECT-PROPS>
+        <UNIT-SPEC>
+            <UNITS>
+                <UNIT ID="Baud" OID="194c319b-d8ea-437b-bede-095a1eed7a6c">
+                    <SHORT-NAME>Baud</SHORT-NAME>
+                    <LONG-NAME TI="TI_1651540981">Baud</LONG-NAME>
+                    <DISPLAY-NAME>Bd</DISPLAY-NAME>
+                </UNIT>
+                <UNIT ID="PerCent" OID="f4ac24a8-590b-4780-91be-fe1924c92891">
+                    <SHORT-NAME>PerCent</SHORT-NAME>
+                    <LONG-NAME TI="TI_523017891">Per Cent</LONG-NAME>
+                    <DISPLAY-NAME>%</DISPLAY-NAME>
+                </UNIT>
+            </UNITS>
+        </UNIT-SPEC>
+    </COMPARAM-SUBSET>
+</ODX>
+<!-- Mit XMLSpy v2011 sp1 (x64) (http://www.altova.com) von DSA Daten- und Systemtechnik GmbH (DSA Daten- und Systemtechnik GmbH) bearbeitet -->

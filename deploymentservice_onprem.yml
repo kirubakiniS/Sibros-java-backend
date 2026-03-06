@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vehicle-stack-communication-java-deployment-dtd
+  namespace: dtd-dev
+  labels:
+    app: vehicle-stack-communication-java-dtd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vehicle-stack-communication-java-dtd
+  template:
+    metadata:
+      labels:
+        app: vehicle-stack-communication-java-dtd
+    spec:
+      containers:
+        - name: vehicle-stack-communication-javaserver-dtd
+          image: registry.hub.docker.com/digimob/vehiclestack-dev:latest
+          volumeMounts:
+            - name: host-volume
+              mountPath: /srv
+          ports:
+            - containerPort: 8082
+      volumes:
+        - name: host-volume
+          hostPath:
+            path: /srv
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: vehicle-stack-communication-java-service-dtd
+  namespace: dtd-dev
+spec:
+  selector:
+    app: vehicle-stack-communication-java-dtd
+  type: ClusterIP
+  ports:
+    - port: 8082

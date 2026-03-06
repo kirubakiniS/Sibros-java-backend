@@ -1,0 +1,1733 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ODX MODEL-VERSION="2.2.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="odx.xsd">
+    <!--
+<ODX MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx220.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ODX MODEL-VERSION="2.2.0" xsi:noNamespaceSchemaLocation="odx.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	-->
+    <COMPARAM-SUBSET CATEGORY="TRANS" ID="ISO_15765_2" OID="07e3ca6e-0a77-4ad1-86a5-17be075cbce1">
+        <SHORT-NAME>ISO_15765_2</SHORT-NAME>
+        <LONG-NAME TI="TI_213265349">ISO 15765-2</LONG-NAME>
+        <ADMIN-DATA>
+            <LANGUAGE>en-UK</LANGUAGE>
+            <DOC-REVISIONS>
+                <DOC-REVISION>
+                    <TEAM-MEMBER-REF ID-REF="ISO_15765_2.ISO.Joint_COMPARAM_Group"/>
+                    <REVISION-LABEL>1.0.0</REVISION-LABEL>
+                    <STATE>Release</STATE>
+                    <DATE>2009-06-29T00:00:00</DATE>
+                    <MODIFICATIONS>
+                        <MODIFICATION>
+                            <CHANGE>No changes</CHANGE>
+                            <REASON>Official version</REASON>
+                        </MODIFICATION>
+                    </MODIFICATIONS>
+                </DOC-REVISION>
+            </DOC-REVISIONS>
+        </ADMIN-DATA>
+        <COMPANY-DATAS>
+            <COMPANY-DATA ID="ISO_15765_2.ISO" OID="c3dd6df4-7d74-4fc8-be06-32e22ee838a4">
+                <SHORT-NAME>ISO</SHORT-NAME>
+                <LONG-NAME TI="TI_1244325102">International Organization for Standardization (ISO)</LONG-NAME>
+                <TEAM-MEMBERS>
+                    <TEAM-MEMBER
+                        ID="ISO_15765_2.ISO.Joint_COMPARAM_Group" OID="9c5889e4-0f49-413a-b488-5cef815a474c">
+                        <SHORT-NAME>Joint_COMPARAM_Group</SHORT-NAME>
+                        <LONG-NAME TI="TI_1579392334">Joint COMPARAM-Group</LONG-NAME>
+                        <ADDRESS>Arnikastrasse 2</ADDRESS>
+                        <ZIP>85635</ZIP>
+                        <CITY>Hoehenkirchen</CITY>
+                        <PHONE>+49 8102 895317</PHONE>
+                        <FAX>+49 8102 895310</FAX>
+                        <EMAIL>info@asam.net</EMAIL>
+                    </TEAM-MEMBER>
+                </TEAM-MEMBERS>
+                <COMPANY-SPECIFIC-INFO>
+                    <RELATED-DOCS>
+                        <RELATED-DOC>
+                            <XDOC>
+                                <SHORT-NAME>ISO_22900_2</SHORT-NAME>
+                                <LONG-NAME TI="TI_418403823">ISO 22900-2</LONG-NAME>
+                                <NUMBER>2.2.0</NUMBER>
+                                <STATE>Release</STATE>
+                                <DATE>2009-01-27T00:00:00</DATE>
+                                <PUBLISHER>ISO</PUBLISHER>
+                            </XDOC>
+                        </RELATED-DOC>
+                        <RELATED-DOC>
+                            <XDOC>
+                                <SHORT-NAME>ISO_22901_1</SHORT-NAME>
+                                <LONG-NAME TI="TI_1963359431">ISO 22901-1</LONG-NAME>
+                                <NUMBER>2.2.0</NUMBER>
+                                <STATE>Release</STATE>
+                                <DATE>2008-11-06T00:00:00</DATE>
+                                <PUBLISHER>ISO</PUBLISHER>
+                            </XDOC>
+                        </RELATED-DOC>
+                    </RELATED-DOCS>
+                </COMPANY-SPECIFIC-INFO>
+            </COMPANY-DATA>
+        </COMPANY-DATAS>
+        <COMPARAMS>
+            <COMPARAM CPTYPE="STANDARD" CPUSAGE="TESTER"
+                ID="ISO_15765_2.CP_Ar"
+                OID="26559478-e39f-46f0-b31c-e974dbca2ba7" PARAM-CLASS="TIMING">
+                <SHORT-NAME>CP_Ar</SHORT-NAME>
+                <LONG-NAME TI="TI_1955443643">CP_Ar</LONG-NAME>
+                <DESC TI="TI_1626097132">
+                    <p>Time for transmission of the CAN frame (any N_PDU) on the receiver side</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>1000000</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT25_0_20000000_MicroSecond"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="STANDARD" CPUSAGE="TESTER"
+                ID="ISO_15765_2.CP_As"
+                OID="0425f20d-2222-49a2-bdbb-e901f112d76c" PARAM-CLASS="TIMING">
+                <SHORT-NAME>CP_As</SHORT-NAME>
+                <LONG-NAME TI="TI_1707136049">CP_As</LONG-NAME>
+                <DESC TI="TI_3194199">
+                    <p>Time for transmission of the CAN frame (any N_PDU) on the sender side</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>1000000</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT25_0_20000000_MicroSecond"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="STANDARD" CPUSAGE="TESTER"
+                ID="ISO_15765_2.CP_BlockSize"
+                OID="4aba5de9-2c9c-465f-b654-6e2f62159e1a" PARAM-CLASS="COM">
+                <SHORT-NAME>CP_BlockSize</SHORT-NAME>
+                <LONG-NAME TI="TI_323538337">CP_BlockSize</LONG-NAME>
+                <DESC TI="TI_1053023382">
+                    <p>This sets the block size that the interface should report to the vehicle for receiving segmented transfers in a Transmit Flow Control Message.</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>0</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT8"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="OPTIONAL" CPUSAGE="TESTER"
+                ID="ISO_15765_2.CP_BlockSizeOverride"
+                OID="14b43e01-6631-42de-b324-3089cf591b03" PARAM-CLASS="COM">
+                <SHORT-NAME>CP_BlockSizeOverride</SHORT-NAME>
+                <LONG-NAME TI="TI_1760904910">CP_BlockSizeOverride</LONG-NAME>
+                <DESC TI="TI_731839319">
+                    <p>This sets the block size that the interface should use to send segmented messages to the vehicle.</p>
+                    <p>The flow control value reported by the vehicle should be ignored.</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>65535</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT16_BlockSizeOverride"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="OPTIONAL" CPUSAGE="TESTER"
+                ID="ISO_15765_2.CP_Br"
+                OID="5068925c-1e1f-43b9-bc7f-ad99e2eb2c21" PARAM-CLASS="TIMING">
+                <SHORT-NAME>CP_Br</SHORT-NAME>
+                <LONG-NAME TI="TI_184244264">CP_Br</LONG-NAME>
+                <DESC TI="TI_722321707">
+                    <p>Time until transmission of the next FlowControl</p>
+                    <p>This is equivalent to Th in J1939-21.</p>
+                    <p>For ISO 15765-2 and ISO 15765-4, this value is a performance requirement ComParam and should not be used as a timeout value by the tester.</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>10000</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT25_0_20000000_MicroSecond"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="STANDARD" CPUSAGE="TESTER"
+                ID="ISO_15765_2.CP_Bs"
+                OID="8c9457bd-15a0-40c2-ab04-4061f6b47ed8" PARAM-CLASS="TIMING">
+                <SHORT-NAME>CP_Bs</SHORT-NAME>
+                <LONG-NAME TI="TI_1965755689">CP_Bs</LONG-NAME>
+                <DESC TI="TI_1838424279">
+                    <p>Timeout until reception of the next FlowControl</p>
+                    <p>This is equivalent to T4 in J1939-21.</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>1000000</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT25_0_20000000_MicroSecond"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="OPTIONAL" CPUSAGE="TESTER"
+                ID="ISO_15765_2.CP_CanDataSizeOffset"
+                OID="c12ef02d-3b67-47c7-8caf-7040f76eaf95" PARAM-CLASS="COM">
+                <SHORT-NAME>CP_CanDataSizeOffset</SHORT-NAME>
+                <LONG-NAME TI="TI_1923425309">CP_CanDataSizeOffset</LONG-NAME>
+                <DESC TI="TI_228902002">
+                    <p>Offset subtracted from the total number of expected bytes received/transmitted in a first frame message</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>0</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT4_0_8"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="STANDARD" CPUSAGE="ECU-COMM"
+                ID="ISO_15765_2.CP_CanFillerByte"
+                OID="eb461b6a-f488-45f3-898c-ffcf4bdb28c8" PARAM-CLASS="COM">
+                <SHORT-NAME>CP_CanFillerByte</SHORT-NAME>
+                <LONG-NAME TI="TI_1525379633">CP_CanFillerByte</LONG-NAME>
+                <DESC TI="TI_1701605304">
+                    <p>Padding data byte to be used to pad all USDT type transmits frames (SF, FC, and last CF)</p>
+                    <p>NOTE: The padding data byte value is typically 0x00, 0x55, or 0xAA.</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>85</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT8_HEX"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="STANDARD" CPUSAGE="ECU-COMM"
+                ID="ISO_15765_2.CP_CanFillerByteHandling"
+                OID="85c3ee4a-f340-47bd-a19f-11201e025806" PARAM-CLASS="COM">
+                <SHORT-NAME>CP_CanFillerByteHandling</SHORT-NAME>
+                <LONG-NAME TI="TI_801188055">CP_CanFillerByteHandling</LONG-NAME>
+                <DESC TI="TI_266830208">
+                    <p>Enable Padding, forcing the DLC of a CAN frame to always be 8</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>Enabled</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="TEXTTABLE_UINT1_Disabled_Enabled"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="OPTIONAL" CPUSAGE="TESTER"
+                ID="ISO_15765_2.CP_CanFirstConsecutiveFrameValue"
+                OID="a5759cda-a728-47ba-906e-ff44d5922c82" PARAM-CLASS="COM">
+                <SHORT-NAME>CP_CanFirstConsecutiveFrameValue</SHORT-NAME>
+                <LONG-NAME TI="TI_1293468407">CP_CanFirstConsecutiveFrameValue</LONG-NAME>
+                <DESC TI="TI_571407485">
+                    <p>First consecutive frame number to be transmitted/received on a multi-segment transfer</p>
+                    <p>Used to override the normal first consecutive frame value of 1.</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>1</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT4_HEX"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="STANDARD" CPUSAGE="ECU-COMM"
+                ID="ISO_15765_2.CP_CanFuncReqExtAddr"
+                OID="d8107d8b-a880-4b92-8ffa-c279f1f67835" PARAM-CLASS="COM">
+                <SHORT-NAME>CP_CanFuncReqExtAddr</SHORT-NAME>
+                <LONG-NAME TI="TI_196269023">CP_CanFuncReqExtAddr</LONG-NAME>
+                <DESC TI="TI_1559098262">
+                    <p>Address extension for enhanced diagnostics</p>
+                    <p>The first byte of the requested CAN frame data contains the N_AE/N_TA byte followed by the correct number of PCI bytes.</p>
+                    <p>This ComParam is used for all transmitted CAN Frames that have the “Can Address Extension” bit set in the CanIdFormat.</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>0</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT8_HEX"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="STANDARD" CPUSAGE="ECU-COMM"
+                ID="ISO_15765_2.CP_CanFuncReqFormat"
+                OID="622510d7-3f46-49c2-b7f0-eccf89c08756" PARAM-CLASS="COM">
+                <SHORT-NAME>CP_CanFuncReqFormat</SHORT-NAME>
+                <LONG-NAME TI="TI_1660721500">CP_CanFuncReqFormat</LONG-NAME>
+                <DESC TI="TI_1433783595">
+                    <p>CAN Format used for a functional address transmit</p>
+                    <p>See TEXTTABLE_UINT6_CanReqFormat</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>normal segmented 11-bit transmit with FC</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="TEXTTABLE_UINT6_CanReqFormat"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="STANDARD" CPUSAGE="ECU-COMM"
+                ID="ISO_15765_2.CP_CanFuncReqId"
+                OID="45a1b81f-4d4f-4947-aae3-da2d65b71b3e" PARAM-CLASS="COM">
+                <SHORT-NAME>CP_CanFuncReqId</SHORT-NAME>
+                <LONG-NAME TI="TI_533003377">CP_CanFuncReqId</LONG-NAME>
+                <DESC TI="TI_1822570092">
+                    <p>CAN ID used for a functional address transmit</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>2015</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT29_HEX"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="STANDARD" CPUSAGE="ECU-COMM"
+                ID="ISO_15765_2.CP_CanMaxNumWaitFrames"
+                OID="1a2dfec6-9683-4877-863d-c705f1b8f67a" PARAM-CLASS="COM">
+                <SHORT-NAME>CP_CanMaxNumWaitFrames</SHORT-NAME>
+                <LONG-NAME TI="TI_496628443">CP_CanMaxNumWaitFrames</LONG-NAME>
+                <DESC TI="TI_1155821704">
+                    <p>The maximum number of WAIT flow control frames allowed during a multi-segment transfer</p>
+                    <p>For SAE J1939, this is the maximum number of allowed CTS frames.</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>255</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT11_0_1027"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="STANDARD" CPUSAGE="TESTER"
+                ID="ISO_15765_2.CP_Cr"
+                OID="deb339bf-ab6e-4493-a7e0-cf3a47c65e53" PARAM-CLASS="TIMING">
+                <SHORT-NAME>CP_Cr</SHORT-NAME>
+                <LONG-NAME TI="TI_2653042">CP_Cr</LONG-NAME>
+                <DESC TI="TI_1930685880">
+                    <p>Timeout for reception of the next ConsecutiveFrame</p>
+                    <p>For SAE J1939-21, this is equivalent to T1.</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>1000000</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT25_0_20000000_MicroSecond"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="OPTIONAL" CPUSAGE="TESTER"
+                ID="ISO_15765_2.CP_Cs"
+                OID="b33e706b-16d6-4cc9-b18d-77527f956166" PARAM-CLASS="TIMING">
+                <SHORT-NAME>CP_Cs</SHORT-NAME>
+                <LONG-NAME TI="TI_1636712200">CP_Cs</LONG-NAME>
+                <DESC TI="TI_1390894282">
+                    <p>Time until transmission of the next Consecutive Frame</p>
+                    <p>(This is used if FC is not enabled or if the STmin value in the FC=0 and STminOverride=0xFFFF.) See ISO 15765-2.</p>
+                    <p>For ISO 15765-2 and ISO 15765-4, this is a performance requirement ComParam and should not be used as a timeout value by the tester.</p>
+                    <p>For SAE J1939, this is equivalent to the time between sending packets in a multi-packet broadcast and a multi-packet destination-specific message. From text in SAE J1939-21:2006, 5.12.3.</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>10000</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT25_0_20000000_MicroSecond"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="OPTIONAL" CPUSAGE="TESTER"
+                ID="ISO_15765_2.CP_RepeatReqCountTrans"
+                OID="96e346bb-6a4e-4cb2-b9ee-54daceb6cce8" PARAM-CLASS="ERRHDL">
+                <SHORT-NAME>CP_RepeatReqCountTrans</SHORT-NAME>
+                <LONG-NAME TI="TI_1832280487">CP_RepeatReqCountTrans</LONG-NAME>
+                <DESC TI="TI_710701749">
+                    <p>This ComParam contains a counter to enable a re-transmission of the last request when either a transmit, a receive error, or transport layer timeout is detected.</p>
+                    <p>This applies to the transport layer only.</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>0</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT8"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="STANDARD" CPUSAGE="TESTER"
+                ID="ISO_15765_2.CP_RequestAddrMode"
+                OID="56167821-763f-44e9-9a60-61c757af5856" PARAM-CLASS="COM">
+                <SHORT-NAME>CP_RequestAddrMode</SHORT-NAME>
+                <LONG-NAME TI="TI_35453009">CP_RequestAddrMode</LONG-NAME>
+                <DESC TI="TI_687649612">
+                    <p>Addressing Mode to be used for the Com Primitive</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>Physical</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="TEXTTABLE_UINT2_1_2_RequestAddrMode"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="STANDARD" CPUSAGE="ECU-COMM"
+                ID="ISO_15765_2.CP_SendRemoteFrame"
+                OID="0c391da3-8e62-446f-8757-3e95767762b0" PARAM-CLASS="COM">
+                <SHORT-NAME>CP_SendRemoteFrame</SHORT-NAME>
+                <LONG-NAME TI="TI_1137610535">CP_SendRemoteFrame</LONG-NAME>
+                <DESC TI="TI_937692445">
+                    <p>This ComParam is used for CAN remote frame handling.</p>
+                    <p>(No data bytes are transmitted. Just the CAN ID. The first byte of the PDU Data shall contain the Data Length Code.)</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>No remote frame</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="TEXTTABLE_UINT1_SendRemoteFrame"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="STANDARD" CPUSAGE="TESTER"
+                ID="ISO_15765_2.CP_StMin"
+                OID="4c905ab8-5846-4671-a307-4a81dd25e81d" PARAM-CLASS="TIMING">
+                <SHORT-NAME>CP_StMin</SHORT-NAME>
+                <LONG-NAME TI="TI_1524256610">CP_StMin</LONG-NAME>
+                <DESC TI="TI_1572893959">
+                    <p>This sets the separation time the interface should report to the vehicle for receiving segmented transfers in a Transmit Flow Control Message.</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>0</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="SCALE_LINEAR_UINT8_INT32_MicroSecond_StMin"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="OPTIONAL" CPUSAGE="TESTER"
+                ID="ISO_15765_2.CP_StMinOverride"
+                OID="0bf0aff2-1898-4b6a-9664-4265875f3477" PARAM-CLASS="TIMING">
+                <SHORT-NAME>CP_StMinOverride</SHORT-NAME>
+                <LONG-NAME TI="TI_855366255">CP_StMinOverride</LONG-NAME>
+                <DESC TI="TI_636457347">
+                    <p>This sets the separation time the interface should use to transmit segmented messages to the vehicle.</p>
+                    <p>The flow control value reported by the vehicle should be ignored.</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>4294967295</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT32_MicroSecond_StMinOverride"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="OPTIONAL" CPUSAGE="TESTER"
+                ID="ISO_15765_2.CP_CANFDTxMaxDataLength"
+                OID="9920eeb9-e625-47fc-aa47-0094b2888ea9" PARAM-CLASS="COM">
+                <SHORT-NAME>CP_CANFDTxMaxDataLength</SHORT-NAME>
+                <LONG-NAME TI="TI_892688183">CP_CANFDTxMaxDataLength</LONG-NAME>
+                <DESC TI="TI_433017424">
+                    <p>Value of ISO15765-2 TX_DL parameter. Also used <br/>to identify whether Classic CAN or CANFD to be used for the <br/>transmission. <br/>TX_DL = 8 : Classic CAN mode or CANFD mode <br/>TX_DL &gt; 8 : CANFD mode <br/>The value is stored in the D‐PDU API, but only used if a proper<br/>value for the ComParam CP_CANFDBaudrate is set (can occur <br/>after setting CP_CANFDTxMaxDataLength). Otherwise, TX_DL <br/>= 8 will be used. <br/>NOTE 5    If filler bytes are needed in case of TX_DL &gt; 8, the <br/>value defined in CP_CanFillerByte shall be used, regardless of <br/>the value in CP_CanFillerByteHandling.</p>
+                    <p/>
+                    <p>Type: PDU_PT_UNUM32 <br/>Value [0;8;9;10;11;12;13;14;15]  <br/>0:   TX_DL = 8,   Classic CAN <br/>8:   TX_DL = 8,   CANFD <br/>9:   TX_DL = 12, CANFD <br/>10: TX_DL = 16, CANFD <br/>11: TX_DL = 20, CANFD <br/>12: TX_DL = 24, CANFD <br/>13: TX_DL = 32, CANFD <br/>14: TX_DL = 48, CANFD <br/>15: TX_DL = 64, CANFD</p>
+                    <p/>
+                    <p>Default: 0</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>TX_DL=8 Classic CAN</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="TEXTTABLE_MaxDataLength"/>
+            </COMPARAM>
+            <COMPARAM CPTYPE="OPTIONAL" CPUSAGE="ECU-COMM"
+                ID="ISO_15765_2.CP_EscapeSequenceHandling"
+                OID="deac2faa-37b7-4932-80cd-d402b6f9cade" PARAM-CLASS="COM">
+                <SHORT-NAME>CP_EscapeSequenceHandling</SHORT-NAME>
+                <LONG-NAME TI="TI_1791626600">CP_EscapeSequenceHandling</LONG-NAME>
+                <DESC TI="TI_383590294">
+                    <p>This ComParam is used to enable/disable the ISO15765-2 multi-frame escape sequence on classical CAN or CAN FD.</p>
+                    <p>Type: PDU_PT_UNUM32 Range [0;0xFFFFFFFF] 0: don't use escape sequence 1: use escape sequence according to ISO15765-2 2: 0xFFFFFFFF: ISO reserved.</p>
+                </DESC>
+                <PHYSICAL-DEFAULT-VALUE>0</PHYSICAL-DEFAULT-VALUE>
+                <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT4_HEX"/>
+            </COMPARAM>
+        </COMPARAMS>
+        <COMPLEX-COMPARAMS>
+            <COMPLEX-COMPARAM ALLOW-MULTIPLE-VALUES="true"
+                CPTYPE="STANDARD" CPUSAGE="ECU-COMM"
+                ID="ISO_15765_2.CP_UniqueRespIdTable"
+                OID="91f67343-239e-4173-924d-17cd8a787bae" PARAM-CLASS="UNIQUE_ID">
+                <SHORT-NAME>CP_UniqueRespIdTable</SHORT-NAME>
+                <LONG-NAME TI="TI_1699336413">CP_UniqueRespIdTable</LONG-NAME>
+                <DESC TI="TI_1219461553">
+                    <p>The purpose of this communication parameter is to provide a table that allows the D-server to map the ECU responses to functional requests to their physical source ECUs.</p>
+                </DESC>
+                <COMPARAM CPTYPE="STANDARD" CPUSAGE="ECU-COMM"
+                    ID="ISO_15765_2.CP_CanPhysReqExtAddr"
+                    OID="c6fb2d66-570b-4aec-98ec-7d10c086353b" PARAM-CLASS="UNIQUE_ID">
+                    <SHORT-NAME>CP_CanPhysReqExtAddr</SHORT-NAME>
+                    <LONG-NAME TI="TI_330643432">CP_CanPhysReqExtAddr</LONG-NAME>
+                    <DESC TI="TI_1696466000">
+                        <p>Address extension for enhanced diagnostics</p>
+                        <p>The first byte of the requested CAN frame data contains the N_AE/N_TA byte followed by the correct number of PCI bytes.</p>
+                        <p>This ComParam is used for all transmitted CAN Frames that have the “Can Address Extension” bit set in the CanIdFormat.</p>
+                    </DESC>
+                    <PHYSICAL-DEFAULT-VALUE>0</PHYSICAL-DEFAULT-VALUE>
+                    <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT8_HEX"/>
+                </COMPARAM>
+                <COMPARAM CPTYPE="STANDARD" CPUSAGE="ECU-COMM"
+                    ID="ISO_15765_2.CP_CanPhysReqFormat"
+                    OID="35583efe-d5b5-46f4-bd53-929cbf060bd9" PARAM-CLASS="UNIQUE_ID">
+                    <SHORT-NAME>CP_CanPhysReqFormat</SHORT-NAME>
+                    <LONG-NAME TI="TI_1691814364">CP_CanPhysReqFormat</LONG-NAME>
+                    <DESC TI="TI_1071918641">
+                        <p>CAN Format used for a physical address transmit</p>
+                        <p>See TEXTTABLE_UINT6_CanReqFormat</p>
+                    </DESC>
+                    <PHYSICAL-DEFAULT-VALUE>normal segmented 29-bit transmit with FC and padding enabled</PHYSICAL-DEFAULT-VALUE>
+                    <DATA-OBJECT-PROP-REF ID-REF="TEXTTABLE_UINT6_CanReqFormat"/>
+                </COMPARAM>
+                <COMPARAM CPTYPE="STANDARD" CPUSAGE="ECU-COMM"
+                    ID="ISO_15765_2.CP_CanPhysReqId"
+                    OID="ebfc08b4-ac8e-404c-8936-0fd667525198" PARAM-CLASS="UNIQUE_ID">
+                    <SHORT-NAME>CP_CanPhysReqId</SHORT-NAME>
+                    <LONG-NAME TI="TI_88897776">CP_CanPhysReqId</LONG-NAME>
+                    <DESC TI="TI_280738822">
+                        <p>CAN ID used for a physical address transmit</p>
+                    </DESC>
+                    <PHYSICAL-DEFAULT-VALUE>215676153</PHYSICAL-DEFAULT-VALUE>
+                    <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT29_HEX"/>
+                </COMPARAM>
+                <COMPARAM CPTYPE="STANDARD" CPUSAGE="ECU-COMM"
+                    ID="ISO_15765_2.CP_CanRespUSDTExtAddr"
+                    OID="7cf531a5-70db-45d0-8cb4-1f59c94859c6" PARAM-CLASS="UNIQUE_ID">
+                    <SHORT-NAME>CP_CanRespUSDTExtAddr</SHORT-NAME>
+                    <LONG-NAME TI="TI_1374594989">CP_CanRespUSDTExtAddr</LONG-NAME>
+                    <DESC TI="TI_1402566144">
+                        <p>Extended Address used for a USDT response from an ECU if the CAN Format indicates address extension</p>
+                    </DESC>
+                    <PHYSICAL-DEFAULT-VALUE>0</PHYSICAL-DEFAULT-VALUE>
+                    <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT8_HEX"/>
+                </COMPARAM>
+                <COMPARAM CPTYPE="STANDARD" CPUSAGE="ECU-COMM"
+                    ID="ISO_15765_2.CP_CanRespUSDTFormat"
+                    OID="ec9b07d9-0681-4467-9aea-fdbfddba4d96" PARAM-CLASS="UNIQUE_ID">
+                    <SHORT-NAME>CP_CanRespUSDTFormat</SHORT-NAME>
+                    <LONG-NAME TI="TI_1351287765">CP_CanRespUSDTFormat</LONG-NAME>
+                    <DESC TI="TI_860962528">
+                        <p>CAN Format for the USDT CAN ID received from an ECU (Segment type Bit must = 1)</p>
+                        <p>See TEXTTABLE_UINT4_4_15_CanRespUSDTFormat</p>
+                    </DESC>
+                    <PHYSICAL-DEFAULT-VALUE>normal segmented 29-bit receive with FC</PHYSICAL-DEFAULT-VALUE>
+                    <DATA-OBJECT-PROP-REF ID-REF="TEXTTABLE_UINT4_4_15_CanRespUSDTFormat"/>
+                </COMPARAM>
+                <COMPARAM CPTYPE="STANDARD" CPUSAGE="ECU-COMM"
+                    ID="ISO_15765_2.CP_CanRespUSDTId"
+                    OID="303b2145-1506-487b-b87e-d27f55c46e87" PARAM-CLASS="UNIQUE_ID">
+                    <SHORT-NAME>CP_CanRespUSDTId</SHORT-NAME>
+                    <LONG-NAME TI="TI_1073630782">CP_CanRespUSDTId</LONG-NAME>
+                    <DESC TI="TI_1444673133">
+                        <p>Received USDT CAN ID from an ECU</p>
+                        <p>NOTE: 0xFFFFFFFF indicates that the ComParam is not used. This ComParam is used in the Unique Response Identifier Table for CAN protocols.</p>
+                    </DESC>
+                    <PHYSICAL-DEFAULT-VALUE>215677428</PHYSICAL-DEFAULT-VALUE>
+                    <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT32_HEX_CanRespId"/>
+                </COMPARAM>
+                <COMPARAM CPTYPE="STANDARD" CPUSAGE="ECU-COMM"
+                    ID="ISO_15765_2.CP_CanRespUUDTExtAddr"
+                    OID="2b660dd9-13f3-4554-b5ff-25a6eb4f9438" PARAM-CLASS="UNIQUE_ID">
+                    <SHORT-NAME>CP_CanRespUUDTExtAddr</SHORT-NAME>
+                    <LONG-NAME TI="TI_1854433655">CP_CanRespUUDTExtAddr</LONG-NAME>
+                    <DESC TI="TI_1357463604">
+                        <p>Extended Address used for UUDT response if the CAN Format indicates address extension</p>
+                    </DESC>
+                    <PHYSICAL-DEFAULT-VALUE>0</PHYSICAL-DEFAULT-VALUE>
+                    <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT8_HEX"/>
+                </COMPARAM>
+                <COMPARAM CPTYPE="STANDARD" CPUSAGE="ECU-COMM"
+                    ID="ISO_15765_2.CP_CanRespUUDTFormat"
+                    OID="aa5b9a20-d784-44ae-b022-55a246e72555" PARAM-CLASS="UNIQUE_ID">
+                    <SHORT-NAME>CP_CanRespUUDTFormat</SHORT-NAME>
+                    <LONG-NAME TI="TI_1887891839">CP_CanRespUUDTFormat</LONG-NAME>
+                    <DESC TI="TI_1461898781">
+                        <p>Received CAN Format for CAN ID without segmentation (Segment Type Bit must = 0)</p>
+                        <p>See TEXTTABLE_UINT4_0_10_CanRespUUDTFormat</p>
+                    </DESC>
+                    <PHYSICAL-DEFAULT-VALUE>normal unsegmented 11-bit receive</PHYSICAL-DEFAULT-VALUE>
+                    <DATA-OBJECT-PROP-REF ID-REF="TEXTTABLE_UINT4_0_10_CanRespUUDTFormat"/>
+                </COMPARAM>
+                <COMPARAM CPTYPE="STANDARD" CPUSAGE="ECU-COMM"
+                    ID="ISO_15765_2.CP_CanRespUUDTId"
+                    OID="e3394ada-8c15-47a2-94c1-76df0fb9bd25" PARAM-CLASS="UNIQUE_ID">
+                    <SHORT-NAME>CP_CanRespUUDTId</SHORT-NAME>
+                    <LONG-NAME TI="TI_1502675503">CP_CanRespUUDTId</LONG-NAME>
+                    <DESC TI="TI_383682987">
+                        <p>Received UUDT CAN ID from an ECU</p>
+                        <p>NOTE: 0xFFFFFFFF indicates that the ComParam is not used. This ComParam is used in the Unique Response Identifier Table for CAN protocols.</p>
+                    </DESC>
+                    <PHYSICAL-DEFAULT-VALUE>4294967295</PHYSICAL-DEFAULT-VALUE>
+                    <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_UINT32_HEX_CanRespId"/>
+                </COMPARAM>
+                <COMPARAM CPTYPE="STANDARD" CPUSAGE="APPLICATION"
+                    ID="ISO_15765_2.CP_ECULayerShortName"
+                    OID="2ccd05c9-e064-4179-a531-846431c6d586" PARAM-CLASS="UNIQUE_ID">
+                    <SHORT-NAME>CP_ECULayerShortName</SHORT-NAME>
+                    <LONG-NAME TI="TI_1835943974">CP_ECULayerShortName</LONG-NAME>
+                    <DESC TI="TI_1572884775">
+                        <p>This communication parameter is needed by the D-server to set up the correct Access Keys for every received response.</p>
+                    </DESC>
+                    <PHYSICAL-DEFAULT-VALUE>None</PHYSICAL-DEFAULT-VALUE>
+                    <DATA-OBJECT-PROP-REF ID-REF="IDENTICAL_ASCII_1_128_END_OF_PDU"/>
+                </COMPARAM>
+            </COMPLEX-COMPARAM>
+        </COMPLEX-COMPARAMS>
+        <DATA-OBJECT-PROPS>
+            <DATA-OBJECT-PROP ID="IDENTICAL_ASCII_1_128_END_OF_PDU" OID="05d185d8-1441-402d-9804-e12416150440">
+                <SHORT-NAME>IDENTICAL_ASCII_1_128_END_OF_PDU</SHORT-NAME>
+                <LONG-NAME TI="TI_1960204018">IDENTICAL_ASCII_1_128_END_OF_PDU</LONG-NAME>
+                <COMPU-METHOD>
+                    <CATEGORY>IDENTICAL</CATEGORY>
+                </COMPU-METHOD>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_ASCIISTRING"
+                    TERMINATION="END-OF-PDU" xsi:type="MIN-MAX-LENGTH-TYPE">
+                    <MAX-LENGTH>128</MAX-LENGTH>
+                    <MIN-LENGTH>1</MIN-LENGTH>
+                </DIAG-CODED-TYPE>
+                <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING"/>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="IDENTICAL_UINT11_0_1027" OID="41d6f5c5-7d10-4ce4-8676-9d91bb12aca2">
+                <SHORT-NAME>IDENTICAL_UINT11_0_1027</SHORT-NAME>
+                <LONG-NAME TI="TI_1486683915">IDENTICAL_UINT11_0_1027</LONG-NAME>
+                <COMPU-METHOD>
+                    <CATEGORY>IDENTICAL</CATEGORY>
+                </COMPU-METHOD>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                    <BIT-LENGTH>32</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+                <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32"/>
+                <INTERNAL-CONSTR>
+                    <LOWER-LIMIT>0</LOWER-LIMIT>
+                    <UPPER-LIMIT>1027</UPPER-LIMIT>
+                </INTERNAL-CONSTR>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="IDENTICAL_UINT16_BlockSizeOverride" OID="0c29b75d-43ae-4580-9c71-449699d4180d">
+                <SHORT-NAME>IDENTICAL_UINT16_BlockSizeOverride</SHORT-NAME>
+                <LONG-NAME TI="TI_1310496641">IDENTICAL_UINT16_BlockSizeOverride</LONG-NAME>
+                <DESC TI="TI_818364569">
+                    <p>65535 = Use the value reported by the vehicle</p>
+                </DESC>
+                <COMPU-METHOD>
+                    <CATEGORY>IDENTICAL</CATEGORY>
+                </COMPU-METHOD>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                    <BIT-LENGTH>32</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+                <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32"/>
+                <INTERNAL-CONSTR>
+                    <LOWER-LIMIT>0</LOWER-LIMIT>
+                    <UPPER-LIMIT>65535</UPPER-LIMIT>
+                </INTERNAL-CONSTR>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP
+                ID="IDENTICAL_UINT25_0_20000000_MicroSecond" OID="b12abea3-fc51-4c94-a46c-6b73b3f2d977">
+                <SHORT-NAME>IDENTICAL_UINT25_0_20000000_MicroSecond</SHORT-NAME>
+                <LONG-NAME TI="TI_1970799765">IDENTICAL_UINT25_0_20000000_MicroSecond</LONG-NAME>
+                <COMPU-METHOD>
+                    <CATEGORY>IDENTICAL</CATEGORY>
+                </COMPU-METHOD>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                    <BIT-LENGTH>32</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+                <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32"/>
+                <INTERNAL-CONSTR>
+                    <LOWER-LIMIT>0</LOWER-LIMIT>
+                    <UPPER-LIMIT>20000000</UPPER-LIMIT>
+                </INTERNAL-CONSTR>
+                <UNIT-REF ID-REF="MicroSecond"/>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="IDENTICAL_UINT29_HEX" OID="d4b688a4-aa88-454a-a26f-56dd0b890775">
+                <SHORT-NAME>IDENTICAL_UINT29_HEX</SHORT-NAME>
+                <LONG-NAME TI="TI_520715897">IDENTICAL_UINT29_HEX</LONG-NAME>
+                <COMPU-METHOD>
+                    <CATEGORY>IDENTICAL</CATEGORY>
+                </COMPU-METHOD>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                    <BIT-LENGTH>32</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+                <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32" DISPLAY-RADIX="HEX"/>
+                <INTERNAL-CONSTR>
+                    <LOWER-LIMIT>0</LOWER-LIMIT>
+                    <UPPER-LIMIT>536870911</UPPER-LIMIT>
+                </INTERNAL-CONSTR>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="IDENTICAL_UINT32_HEX_CanRespId" OID="ed16ed35-3079-40c2-8778-887354e2aad0">
+                <SHORT-NAME>IDENTICAL_UINT32_HEX_CanRespId</SHORT-NAME>
+                <LONG-NAME TI="TI_1504654630">IDENTICAL_UINT32_HEX_CanRespId</LONG-NAME>
+                <DESC TI="TI_91265508">
+                    <p>0xFFFFFFFF = indicates that the ComParam is not used.</p>
+                    <p>This ComParam is used in the Unique Response Identifier Table for CAN protocols</p>
+                </DESC>
+                <COMPU-METHOD>
+                    <CATEGORY>IDENTICAL</CATEGORY>
+                </COMPU-METHOD>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                    <BIT-LENGTH>32</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+                <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32" DISPLAY-RADIX="HEX"/>
+                <INTERNAL-CONSTR>
+                    <SCALE-CONSTRS>
+                        <SCALE-CONSTR VALIDITY="NOT-DEFINED">
+                            <LOWER-LIMIT>536870912</LOWER-LIMIT>
+                            <UPPER-LIMIT>4294967294</UPPER-LIMIT>
+                        </SCALE-CONSTR>
+                    </SCALE-CONSTRS>
+                </INTERNAL-CONSTR>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="IDENTICAL_UINT4_0_8" OID="abb02038-fe4d-4084-af96-0613afaa2b34">
+                <SHORT-NAME>IDENTICAL_UINT4_0_8</SHORT-NAME>
+                <LONG-NAME TI="TI_1206188130">IDENTICAL_UINT4_0_8</LONG-NAME>
+                <COMPU-METHOD>
+                    <CATEGORY>IDENTICAL</CATEGORY>
+                </COMPU-METHOD>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                    <BIT-LENGTH>32</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+                <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32"/>
+                <INTERNAL-CONSTR>
+                    <LOWER-LIMIT>0</LOWER-LIMIT>
+                    <UPPER-LIMIT>8</UPPER-LIMIT>
+                </INTERNAL-CONSTR>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="IDENTICAL_UINT4_HEX" OID="404ded14-75a6-46d7-a246-682d7de8f08d">
+                <SHORT-NAME>IDENTICAL_UINT4_HEX</SHORT-NAME>
+                <LONG-NAME TI="TI_1244328320">IDENTICAL_UINT4_HEX</LONG-NAME>
+                <COMPU-METHOD>
+                    <CATEGORY>IDENTICAL</CATEGORY>
+                </COMPU-METHOD>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                    <BIT-LENGTH>32</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+                <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32" DISPLAY-RADIX="HEX"/>
+                <INTERNAL-CONSTR>
+                    <LOWER-LIMIT>0</LOWER-LIMIT>
+                    <UPPER-LIMIT>15</UPPER-LIMIT>
+                </INTERNAL-CONSTR>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="IDENTICAL_UINT8" OID="74f01487-9e28-433e-bede-7a444a587b2d">
+                <SHORT-NAME>IDENTICAL_UINT8</SHORT-NAME>
+                <LONG-NAME TI="TI_421758426">IDENTICAL_UINT8</LONG-NAME>
+                <COMPU-METHOD>
+                    <CATEGORY>IDENTICAL</CATEGORY>
+                </COMPU-METHOD>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                    <BIT-LENGTH>32</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+                <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32"/>
+                <INTERNAL-CONSTR>
+                    <LOWER-LIMIT>0</LOWER-LIMIT>
+                    <UPPER-LIMIT>255</UPPER-LIMIT>
+                </INTERNAL-CONSTR>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="IDENTICAL_UINT8_HEX" OID="0371c624-0071-40b6-acff-1062da4b44e7">
+                <SHORT-NAME>IDENTICAL_UINT8_HEX</SHORT-NAME>
+                <LONG-NAME TI="TI_1846540639">IDENTICAL_UINT8_HEX</LONG-NAME>
+                <COMPU-METHOD>
+                    <CATEGORY>IDENTICAL</CATEGORY>
+                </COMPU-METHOD>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                    <BIT-LENGTH>32</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+                <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32" DISPLAY-RADIX="HEX"/>
+                <INTERNAL-CONSTR>
+                    <LOWER-LIMIT>0</LOWER-LIMIT>
+                    <UPPER-LIMIT>255</UPPER-LIMIT>
+                </INTERNAL-CONSTR>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP
+                ID="IDENTICAL_UINT32_MicroSecond_StMinOverride" OID="d93f9ae4-9fcc-4ce6-b510-5ff1b61f672f">
+                <SHORT-NAME>IDENTICAL_UINT32_MicroSecond_StMinOverride</SHORT-NAME>
+                <LONG-NAME TI="TI_553729374">IDENTICAL_UINT32_MicroSecond_StMinOverride</LONG-NAME>
+                <DESC TI="TI_1868161038">
+                    <p>0xFFFFFFFF = Use the value reported by the vehicle</p>
+                </DESC>
+                <COMPU-METHOD>
+                    <CATEGORY>IDENTICAL</CATEGORY>
+                </COMPU-METHOD>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                    <BIT-LENGTH>32</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+                <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32"/>
+                <INTERNAL-CONSTR>
+                    <SCALE-CONSTRS>
+                        <SCALE-CONSTR VALIDITY="NOT-DEFINED">
+                            <LOWER-LIMIT>127001</LOWER-LIMIT>
+                            <UPPER-LIMIT>4294967294</UPPER-LIMIT>
+                        </SCALE-CONSTR>
+                    </SCALE-CONSTRS>
+                </INTERNAL-CONSTR>
+                <UNIT-REF ID-REF="MicroSecond"/>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP
+                ID="SCALE_LINEAR_UINT8_INT32_MicroSecond_StMin" OID="b9c5c0ae-ec85-491e-b771-ab1ab43527f8">
+                <SHORT-NAME>SCALE_LINEAR_UINT8_INT32_MicroSecond_StMin</SHORT-NAME>
+                <LONG-NAME TI="TI_15998730">SCALE_LINEAR_UINT8_INT32_MicroSecond_StMin</LONG-NAME>
+                <DESC TI="TI_1933057311">
+                    <p>0x00-0x7F: 0 µs-127.000 µs Resolution = 1 ms</p>
+                    <p>0xF1-0xF9: 100µs - 900µs Resolution = 100 µs</p>
+                    <p>use 3 COMPU-SCALEs for invertible linear computation between physical and internal value without overlapping ranges of physical value and domain A_INT32 with unit [µs]</p>
+                </DESC>
+                <COMPU-METHOD>
+                    <CATEGORY>SCALE-LINEAR</CATEGORY>
+                    <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                            <COMPU-SCALE>
+                                <DESC TI="TI_238834892">
+                                    <p>physical value 0 µs, internal value 0x00</p>
+                                </DESC>
+                                <LOWER-LIMIT>0</LOWER-LIMIT>
+                                <COMPU-RATIONAL-COEFFS>
+                                    <COMPU-NUMERATOR>
+                                    <V>0</V>
+                                    <V>1000</V>
+                                    </COMPU-NUMERATOR>
+                                    <COMPU-DENOMINATOR>
+                                    <V>1</V>
+                                    </COMPU-DENOMINATOR>
+                                </COMPU-RATIONAL-COEFFS>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <DESC TI="TI_16858161">
+                                    <p>physical value range 1000 ... 127000 µs, internal value range 0x01 ... 0x7F</p>
+                                </DESC>
+                                <LOWER-LIMIT>1</LOWER-LIMIT>
+                                <UPPER-LIMIT>127</UPPER-LIMIT>
+                                <COMPU-RATIONAL-COEFFS>
+                                    <COMPU-NUMERATOR>
+                                    <V>0</V>
+                                    <V>1000</V>
+                                    </COMPU-NUMERATOR>
+                                    <COMPU-DENOMINATOR>
+                                    <V>1</V>
+                                    </COMPU-DENOMINATOR>
+                                </COMPU-RATIONAL-COEFFS>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <DESC TI="TI_7675363">
+                                    <p>physical value 100..900 µs, internal value 0xF1..0xF9</p>
+                                </DESC>
+                                <LOWER-LIMIT>241</LOWER-LIMIT>
+                                <UPPER-LIMIT>249</UPPER-LIMIT>
+                                <COMPU-RATIONAL-COEFFS>
+                                    <COMPU-NUMERATOR>
+                                    <V>-24000</V>
+                                    <V>100</V>
+                                    </COMPU-NUMERATOR>
+                                    <COMPU-DENOMINATOR>
+                                    <V>1</V>
+                                    </COMPU-DENOMINATOR>
+                                </COMPU-RATIONAL-COEFFS>
+                            </COMPU-SCALE>
+                        </COMPU-SCALES>
+                    </COMPU-INTERNAL-TO-PHYS>
+                </COMPU-METHOD>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                    <BIT-LENGTH>32</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+                <PHYSICAL-TYPE BASE-DATA-TYPE="A_INT32"/>
+                <INTERNAL-CONSTR>
+                    <LOWER-LIMIT>0</LOWER-LIMIT>
+                    <UPPER-LIMIT>249</UPPER-LIMIT>
+                    <SCALE-CONSTRS>
+                        <SCALE-CONSTR VALIDITY="NOT-VALID">
+                            <LOWER-LIMIT>128</LOWER-LIMIT>
+                            <UPPER-LIMIT>240</UPPER-LIMIT>
+                        </SCALE-CONSTR>
+                    </SCALE-CONSTRS>
+                </INTERNAL-CONSTR>
+                <UNIT-REF ID-REF="MicroSecond"/>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="TEXTTABLE_UINT1_Disabled_Enabled" OID="6404f4ea-5064-4413-991b-7a4f90649b9e">
+                <SHORT-NAME>TEXTTABLE_UINT1_Disabled_Enabled</SHORT-NAME>
+                <LONG-NAME TI="TI_842726693">TEXTTABLE_UINT1_Disabled_Enabled</LONG-NAME>
+                <COMPU-METHOD>
+                    <CATEGORY>TEXTTABLE</CATEGORY>
+                    <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                            <COMPU-SCALE>
+                                <LOWER-LIMIT>0</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_693788921">Disabled</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <LOWER-LIMIT>1</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1673717936">Enabled</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                        </COMPU-SCALES>
+                    </COMPU-INTERNAL-TO-PHYS>
+                </COMPU-METHOD>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                    <BIT-LENGTH>32</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+                <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING"/>
+                <INTERNAL-CONSTR>
+                    <LOWER-LIMIT>0</LOWER-LIMIT>
+                    <UPPER-LIMIT>1</UPPER-LIMIT>
+                </INTERNAL-CONSTR>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="TEXTTABLE_UINT1_SendRemoteFrame" OID="3fa2990f-f4c3-4fd8-94d6-e640fd06866c">
+                <SHORT-NAME>TEXTTABLE_UINT1_SendRemoteFrame</SHORT-NAME>
+                <LONG-NAME TI="TI_797189405">TEXTTABLE_UINT1_SendRemoteFrame</LONG-NAME>
+                <COMPU-METHOD>
+                    <CATEGORY>TEXTTABLE</CATEGORY>
+                    <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                            <COMPU-SCALE>
+                                <DESC TI="TI_508926338">
+                                    <p>No Remote Frame Transmit</p>
+                                </DESC>
+                                <LOWER-LIMIT>0</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_149515284">No remote frame</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <DESC TI="TI_215118263">
+                                    <p>Transmit a Remote Frame using the DLC in the PDU Data</p>
+                                </DESC>
+                                <LOWER-LIMIT>1</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1162422845">Transmit remote frame</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                        </COMPU-SCALES>
+                    </COMPU-INTERNAL-TO-PHYS>
+                </COMPU-METHOD>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                    <BIT-LENGTH>32</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+                <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING"/>
+                <INTERNAL-CONSTR>
+                    <LOWER-LIMIT>0</LOWER-LIMIT>
+                    <UPPER-LIMIT>1</UPPER-LIMIT>
+                </INTERNAL-CONSTR>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="TEXTTABLE_UINT2_1_2_RequestAddrMode" OID="20f228cc-3f8a-4a20-8c0f-bc0a5d6fbd5a">
+                <SHORT-NAME>TEXTTABLE_UINT2_1_2_RequestAddrMode</SHORT-NAME>
+                <LONG-NAME TI="TI_1017319646">TEXTTABLE_UINT2_1_2_RequestAddrMode</LONG-NAME>
+                <COMPU-METHOD>
+                    <CATEGORY>TEXTTABLE</CATEGORY>
+                    <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                            <COMPU-SCALE>
+                                <DESC TI="TI_123448915">
+                                    <p>Use Physical Addressing for the request</p>
+                                </DESC>
+                                <LOWER-LIMIT>1</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_341779356">Physical</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <DESC TI="TI_1449454912">
+                                    <p>Use Functional Addressing for the request</p>
+                                </DESC>
+                                <LOWER-LIMIT>2</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1307880457">Functional</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                        </COMPU-SCALES>
+                    </COMPU-INTERNAL-TO-PHYS>
+                </COMPU-METHOD>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                    <BIT-LENGTH>32</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+                <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING"/>
+                <INTERNAL-CONSTR>
+                    <LOWER-LIMIT>1</LOWER-LIMIT>
+                    <UPPER-LIMIT>2</UPPER-LIMIT>
+                </INTERNAL-CONSTR>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP
+                ID="TEXTTABLE_UINT4_0_10_CanRespUUDTFormat" OID="a3e178d0-596b-4473-bf50-7418bae9652b">
+                <SHORT-NAME>TEXTTABLE_UINT4_0_10_CanRespUUDTFormat</SHORT-NAME>
+                <LONG-NAME TI="TI_680522902">TEXTTABLE_UINT4_0_10_CanRespUUDTFormat</LONG-NAME>
+                <COMPU-METHOD>
+                    <CATEGORY>TEXTTABLE</CATEGORY>
+                    <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_1542109417">0x0</SHORT-LABEL>
+                                <DESC TI="TI_1812993456">
+                                    <p>- Normal addressing for Target (ECU)</p>
+                                    <p>- UUDT Message Transmit (No PCI Bytes)</p>
+                                    <p>- 11-bit CAN ID Size</p>
+                                    <p>- UUDT Message Receive (No Flow Control)</p>
+                                </DESC>
+                                <LOWER-LIMIT>0</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1914058375">normal unsegmented 11-bit receive</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_1036537644">0x2</SHORT-LABEL>
+                                <DESC TI="TI_359502804">
+                                    <p>- Normal addressing for Target (ECU)</p>
+                                    <p>- UUDT Message Transmit (No PCI Bytes)</p>
+                                    <p>- 29-bit CAN ID Size</p>
+                                    <p>- UUDT Message Receive (No Flow Control)</p>
+                                </DESC>
+                                <LOWER-LIMIT>2</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1802714873">normal unsegmented 29-bit receive</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_1584934092">0x8</SHORT-LABEL>
+                                <DESC TI="TI_1212951181">
+                                    <p>- Extended addressing for Target (ECU)</p>
+                                    <p>- UUDT Message Transmit (No PCI Bytes)</p>
+                                    <p>- 11-bit CAN ID Size</p>
+                                    <p>- UUDT Message Receive (No Flow Control)</p>
+                                </DESC>
+                                <LOWER-LIMIT>8</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_823030375">extended unsegmented 11-bit receive</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_1375736133">0xA</SHORT-LABEL>
+                                <DESC TI="TI_187505223">
+                                    <p>- Extended addressing for Target (ECU)</p>
+                                    <p>- UUDT Message Transmit (No PCI Bytes)</p>
+                                    <p>- 29-bit CAN ID Size</p>
+                                    <p>- UUDT Message Receive (No Flow Control)</p>
+                                </DESC>
+                                <LOWER-LIMIT>10</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_224830746">extended unsegmented 29-bit receive</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                        </COMPU-SCALES>
+                    </COMPU-INTERNAL-TO-PHYS>
+                </COMPU-METHOD>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                    <BIT-LENGTH>32</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+                <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING"/>
+                <INTERNAL-CONSTR>
+                    <LOWER-LIMIT>0</LOWER-LIMIT>
+                    <UPPER-LIMIT>10</UPPER-LIMIT>
+                    <SCALE-CONSTRS>
+                        <SCALE-CONSTR VALIDITY="NOT-DEFINED">
+                            <LOWER-LIMIT>1</LOWER-LIMIT>
+                            <UPPER-LIMIT>1</UPPER-LIMIT>
+                        </SCALE-CONSTR>
+                        <SCALE-CONSTR VALIDITY="NOT-DEFINED">
+                            <LOWER-LIMIT>3</LOWER-LIMIT>
+                            <UPPER-LIMIT>7</UPPER-LIMIT>
+                        </SCALE-CONSTR>
+                        <SCALE-CONSTR VALIDITY="NOT-DEFINED">
+                            <LOWER-LIMIT>9</LOWER-LIMIT>
+                            <UPPER-LIMIT>9</UPPER-LIMIT>
+                        </SCALE-CONSTR>
+                    </SCALE-CONSTRS>
+                </INTERNAL-CONSTR>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP
+                ID="TEXTTABLE_UINT4_4_15_CanRespUSDTFormat" OID="73788a82-cf13-4283-9eff-d66c1d994627">
+                <SHORT-NAME>TEXTTABLE_UINT4_4_15_CanRespUSDTFormat</SHORT-NAME>
+                <LONG-NAME TI="TI_1055922571">TEXTTABLE_UINT4_4_15_CanRespUSDTFormat</LONG-NAME>
+                <COMPU-METHOD>
+                    <CATEGORY>TEXTTABLE</CATEGORY>
+                    <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_314009684">0x4</SHORT-LABEL>
+                                <DESC TI="TI_162659849">
+                                    <p>- Normal addressing for Target (ECU)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 11-bit CAN ID Size</p>
+                                    <p>- No Flow Control is sent when a First Frame is received</p>
+                                </DESC>
+                                <LOWER-LIMIT>4</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_2096604172">normal segmented 11-bit receive w/o FC</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_222823330">0x5</SHORT-LABEL>
+                                <DESC TI="TI_1323447799">
+                                    <p>- Normal addressing for Target (ECU)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 11-bit CAN ID Size</p>
+                                    <p>- Flow Control is sent when a First Frame is received</p>
+                                </DESC>
+                                <LOWER-LIMIT>5</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_792510965">normal segmented 11-bit receive with FC</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_381956134">0x6</SHORT-LABEL>
+                                <DESC TI="TI_1798720219">
+                                    <p>- Normal addressing for Target (ECU)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 29-bit CAN ID Size</p>
+                                    <p>- No Flow Control is sent when a First Frame is received</p>
+                                </DESC>
+                                <LOWER-LIMIT>6</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1102489799">normal segmented 29-bit receive w/o FC</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_2055893257">0x7</SHORT-LABEL>
+                                <DESC TI="TI_1735385296">
+                                    <p>- Normal addressing for Target (ECU)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 29-bit CAN ID Size</p>
+                                    <p>- Flow Control is sent when a First Frame is received</p>
+                                </DESC>
+                                <LOWER-LIMIT>7</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1336913178">normal segmented 29-bit receive with FC</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_1283637231">0xC</SHORT-LABEL>
+                                <DESC TI="TI_1123456725">
+                                    <p>- Extended addressing for Target (ECU)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 11-bit CAN ID Size</p>
+                                    <p>- No Flow Control is sent when a First Frame is received</p>
+                                </DESC>
+                                <LOWER-LIMIT>12</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1016542874">extended segmented 11-bit receive w/o FC</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_1686231938">0xD</SHORT-LABEL>
+                                <DESC TI="TI_731564107">
+                                    <p>- Extended addressing for Target (ECU)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 11-bit CAN ID Size</p>
+                                    <p>- Flow Control is sent when a First Frame is received</p>
+                                </DESC>
+                                <LOWER-LIMIT>13</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_2027322093">extended segmented 11-bit receive with FC</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_1667469664">0xE</SHORT-LABEL>
+                                <DESC TI="TI_380360621">
+                                    <p>- Extended addressing for Target (ECU)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 29-bit CAN ID Size</p>
+                                    <p>- No Flow Control is sent when a First Frame is received</p>
+                                </DESC>
+                                <LOWER-LIMIT>14</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1611394512">extended segmented 29-bit receive w/o FC</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_1206250016">0xF</SHORT-LABEL>
+                                <DESC TI="TI_1976858984">
+                                    <p>- Extended addressing for Target (ECU)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 29-bit CAN ID Size</p>
+                                    <p>- Flow Control is sent when a First Frame is received</p>
+                                </DESC>
+                                <LOWER-LIMIT>15</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_2082516488">extended segmented 29-bit receive with FC</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                        </COMPU-SCALES>
+                    </COMPU-INTERNAL-TO-PHYS>
+                </COMPU-METHOD>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                    <BIT-LENGTH>32</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+                <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING"/>
+                <INTERNAL-CONSTR>
+                    <LOWER-LIMIT>4</LOWER-LIMIT>
+                    <UPPER-LIMIT>15</UPPER-LIMIT>
+                    <SCALE-CONSTRS>
+                        <SCALE-CONSTR VALIDITY="NOT-DEFINED">
+                            <LOWER-LIMIT>8</LOWER-LIMIT>
+                            <UPPER-LIMIT>11</UPPER-LIMIT>
+                        </SCALE-CONSTR>
+                    </SCALE-CONSTRS>
+                </INTERNAL-CONSTR>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="TEXTTABLE_UINT6_CanReqFormat" OID="571c263d-09c8-4a7b-abd3-f718444f622d">
+                <SHORT-NAME>TEXTTABLE_UINT6_CanReqFormat</SHORT-NAME>
+                <LONG-NAME TI="TI_341688153">TEXTTABLE_UINT6_CanReqFormat</LONG-NAME>
+                <COMPU-METHOD>
+                    <CATEGORY>TEXTTABLE</CATEGORY>
+                    <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_648762866">0x00</SHORT-LABEL>
+                                <DESC TI="TI_261349411">
+                                    <p>- Use CP_CanFillerByteHandling for padding control</p>
+                                    <p>- Normal addressing for Source (Tester)</p>
+                                    <p>- UUDT Message Transmit (No PCI Bytes)</p>
+                                    <p>- 11-bit CAN ID Size</p>
+                                    <p>- No Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>0</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_833153955">normal unsegmented 11-bit transmit</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_837442619">0x02</SHORT-LABEL>
+                                <DESC TI="TI_519995517">
+                                    <p>- Use CP_CanFillerByteHandling for padding control</p>
+                                    <p>- Normal addressing for Source (Tester)</p>
+                                    <p>- UUDT Message Transmit (No PCI Bytes)</p>
+                                    <p>- 29-bit CAN ID Size</p>
+                                    <p>- No Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>2</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1975128141">normal unsegmented 29-bit transmit</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_90549836">0x04</SHORT-LABEL>
+                                <DESC TI="TI_1093088670">
+                                    <p>- Use CP_CanFillerByteHandling for padding control</p>
+                                    <p>- Normal addressing for Source (Tester)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 11-bit CAN ID Size</p>
+                                    <p>- No Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>4</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_872699344">normal segmented 11-bit transmit w/o FC</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_1812560581">0x05</SHORT-LABEL>
+                                <DESC TI="TI_496805450">
+                                    <p>- Use CP_CanFillerByteHandling for padding control</p>
+                                    <p>- Normal addressing for Source (Tester)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 11-bit CAN ID Size</p>
+                                    <p>- Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>5</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_550678545">normal segmented 11-bit transmit with FC</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_755767395">0x06</SHORT-LABEL>
+                                <DESC TI="TI_2098948312">
+                                    <p>- Use CP_CanFillerByteHandling for padding control</p>
+                                    <p>- Normal addressing for Source (Tester)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 29-bit CAN ID Size</p>
+                                    <p>- No Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>6</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1768720544">normal segmented 29-bit transmit w/o FC</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_1263693143">0x07</SHORT-LABEL>
+                                <DESC TI="TI_298201438">
+                                    <p>- Use CP_CanFillerByteHandling for padding control</p>
+                                    <p>- Normal addressing for Source (Tester)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 29-bit CAN ID Size</p>
+                                    <p>- Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>7</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_2090594577">normal segmented 29-bit transmit with FC</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_2054032713">0x08</SHORT-LABEL>
+                                <DESC TI="TI_745025200">
+                                    <p>- Use CP_CanFillerByteHandling for padding control</p>
+                                    <p>- Extended addressing for Source (Tester)</p>
+                                    <p>- UUDT Message Transmit (No PCI Bytes)</p>
+                                    <p>- 11-bit CAN ID Size</p>
+                                    <p>- No Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>8</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_304392836">extended unsegmented 11-bit transmit</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_322508142">0x0A</SHORT-LABEL>
+                                <DESC TI="TI_2114486359">
+                                    <p>- Use CP_CanFillerByteHandling for padding control</p>
+                                    <p>- Extended addressing for Source (Tester)</p>
+                                    <p>- UUDT Message Transmit (No PCI Bytes)</p>
+                                    <p>- 29-bit CAN ID Size</p>
+                                    <p>- No Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>10</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_494495521">extended unsegmented 29-bit transmit</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_721383510">0x0C</SHORT-LABEL>
+                                <DESC TI="TI_1780941351">
+                                    <p>- Use CP_CanFillerByteHandling for padding control</p>
+                                    <p>- Extended addressing for Source (Tester)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 11-bit CAN ID Size</p>
+                                    <p>- No Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>12</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_453940717">extended segmented 11-bit transmit w/o FC</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_1613502129">0x0D</SHORT-LABEL>
+                                <DESC TI="TI_406044095">
+                                    <p>- Use CP_CanFillerByteHandling for padding control</p>
+                                    <p>- Extended addressing for Source (Tester)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 11-bit CAN ID Size</p>
+                                    <p>- Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>13</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_559175093">extended segmented 11-bit transmit with FC</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_1605433136">0x0E</SHORT-LABEL>
+                                <DESC TI="TI_276469031">
+                                    <p>- Use CP_CanFillerByteHandling for padding control</p>
+                                    <p>- Extended addressing for Source (Tester)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 29-bit CAN ID Size</p>
+                                    <p>- No Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>14</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_980667124">extended segmented 29-bit transmit w/o FC</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_1176406771">0x0F</SHORT-LABEL>
+                                <DESC TI="TI_1377500963">
+                                    <p>- Use CP_CanFillerByteHandling for padding control</p>
+                                    <p>- Extended addressing for Source (Tester)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 29-bit CAN ID Size</p>
+                                    <p>- Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>15</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_2055332136">extended segmented 29-bit transmit with FC</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_694360753">0x20</SHORT-LABEL>
+                                <DESC TI="TI_2092805420">
+                                    <p>- Padding explicitly disabled for this CAN Id (overwrite CP_CanFillerByteHandling)</p>
+                                    <p>- Normal addressing for Source (Tester)</p>
+                                    <p>- UUDT Message Transmit (No PCI Bytes)</p>
+                                    <p>- 11-bit CAN ID Size</p>
+                                    <p>- No Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>32</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1559353709">normal unsegmented 11-bit transmit with padding disabled</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_664782541">0x22</SHORT-LABEL>
+                                <DESC TI="TI_582623963">
+                                    <p>- Padding explicitly disabled for this CAN Id (overwrite CP_CanFillerByteHandling)</p>
+                                    <p>- Normal addressing for Source (Tester)</p>
+                                    <p>- UUDT Message Transmit (No PCI Bytes)</p>
+                                    <p>- 29-bit CAN ID Size</p>
+                                    <p>- No Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>34</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1856586491">normal unsegmented 29-bit transmit with padding disabled</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_572875395">0x24</SHORT-LABEL>
+                                <DESC TI="TI_107731098">
+                                    <p>- Padding explicitly disabled for this CAN Id (overwrite CP_CanFillerByteHandling)</p>
+                                    <p>- Normal addressing for Source (Tester)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 11-bit CAN ID Size</p>
+                                    <p>- No Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>36</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1362484960">normal segmented 11-bit transmit w/o FC and padding disabled</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_2411745">0x25</SHORT-LABEL>
+                                <DESC TI="TI_277448892">
+                                    <p>- Padding explicitly disabled for this CAN Id (overwrite CP_CanFillerByteHandling)</p>
+                                    <p>- Normal addressing for Source (Tester)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 11-bit CAN ID Size</p>
+                                    <p>- Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>37</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_161841393">normal segmented 11-bit transmit with FC and padding disabled</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_254732163">0x26</SHORT-LABEL>
+                                <DESC TI="TI_37250097">
+                                    <p>- Padding explicitly disabled for this CAN Id (overwrite CP_CanFillerByteHandling)</p>
+                                    <p>- Normal addressing for Source (Tester)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 29-bit CAN ID Size</p>
+                                    <p>- No Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>38</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1827213300">normal segmented 29-bit transmit w/o FC and padding disabled</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_173739687">0x27</SHORT-LABEL>
+                                <DESC TI="TI_1334229864">
+                                    <p>- Padding explicitly disabled for this CAN Id (overwrite CP_CanFillerByteHandling)</p>
+                                    <p>- Normal addressing for Source (Tester)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 29-bit CAN ID Size</p>
+                                    <p>- Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>39</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1201313675">normal segmented 29-bit transmit with FC and padding disabled</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_1602761545">0x28</SHORT-LABEL>
+                                <DESC TI="TI_323636881">
+                                    <p>- Padding explicitly disabled for this CAN Id (overwrite CP_CanFillerByteHandling)</p>
+                                    <p>- Extended addressing for Source (Tester)</p>
+                                    <p>- UUDT Message Transmit (No PCI Bytes)</p>
+                                    <p>- 11-bit CAN ID Size</p>
+                                    <p>- No Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>40</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_795182174">extended unsegmented 11-bit transmit with padding disabled</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_1498258188">0x2A</SHORT-LABEL>
+                                <DESC TI="TI_706901906">
+                                    <p>- Padding explicitly disabled for this CAN Id (overwrite CP_CanFillerByteHandling)</p>
+                                    <p>- Extended addressing for Source (Tester)</p>
+                                    <p>- UUDT Message Transmit (No PCI Bytes)</p>
+                                    <p>- 29-bit CAN ID Size</p>
+                                    <p>- No Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>42</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_696269911">extended unsegmented 29-bit transmit with padding disabled</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_1293641072">0x2C</SHORT-LABEL>
+                                <DESC TI="TI_1462218956">
+                                    <p>- Padding explicitly disabled for this CAN Id (overwrite CP_CanFillerByteHandling)</p>
+                                    <p>- Extended addressing for Source (Tester)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 11-bit CAN ID Size</p>
+                                    <p>- No Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>44</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_489389125">extended segmented 11-bit transmit w/o FC and padding disabled</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_682971804">0x2D</SHORT-LABEL>
+                                <DESC TI="TI_656219562">
+                                    <p>- Padding explicitly disabled for this CAN Id (overwrite CP_CanFillerByteHandling)</p>
+                                    <p>- Extended addressing for Source (Tester)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 11-bit CAN ID Size</p>
+                                    <p>- Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>45</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1979798293">extended segmented 11-bit transmit with FC and padding disabled</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_1135145249">0x2E</SHORT-LABEL>
+                                <DESC TI="TI_1951267643">
+                                    <p>- Padding explicitly disabled for this CAN Id (overwrite CP_CanFillerByteHandling)</p>
+                                    <p>- Extended addressing for Source (Tester)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 29-bit CAN ID Size</p>
+                                    <p>- No Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>46</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_96171092">extended segmented 29-bit transmit w/o FC and padding disabled</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_618663430">0x2F</SHORT-LABEL>
+                                <DESC TI="TI_1588379463">
+                                    <p>- Padding explicitly disabled for this CAN Id (overwrite CP_CanFillerByteHandling)</p>
+                                    <p>- Extended addressing for Source (Tester)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 29-bit CAN ID Size</p>
+                                    <p>- Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>47</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1834155725">extended segmented 29-bit transmit with FC and padding disabled</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_620387824">0x30</SHORT-LABEL>
+                                <DESC TI="TI_1494961321">
+                                    <p>- Padding explicitly enabled for this CAN Id (overwrite CP_CanFillerByteHandling)</p>
+                                    <p>- Normal addressing for Source (Tester)</p>
+                                    <p>- UUDT Message Transmit (No PCI Bytes)</p>
+                                    <p>- 11-bit CAN ID Size</p>
+                                    <p>- No Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>48</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_999093087">normal unsegmented 11-bit transmit with padding enabled</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_246736720">0x32</SHORT-LABEL>
+                                <DESC TI="TI_696845350">
+                                    <p>- Padding explicitly enabled for this CAN Id (overwrite CP_CanFillerByteHandling)</p>
+                                    <p>- Normal addressing for Source (Tester)</p>
+                                    <p>- UUDT Message Transmit (No PCI Bytes)</p>
+                                    <p>- 29-bit CAN ID Size</p>
+                                    <p>- No Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>50</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_108944259">normal unsegmented 29-bit transmit with padding enabled</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_1155205296">0x34</SHORT-LABEL>
+                                <DESC TI="TI_1727761457">
+                                    <p>- Padding explicitly enabled for this CAN Id (overwrite CP_CanFillerByteHandling)</p>
+                                    <p>- Normal addressing for Source (Tester)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 11-bit CAN ID Size</p>
+                                    <p>- No Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>52</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1788703620">normal segmented 11-bit transmit w/o FC and padding enabled</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_2103735904">0x35</SHORT-LABEL>
+                                <DESC TI="TI_410678094">
+                                    <p>- Padding explicitly enabled for this CAN Id (overwrite CP_CanFillerByteHandling)</p>
+                                    <p>- Normal addressing for Source (Tester)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 11-bit CAN ID Size</p>
+                                    <p>- Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>53</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_778501092">normal segmented 11-bit transmit with FC and padding enabled</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_1960048711">0x36</SHORT-LABEL>
+                                <DESC TI="TI_208207400">
+                                    <p>- Padding explicitly enabled for this CAN Id (overwrite CP_CanFillerByteHandling)</p>
+                                    <p>- Normal addressing for Source (Tester)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 29-bit CAN ID Size</p>
+                                    <p>- No Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>54</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_341851466">normal segmented 29-bit transmit w/o FC and padding enabled</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_1709246062">0x37</SHORT-LABEL>
+                                <DESC TI="TI_1553318391">
+                                    <p>- Padding explicitly enabled for this CAN Id (overwrite CP_CanFillerByteHandling)</p>
+                                    <p>- Normal addressing for Source (Tester)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 29-bit CAN ID Size</p>
+                                    <p>- Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>55</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1856863183">normal segmented 29-bit transmit with FC and padding enabled</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_1190650313">0x38</SHORT-LABEL>
+                                <DESC TI="TI_1331425423">
+                                    <p>- Padding explicitly enabled for this CAN Id (overwrite CP_CanFillerByteHandling)</p>
+                                    <p>- Extended addressing for Source (Tester)</p>
+                                    <p>- UUDT Message Transmit (No PCI Bytes)</p>
+                                    <p>- 11-bit CAN ID Size</p>
+                                    <p>- No Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>56</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_631849654">extended unsegmented 11-bit transmit with padding enabled</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_165383004">0x3A</SHORT-LABEL>
+                                <DESC TI="TI_510577791">
+                                    <p>- Padding explicitly enabled for this CAN Id (overwrite CP_CanFillerByteHandling)</p>
+                                    <p>- Extended addressing for Source (Tester)</p>
+                                    <p>- UUDT Message Transmit (No PCI Bytes)</p>
+                                    <p>- 29-bit CAN ID Size</p>
+                                    <p>- No Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>58</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1861810703">extended unsegmented 29-bit transmit with padding enabled</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_2081991660">0x3C</SHORT-LABEL>
+                                <DESC TI="TI_444547346">
+                                    <p>- Padding explicitly enabled for this CAN Id (overwrite CP_CanFillerByteHandling)</p>
+                                    <p>- Extended addressing for Source (Tester)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 11-bit CAN ID Size</p>
+                                    <p>- No Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>60</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1322712256">extended segmented 11-bit transmit w/o FC and padding enabled</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_2025808940">0x3D</SHORT-LABEL>
+                                <DESC TI="TI_1289931066">
+                                    <p>- Padding explicitly enabled for this CAN Id (overwrite CP_CanFillerByteHandling)</p>
+                                    <p>- Extended addressing for Source (Tester)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 11-bit CAN ID Size</p>
+                                    <p>- Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>61</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1403110609">extended segmented 11-bit transmit with FC and padding enabled</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_1808971440">0x3E</SHORT-LABEL>
+                                <DESC TI="TI_923136102">
+                                    <p>- Padding explicitly enabled for this CAN Id (overwrite CP_CanFillerByteHandling)</p>
+                                    <p>- Extended addressing for Source (Tester)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 29-bit CAN ID Size</p>
+                                    <p>- No Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>62</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_639416345">extended segmented 29-bit transmit w/o FC and padding enabled</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <SHORT-LABEL TI="TI_816006085">0x3F</SHORT-LABEL>
+                                <DESC TI="TI_779414305">
+                                    <p>- Padding explicitly enabled for this CAN Id (overwrite CP_CanFillerByteHandling)</p>
+                                    <p>- Extended addressing for Source (Tester)</p>
+                                    <p>- USDT Message Transmit (Segmented transmits)</p>
+                                    <p>- 29-bit CAN ID Size</p>
+                                    <p>- Flow Control frames are expected from Target (ECU)</p>
+                                </DESC>
+                                <LOWER-LIMIT>63</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1301234523">extended segmented 29-bit transmit with FC and padding enabled</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                        </COMPU-SCALES>
+                    </COMPU-INTERNAL-TO-PHYS>
+                </COMPU-METHOD>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                    <BIT-LENGTH>32</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+                <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING"/>
+                <INTERNAL-CONSTR>
+                    <LOWER-LIMIT>0</LOWER-LIMIT>
+                    <UPPER-LIMIT>63</UPPER-LIMIT>
+                    <SCALE-CONSTRS>
+                        <SCALE-CONSTR VALIDITY="NOT-DEFINED">
+                            <LOWER-LIMIT>1</LOWER-LIMIT>
+                            <UPPER-LIMIT>1</UPPER-LIMIT>
+                        </SCALE-CONSTR>
+                        <SCALE-CONSTR VALIDITY="NOT-DEFINED">
+                            <LOWER-LIMIT>3</LOWER-LIMIT>
+                            <UPPER-LIMIT>3</UPPER-LIMIT>
+                        </SCALE-CONSTR>
+                        <SCALE-CONSTR VALIDITY="NOT-DEFINED">
+                            <LOWER-LIMIT>9</LOWER-LIMIT>
+                            <UPPER-LIMIT>9</UPPER-LIMIT>
+                        </SCALE-CONSTR>
+                        <SCALE-CONSTR VALIDITY="NOT-DEFINED">
+                            <LOWER-LIMIT>11</LOWER-LIMIT>
+                            <UPPER-LIMIT>11</UPPER-LIMIT>
+                        </SCALE-CONSTR>
+                        <SCALE-CONSTR VALIDITY="NOT-DEFINED">
+                            <LOWER-LIMIT>16</LOWER-LIMIT>
+                            <UPPER-LIMIT>31</UPPER-LIMIT>
+                        </SCALE-CONSTR>
+                        <SCALE-CONSTR VALIDITY="NOT-DEFINED">
+                            <LOWER-LIMIT>33</LOWER-LIMIT>
+                            <UPPER-LIMIT>33</UPPER-LIMIT>
+                        </SCALE-CONSTR>
+                        <SCALE-CONSTR VALIDITY="NOT-DEFINED">
+                            <LOWER-LIMIT>35</LOWER-LIMIT>
+                            <UPPER-LIMIT>35</UPPER-LIMIT>
+                        </SCALE-CONSTR>
+                        <SCALE-CONSTR VALIDITY="NOT-DEFINED">
+                            <LOWER-LIMIT>41</LOWER-LIMIT>
+                            <UPPER-LIMIT>41</UPPER-LIMIT>
+                        </SCALE-CONSTR>
+                        <SCALE-CONSTR VALIDITY="NOT-DEFINED">
+                            <LOWER-LIMIT>43</LOWER-LIMIT>
+                            <UPPER-LIMIT>43</UPPER-LIMIT>
+                        </SCALE-CONSTR>
+                        <SCALE-CONSTR VALIDITY="NOT-DEFINED">
+                            <LOWER-LIMIT>49</LOWER-LIMIT>
+                            <UPPER-LIMIT>49</UPPER-LIMIT>
+                        </SCALE-CONSTR>
+                        <SCALE-CONSTR VALIDITY="NOT-DEFINED">
+                            <LOWER-LIMIT>51</LOWER-LIMIT>
+                            <UPPER-LIMIT>51</UPPER-LIMIT>
+                        </SCALE-CONSTR>
+                        <SCALE-CONSTR VALIDITY="NOT-DEFINED">
+                            <LOWER-LIMIT>57</LOWER-LIMIT>
+                            <UPPER-LIMIT>57</UPPER-LIMIT>
+                        </SCALE-CONSTR>
+                        <SCALE-CONSTR VALIDITY="NOT-DEFINED">
+                            <LOWER-LIMIT>59</LOWER-LIMIT>
+                            <UPPER-LIMIT>59</UPPER-LIMIT>
+                        </SCALE-CONSTR>
+                    </SCALE-CONSTRS>
+                </INTERNAL-CONSTR>
+            </DATA-OBJECT-PROP>
+            <DATA-OBJECT-PROP ID="TEXTTABLE_MaxDataLength" OID="5e4b3ed9-59c7-4d9f-a909-c9ad3277f230">
+                <SHORT-NAME>TEXTTABLE_MaxDataLength</SHORT-NAME>
+                <LONG-NAME TI="TI_352445866">TEXTTABLE_MaxDataLength</LONG-NAME>
+                <DESC TI="TI_474119219">
+                    <p>Value [0;8;9;10;11;12;13;14;15]  <br/>0:   TX_DL = 8,   Classic CAN <br/>8:   TX_DL = 8,   CANFD <br/>9:   TX_DL = 12, CANFD <br/>10: TX_DL = 16, CANFD <br/>11: TX_DL = 20, CANFD <br/>12: TX_DL = 24, CANFD <br/>13: TX_DL = 32, CANFD <br/>14: TX_DL = 48, CANFD <br/>15: TX_DL = 64, CANFD</p>
+                </DESC>
+                <COMPU-METHOD>
+                    <CATEGORY>TEXTTABLE</CATEGORY>
+                    <COMPU-INTERNAL-TO-PHYS>
+                        <COMPU-SCALES>
+                            <COMPU-SCALE>
+                                <LOWER-LIMIT>0</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_55067339">TX_DL=8 Classic CAN</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <LOWER-LIMIT>8</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1893182936">TX_DL=8 CANFD</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <LOWER-LIMIT>9</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_722864514">TX_DL=12 CANFD</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <LOWER-LIMIT>10</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1814907970">TX_DL=16 CANFD</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <LOWER-LIMIT>11</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1168377628">TX_DL=20 CANFD</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <LOWER-LIMIT>12</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_1011910825">TX_DL=24 CANFD</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <LOWER-LIMIT>13</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_696453774">TX_DL=32 CANFD</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <LOWER-LIMIT>14</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_349093634">TX_DL=48 CANFD</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                            <COMPU-SCALE>
+                                <LOWER-LIMIT>15</LOWER-LIMIT>
+                                <COMPU-CONST>
+                                    <VT TI="TI_2015459477">TX_DL=64 CANFD</VT>
+                                </COMPU-CONST>
+                            </COMPU-SCALE>
+                        </COMPU-SCALES>
+                    </COMPU-INTERNAL-TO-PHYS>
+                </COMPU-METHOD>
+                <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                    <BIT-LENGTH>32</BIT-LENGTH>
+                </DIAG-CODED-TYPE>
+                <PHYSICAL-TYPE BASE-DATA-TYPE="A_UNICODE2STRING"/>
+                <INTERNAL-CONSTR>
+                    <LOWER-LIMIT>0</LOWER-LIMIT>
+                    <UPPER-LIMIT>15</UPPER-LIMIT>
+                    <SCALE-CONSTRS>
+                        <SCALE-CONSTR VALIDITY="NOT-DEFINED">
+                            <LOWER-LIMIT>1</LOWER-LIMIT>
+                            <UPPER-LIMIT>7</UPPER-LIMIT>
+                        </SCALE-CONSTR>
+                    </SCALE-CONSTRS>
+                </INTERNAL-CONSTR>
+            </DATA-OBJECT-PROP>
+        </DATA-OBJECT-PROPS>
+        <UNIT-SPEC>
+            <UNITS>
+                <UNIT ID="MicroSecond" OID="7e40939a-6b22-45b2-b15e-a24d34a8c19d">
+                    <SHORT-NAME>MicroSecond</SHORT-NAME>
+                    <LONG-NAME TI="TI_870245519">Micro-Second</LONG-NAME>
+                    <DISPLAY-NAME>µs</DISPLAY-NAME>
+                </UNIT>
+            </UNITS>
+        </UNIT-SPEC>
+    </COMPARAM-SUBSET>
+</ODX>

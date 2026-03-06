@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ODX MODEL-VERSION="2.2.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="odx.xsd">
+    <!--
+<ODX MODEL-VERSION="2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="odx220.xsd">
+<ODX MODEL-VERSION="2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="odx.xsd">
+  -->
+    <DIAG-LAYER-CONTAINER ID="DLC_ES_UDSFunctClass" OID="3c2b2f48-8b64-4472-aa1e-142cbdabc38a">
+        <SHORT-NAME>DLC_ES_UDSFunctClass</SHORT-NAME>
+        <LONG-NAME TI="TI_1081709303">ES UDS Function Classes</LONG-NAME>
+        <DESC TI="TI_292584841"/>
+        <ECU-SHARED-DATAS>
+            <ECU-SHARED-DATA ID="ES_UDSFunctClass" OID="57391dd2-1b89-4d03-9edc-af4e8394c71e">
+                <SHORT-NAME>ES_UDSFunctClass</SHORT-NAME>
+                <LONG-NAME TI="TI_1081709303">ES UDS Function Classes</LONG-NAME>
+                <DESC TI="TI_292584841"/>
+                <ADMIN-DATA>
+                    <DOC-REVISIONS>
+                        <DOC-REVISION>
+                            <TEAM-MEMBER-REF ID-REF="ES_UDSFunctClass.CO_DSADatenUndSysteGmbH.TM_Syste.TEAM-MEMBER"/>
+                            <REVISION-LABEL>02.01.00</REVISION-LABEL>
+                            <STATE>DRAFT</STATE>
+                            <DATE>2018-11-19T11:02:00</DATE>
+                            <TOOL>DatabaseDesignerNG 2013 2.00.000</TOOL>
+                            <MODIFICATIONS>
+                                <MODIFICATION>
+                                    <CHANGE>added function class definitions</CHANGE>
+                                    <REASON>removed from any other module</REASON>
+                                </MODIFICATION>
+                            </MODIFICATIONS>
+                        </DOC-REVISION>
+                    </DOC-REVISIONS>
+                </ADMIN-DATA>
+                <COMPANY-DATAS>
+                    <COMPANY-DATA
+                        ID="ES_UDSFunctClass.CO_DSADatenUndSysteGmbH.COMPANY-DATA" OID="6b79b8e7-f189-4247-97d0-46f4da192255">
+                        <SHORT-NAME>CD_DSADatenUndSysteGmbH</SHORT-NAME>
+                        <LONG-NAME TI="TI_2135180869">DSA - Daten- und Systemtechnik GmbH</LONG-NAME>
+                        <DESC TI="TI_292584841"/>
+                        <TEAM-MEMBERS>
+                            <TEAM-MEMBER
+                                ID="ES_UDSFunctClass.CO_DSADatenUndSysteGmbH.TM_Syste.TEAM-MEMBER" OID="0f196553-476c-407b-896c-cc720f08cfd3">
+                                <SHORT-NAME>TM_Syste</SHORT-NAME>
+                                <LONG-NAME TI="TI_973842212">Systemsupplier</LONG-NAME>
+                                <DESC TI="TI_292584841"/>
+                                <DEPARTMENT>SAE</DEPARTMENT>
+                                <ADDRESS>Pascalstrasse 28</ADDRESS>
+                                <ZIP>D-52076</ZIP>
+                                <CITY>Aachen</CITY>
+                                <PHONE>+49 (0)2408 9492-0</PHONE>
+                                <FAX>+49 (0)2408 9492-92</FAX>
+                                <EMAIL>dsa@dsa-ac.de</EMAIL>
+                            </TEAM-MEMBER>
+                        </TEAM-MEMBERS>
+                        <COMPANY-SPECIFIC-INFO/>
+                    </COMPANY-DATA>
+                </COMPANY-DATAS>
+                <FUNCT-CLASSS>
+                    <FUNCT-CLASS
+                        ID="ES_UDSFunctClass.FC_DiagnAndCommuManag.FUNCT-CLASS" OID="115df351-90f3-4866-ac99-582e6728c7c2">
+                        <SHORT-NAME>FC_DiagnAndCommuManag</SHORT-NAME>
+                        <LONG-NAME TI="TI_1922042370">Diagnostic and Communication Management</LONG-NAME>
+                        <DESC TI="TI_1451268456">
+                            <p>      DiagnosticSessionControl    </p>
+                            <p>      ECUReset    </p>
+                            <p>      SecurityAccess    </p>
+                            <p>      CommunicationControl    </p>
+                            <p>      TesterPresent    </p>
+                            <p>      AccessTimingParameter    </p>
+                            <p>      SecuredDataTransmission    </p>
+                            <p>      ControlDTCSetting    </p>
+                            <p>      ResponseOnEvent    </p>
+                            <p>      LinkControl    </p>
+                        </DESC>
+                    </FUNCT-CLASS>
+                    <FUNCT-CLASS
+                        ID="ES_UDSFunctClass.FC_DataTrans.FUNCT-CLASS" OID="674429f0-a7ed-4a68-b0bd-73198893d7d9">
+                        <SHORT-NAME>FC_DataTrans</SHORT-NAME>
+                        <LONG-NAME TI="TI_1342565737">Data Transmission</LONG-NAME>
+                        <DESC TI="TI_1829728975">
+                            <p>      ReadDataByIdentifier    </p>
+                            <p>      ReadMemoryByAddress    </p>
+                            <p>      ReadScalingDataByIdentifier    </p>
+                            <p>      ReadDataByPeriodicIdentifier    </p>
+                            <p>      DynamicallyDefineDataIdentifier    </p>
+                            <p>      WriteDataByIdentifier    </p>
+                            <p>      WriteMemoryByAddress    </p>
+                        </DESC>
+                    </FUNCT-CLASS>
+                    <FUNCT-CLASS
+                        ID="ES_UDSFunctClass.FC_StoreDataTrans.FUNCT-CLASS" OID="637f1b23-376d-4b21-b6bc-a495aff1a2e5">
+                        <SHORT-NAME>FC_StoreDataTrans</SHORT-NAME>
+                        <LONG-NAME TI="TI_693898434">Stored Data Transmission</LONG-NAME>
+                        <DESC TI="TI_1404061928">
+                            <p>      ClearDiagnosticInformation    </p>
+                            <p>      ReadDTCInformation    </p>
+                        </DESC>
+                    </FUNCT-CLASS>
+                    <FUNCT-CLASS
+                        ID="ES_UDSFunctClass.FC_InputOutpuContr.FUNCT-CLASS" OID="a315e138-da04-416f-9177-999451952211">
+                        <SHORT-NAME>FC_InputOutpuContr</SHORT-NAME>
+                        <LONG-NAME TI="TI_791175430">Input Output Control</LONG-NAME>
+                        <DESC TI="TI_1302462904">
+                            <p>      InputOutputControlByIdentifier    </p>
+                        </DESC>
+                    </FUNCT-CLASS>
+                    <FUNCT-CLASS
+                        ID="ES_UDSFunctClass.FC_Routi.FUNCT-CLASS" OID="50b73da3-4c02-4e6a-ad6c-992577a4d51a">
+                        <SHORT-NAME>FC_Routi</SHORT-NAME>
+                        <LONG-NAME TI="TI_1980749981">Routine</LONG-NAME>
+                        <DESC TI="TI_335922124">
+                            <p>      RoutineControl    </p>
+                        </DESC>
+                    </FUNCT-CLASS>
+                    <FUNCT-CLASS
+                        ID="ES_UDSFunctClass.FC_UploaDownl.FUNCT-CLASS" OID="28aefa8d-afeb-45f3-9d0d-6d798d1f9275">
+                        <SHORT-NAME>FC_UploaDownl</SHORT-NAME>
+                        <LONG-NAME TI="TI_846442368">Upload Download</LONG-NAME>
+                        <DESC TI="TI_593558546">
+                            <p>      RequestDownload    </p>
+                            <p>      RequestUpload    </p>
+                            <p>      TransferData    </p>
+                            <p>      RequestTransferExit    </p>
+                            <p>      RequestFileTransfer    </p>
+                        </DESC>
+                    </FUNCT-CLASS>
+                    <FUNCT-CLASS
+                        ID="ES_UDSFunctClass.FC_Sessi.FUNCT-CLASS" OID="67b9a975-547b-405d-a8b6-c44207e66f29">
+                        <SHORT-NAME>FC_Sessi</SHORT-NAME>
+                        <LONG-NAME TI="TI_199207650">Session</LONG-NAME>
+                        <DESC TI="TI_292584841"/>
+                    </FUNCT-CLASS>
+                    <FUNCT-CLASS
+                        ID="ES_UDSFunctClass.FC_Ident.FUNCT-CLASS" OID="e04307be-04de-468c-8cb0-af7bd5961a1b">
+                        <SHORT-NAME>FC_Ident</SHORT-NAME>
+                        <LONG-NAME TI="TI_2098155725">Identification</LONG-NAME>
+                        <DESC TI="TI_292584841"/>
+                    </FUNCT-CLASS>
+                    <FUNCT-CLASS
+                        ID="ES_UDSFunctClass.FC_Measu.FUNCT-CLASS" OID="6485d741-d5c1-4895-b989-3b8371017da8">
+                        <SHORT-NAME>FC_Measu</SHORT-NAME>
+                        <LONG-NAME TI="TI_1141064441">Measurement</LONG-NAME>
+                        <DESC TI="TI_292584841"/>
+                    </FUNCT-CLASS>
+                    <FUNCT-CLASS
+                        ID="ES_UDSFunctClass.FC_Param.FUNCT-CLASS" OID="a39a3919-0537-42e0-a66c-889c6fb845c6">
+                        <SHORT-NAME>FC_Param</SHORT-NAME>
+                        <LONG-NAME TI="TI_1501692790">Parametrization</LONG-NAME>
+                        <DESC TI="TI_292584841"/>
+                    </FUNCT-CLASS>
+                    <FUNCT-CLASS
+                        ID="ES_UDSFunctClass.FC_SecurAcces.FUNCT-CLASS" OID="b57ef232-74c5-46e7-9a28-d7cd78c1e6c7">
+                        <SHORT-NAME>FC_SecurAcces</SHORT-NAME>
+                        <LONG-NAME TI="TI_1298953545">Security Access</LONG-NAME>
+                        <DESC TI="TI_292584841"/>
+                    </FUNCT-CLASS>
+                    <FUNCT-CLASS
+                        ID="DLC.DLC_ES_UDSFunctClass.ESD.ES_UDSFunctClass.FNC.FC_Authe" OID="c26fb616-9b08-4b5f-8031-804a4f599941">
+                        <SHORT-NAME>FC_Authe</SHORT-NAME>
+                        <LONG-NAME TI="TI_1186412553">Authentication</LONG-NAME>
+                    </FUNCT-CLASS>
+                    <FUNCT-CLASS
+                        ID="DLC.DLC_ES_UDSFunctClass.ESD.ES_UDSFunctClass.FNC.FC_Gener" OID="5ac25356-97ca-4f93-bf00-be78c7083d24">
+                        <SHORT-NAME>FC_Gener</SHORT-NAME>
+                        <LONG-NAME TI="TI_349167184">Generic</LONG-NAME>
+                        <DESC TI="TI_1688855784">
+                            <p>Use to collect all generic Services</p>
+                        </DESC>
+                    </FUNCT-CLASS>
+                </FUNCT-CLASSS>
+            </ECU-SHARED-DATA>
+        </ECU-SHARED-DATAS>
+    </DIAG-LAYER-CONTAINER>
+</ODX>

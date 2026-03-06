@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ODX MODEL-VERSION="2.2.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="odx220.xsd">
+    <!--
+<ODX MODEL-VERSION="2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="odx220.xsd">
+<ODX MODEL-VERSION="2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="odx.xsd">
+  -->
+    <DIAG-LAYER-CONTAINER ID="DLC_ES_UDSECUConfi" OID="31dcc561-6a38-423c-bcaa-c3191c410bef">
+        <SHORT-NAME>DLC_ES_UDSECUConfi</SHORT-NAME>
+        <LONG-NAME TI="TI_815907624">ES UDS ECU Configuration</LONG-NAME>
+        <ECU-SHARED-DATAS>
+            <ECU-SHARED-DATA ID="ES_UDSECUConfi" OID="5bc9aa88-8fa8-45e2-9c4f-ece9f055a3af">
+                <SHORT-NAME>ES_UDSECUConfi</SHORT-NAME>
+                <LONG-NAME TI="TI_815907624">ES UDS ECU Configuration</LONG-NAME>
+                <DESC TI="TI_1102374683">
+                    <p>      UDS ECU Configuration services according to ISO/FDIS 14229-1(2012).    </p>
+                </DESC>
+                <ADMIN-DATA>
+                    <DOC-REVISIONS>
+                        <DOC-REVISION>
+                            <TEAM-MEMBER-REF ID-REF="ES_UDSECUConfi.CO_DSADatenUndSysteGmbH.TM_Syste.TEAM-MEMBER"/>
+                            <REVISION-LABEL>00.00.00</REVISION-LABEL>
+                            <STATE>NEW</STATE>
+                            <DATE>2016-08-12T15:50:00</DATE>
+                            <TOOL>DatabaseDesignerNG 2013 2.00.000</TOOL>
+                        </DOC-REVISION>
+                        <DOC-REVISION>
+                            <TEAM-MEMBER-REF ID-REF="ES_UDSECUConfi.CO_DSADatenUndSysteGmbH.TM_Syste.TEAM-MEMBER"/>
+                            <REVISION-LABEL>00.00.01</REVISION-LABEL>
+                            <STATE>DRAFT</STATE>
+                            <DATE>2018-06-27T07:43:02</DATE>
+                            <TOOL>ODXStudio 5.0 SP2</TOOL>
+                            <MODIFICATIONS>
+                                <MODIFICATION>
+                                    <CHANGE>converted to ODXStudio pretty print style</CHANGE>
+                                    <REASON>ODXStudio will be used along with DataBaseDesigner</REASON>
+                                </MODIFICATION>
+                                <MODIFICATION>
+                                    <CHANGE>added FUNCT-CLASSS and -REFS</CHANGE>
+                                    <REASON>missing</REASON>
+                                </MODIFICATION>
+                            </MODIFICATIONS>
+                        </DOC-REVISION>
+                        <DOC-REVISION>
+                            <TEAM-MEMBER-REF ID-REF="ES_UDSECUConfi.CO_DSADatenUndSysteGmbH.TM_Syste.TEAM-MEMBER"/>
+                            <REVISION-LABEL>02.01.00</REVISION-LABEL>
+                            <STATE>DRAFT</STATE>
+                            <DATE>2018-11-19T10:26:00</DATE>
+                            <TOOL>DatabaseDesignerNG 2013 2.00.000</TOOL>
+                            <MODIFICATIONS>
+                                <MODIFICATION>
+                                    <CHANGE>removed function class definitions</CHANGE>
+                                    <REASON>moved to ES_UDSFunctClass module</REASON>
+                                </MODIFICATION>
+                            </MODIFICATIONS>
+                        </DOC-REVISION>
+                    </DOC-REVISIONS>
+                </ADMIN-DATA>
+                <COMPANY-DATAS>
+                    <COMPANY-DATA
+                        ID="ES_UDSECUConfi.CO_DSADatenUndSysteGmbH.COMPANY-DATA" OID="82577139-db05-47b8-a8ad-1a0ac6073451">
+                        <SHORT-NAME>CO_DSADatenUndSysteGmbH</SHORT-NAME>
+                        <LONG-NAME TI="TI_1605248285">DSA Daten- und Systemtechnik GmbH</LONG-NAME>
+                        <TEAM-MEMBERS>
+                            <TEAM-MEMBER
+                                ID="ES_UDSECUConfi.CO_DSADatenUndSysteGmbH.TM_Syste.TEAM-MEMBER" OID="f53baf61-1ea4-43a5-a620-44b7a89bbe82">
+                                <SHORT-NAME>TM_Syste</SHORT-NAME>
+                                <LONG-NAME TI="TI_973842212">Systemsupplier</LONG-NAME>
+                                <DEPARTMENT>SAE</DEPARTMENT>
+                                <ADDRESS>Pascalstraße 28</ADDRESS>
+                                <ZIP>D-52076</ZIP>
+                                <CITY>Aachen</CITY>
+                                <PHONE>+49 (0)2408 9492-0</PHONE>
+                                <FAX>+49 (0)2408 9492-92</FAX>
+                                <EMAIL>dsa@dsa.de</EMAIL>
+                            </TEAM-MEMBER>
+                        </TEAM-MEMBERS>
+                        <COMPANY-SPECIFIC-INFO/>
+                    </COMPANY-DATA>
+                </COMPANY-DATAS>
+                <DIAG-DATA-DICTIONARY-SPEC>
+                    <DATA-OBJECT-PROPS>
+                        <DATA-OBJECT-PROP
+                            ID="ES_UDSECUConfi.DOP_LengtKeyFormaIdent115.DATA-OBJECT-PROP" OID="7bc704b8-bbbf-4969-afcd-e2e221a4bc45">
+                            <SHORT-NAME>DOP_LengtKeyFormaIdent115</SHORT-NAME>
+                            <LONG-NAME TI="TI_746501190">Length Key Format Identifier [1;15]</LONG-NAME>
+                            <DESC TI="TI_475867241">
+                                <p>      Allows 8 to 120 Bit A_BYTEFIELD Big Memory Address or Size    </p>
+                            </DESC>
+                            <COMPU-METHOD>
+                                <CATEGORY>LINEAR</CATEGORY>
+                                <COMPU-INTERNAL-TO-PHYS>
+                                    <COMPU-SCALES>
+                                    <COMPU-SCALE>
+                                    <COMPU-RATIONAL-COEFFS>
+                                    <COMPU-NUMERATOR>
+                                    <V>0</V>
+                                    <V>8</V>
+                                    </COMPU-NUMERATOR>
+                                    <COMPU-DENOMINATOR>
+                                    <V>1</V>
+                                    </COMPU-DENOMINATOR>
+                                    </COMPU-RATIONAL-COEFFS>
+                                    </COMPU-SCALE>
+                                    </COMPU-SCALES>
+                                </COMPU-INTERNAL-TO-PHYS>
+                            </COMPU-METHOD>
+                            <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                                <BIT-LENGTH>4</BIT-LENGTH>
+                            </DIAG-CODED-TYPE>
+                            <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32" DISPLAY-RADIX="DEC"/>
+                            <INTERNAL-CONSTR>
+                                <LOWER-LIMIT>1</LOWER-LIMIT>
+                                <UPPER-LIMIT>15</UPPER-LIMIT>
+                            </INTERNAL-CONSTR>
+                        </DATA-OBJECT-PROP>
+                        <DATA-OBJECT-PROP
+                            ID="ES_UDSECUConfi.DOP_LengtKeyFormaIdent14.DATA-OBJECT-PROP" OID="a4f3300c-658e-4725-bd59-476243d719b3">
+                            <SHORT-NAME>DOP_LengtKeyFormaIdent14</SHORT-NAME>
+                            <LONG-NAME TI="TI_6163239">Length Key Format Identifier [1;4]</LONG-NAME>
+                            <DESC TI="TI_747761648">
+                                <p>      Allows 8 to 32 Bit A_UINT32 normal Memory Address and Size    </p>
+                            </DESC>
+                            <COMPU-METHOD>
+                                <CATEGORY>LINEAR</CATEGORY>
+                                <COMPU-INTERNAL-TO-PHYS>
+                                    <COMPU-SCALES>
+                                    <COMPU-SCALE>
+                                    <COMPU-RATIONAL-COEFFS>
+                                    <COMPU-NUMERATOR>
+                                    <V>0</V>
+                                    <V>8</V>
+                                    </COMPU-NUMERATOR>
+                                    <COMPU-DENOMINATOR>
+                                    <V>1</V>
+                                    </COMPU-DENOMINATOR>
+                                    </COMPU-RATIONAL-COEFFS>
+                                    </COMPU-SCALE>
+                                    </COMPU-SCALES>
+                                </COMPU-INTERNAL-TO-PHYS>
+                            </COMPU-METHOD>
+                            <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                                <BIT-LENGTH>4</BIT-LENGTH>
+                            </DIAG-CODED-TYPE>
+                            <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32" DISPLAY-RADIX="DEC"/>
+                            <INTERNAL-CONSTR>
+                                <LOWER-LIMIT>1</LOWER-LIMIT>
+                                <UPPER-LIMIT>4</UPPER-LIMIT>
+                            </INTERNAL-CONSTR>
+                        </DATA-OBJECT-PROP>
+                        <DATA-OBJECT-PROP
+                            ID="ES_UDSECUConfi.DOP_ReadMemorByAddreECUConfiMemorAddre.DATA-OBJECT-PROP" OID="97a2d29d-c43f-4dd6-9fd4-0bbff2002fdf">
+                            <SHORT-NAME>DOP_ReadMemorByAddreECUConfiMemorAddre</SHORT-NAME>
+                            <LONG-NAME TI="TI_1348141571">Read Memory By Address / ECU Configuration / Memory Address</LONG-NAME>
+                            <COMPU-METHOD>
+                                <CATEGORY>IDENTICAL</CATEGORY>
+                            </COMPU-METHOD>
+                            <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="PARAM-LENGTH-INFO-TYPE">
+                                <LENGTH-KEY-REF ID-REF="ES_UDSECUConfi.REQ_ReadMemorByBigAddreECUConfi2.PA_AFI.PARAM"/>
+                            </DIAG-CODED-TYPE>
+                            <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32" DISPLAY-RADIX="HEX"/>
+                        </DATA-OBJECT-PROP>
+                        <DATA-OBJECT-PROP
+                            ID="ES_UDSECUConfi.DOP_ReadMemorByAddreECUConfiMemorSize.DATA-OBJECT-PROP" OID="aa2f3541-a558-4c74-8fd2-90d8220c1521">
+                            <SHORT-NAME>DOP_ReadMemorByAddreECUConfiMemorSize</SHORT-NAME>
+                            <LONG-NAME TI="TI_1583042725">Read Memory By Address / ECU Configuration / Memory Size</LONG-NAME>
+                            <COMPU-METHOD>
+                                <CATEGORY>IDENTICAL</CATEGORY>
+                            </COMPU-METHOD>
+                            <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="PARAM-LENGTH-INFO-TYPE">
+                                <LENGTH-KEY-REF ID-REF="ES_UDSECUConfi.REQ_ReadMemorByBigAddreECUConfi2.PA_SFI.PARAM"/>
+                            </DIAG-CODED-TYPE>
+                            <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32" DISPLAY-RADIX="HEX"/>
+                        </DATA-OBJECT-PROP>
+                        <DATA-OBJECT-PROP
+                            ID="ES_UDSECUConfi.DOP_ReadMemorByBigAddreECUConfiMemorAddre.DATA-OBJECT-PROP" OID="a1d90ad3-6b50-4ce5-8397-7d1a42c64faf">
+                            <SHORT-NAME>DOP_ReadMemorByBigAddreECUConfiMemorAddre</SHORT-NAME>
+                            <LONG-NAME TI="TI_1599061195">Read Memory By Big Address / ECU Configuration / Memory Address</LONG-NAME>
+                            <COMPU-METHOD>
+                                <CATEGORY>IDENTICAL</CATEGORY>
+                            </COMPU-METHOD>
+                            <DIAG-CODED-TYPE
+                                BASE-DATA-TYPE="A_BYTEFIELD" xsi:type="PARAM-LENGTH-INFO-TYPE">
+                                <LENGTH-KEY-REF ID-REF="ES_UDSECUConfi.REQ_ReadMemorByBigAddreECUConfi.PA_AFI.PARAM"/>
+                            </DIAG-CODED-TYPE>
+                            <PHYSICAL-TYPE BASE-DATA-TYPE="A_BYTEFIELD"/>
+                        </DATA-OBJECT-PROP>
+                        <DATA-OBJECT-PROP
+                            ID="ES_UDSECUConfi.DOP_ReadMemorByBigAddreECUConfiMemorSize.DATA-OBJECT-PROP" OID="c8c737e7-2204-4f0e-8547-30c1b574d9b4">
+                            <SHORT-NAME>DOP_ReadMemorByBigAddreECUConfiMemorSize</SHORT-NAME>
+                            <LONG-NAME TI="TI_1933742246">Read Memory By Big Address / ECU Configuration / Memory Size</LONG-NAME>
+                            <COMPU-METHOD>
+                                <CATEGORY>IDENTICAL</CATEGORY>
+                            </COMPU-METHOD>
+                            <DIAG-CODED-TYPE
+                                BASE-DATA-TYPE="A_BYTEFIELD" xsi:type="PARAM-LENGTH-INFO-TYPE">
+                                <LENGTH-KEY-REF ID-REF="ES_UDSECUConfi.REQ_ReadMemorByBigAddreECUConfi.PA_SFI.PARAM"/>
+                            </DIAG-CODED-TYPE>
+                            <PHYSICAL-TYPE BASE-DATA-TYPE="A_BYTEFIELD"/>
+                        </DATA-OBJECT-PROP>
+                        <DATA-OBJECT-PROP
+                            ID="ES_UDSECUConfi.DOP_ReadWriteDataByIdentECUConfiRecorDataIdent.DATA-OBJECT-PROP" OID="ae18ab3f-1f4b-45e2-8068-4e2f0de0a77b">
+                            <SHORT-NAME>DOP_ReadWriteDataByIdentECUConfiRecorDataIdent</SHORT-NAME>
+                            <LONG-NAME TI="TI_881306666">Read Write Data By Identifier / ECU Configuration / Record Data Identifier</LONG-NAME>
+                            <COMPU-METHOD>
+                                <CATEGORY>IDENTICAL</CATEGORY>
+                            </COMPU-METHOD>
+                            <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="STANDARD-LENGTH-TYPE">
+                                <BIT-LENGTH>16</BIT-LENGTH>
+                            </DIAG-CODED-TYPE>
+                            <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32" DISPLAY-RADIX="HEX"/>
+                        </DATA-OBJECT-PROP>
+                        <DATA-OBJECT-PROP
+                            ID="ES_UDSECUConfi.DOP_ReadWriteECUConfiDataRecor.DATA-OBJECT-PROP" OID="6a259d1a-3da2-4325-a1f4-c8a8e8c49f47">
+                            <SHORT-NAME>DOP_ReadWriteECUConfiDataRecor</SHORT-NAME>
+                            <LONG-NAME TI="TI_1474911758">Read Write / ECU Configuration / Data Record</LONG-NAME>
+                            <COMPU-METHOD>
+                                <CATEGORY>IDENTICAL</CATEGORY>
+                            </COMPU-METHOD>
+                            <DIAG-CODED-TYPE
+                                BASE-DATA-TYPE="A_BYTEFIELD"
+                                TERMINATION="END-OF-PDU" xsi:type="MIN-MAX-LENGTH-TYPE">
+                                <MIN-LENGTH>0</MIN-LENGTH>
+                            </DIAG-CODED-TYPE>
+                            <PHYSICAL-TYPE BASE-DATA-TYPE="A_BYTEFIELD"/>
+                        </DATA-OBJECT-PROP>
+                        <DATA-OBJECT-PROP
+                            ID="ES_UDSECUConfi.DOP_WriteMemorByAddreECUConfiMemorAddre.DATA-OBJECT-PROP" OID="3ebd910b-6233-4337-8f70-c2338d4a531b">
+                            <SHORT-NAME>DOP_WriteMemorByAddreECUConfiMemorAddre</SHORT-NAME>
+                            <LONG-NAME TI="TI_660941927">Write Memory By Address / ECU Configuration / Memory Address</LONG-NAME>
+                            <COMPU-METHOD>
+                                <CATEGORY>IDENTICAL</CATEGORY>
+                            </COMPU-METHOD>
+                            <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="PARAM-LENGTH-INFO-TYPE">
+                                <LENGTH-KEY-REF ID-REF="ES_UDSECUConfi.REQ_WriteMemorByBigAddreECUConfi2.PA_AFI.PARAM"/>
+                            </DIAG-CODED-TYPE>
+                            <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32" DISPLAY-RADIX="HEX"/>
+                        </DATA-OBJECT-PROP>
+                        <DATA-OBJECT-PROP
+                            ID="ES_UDSECUConfi.DOP_WriteMemorByAddreECUConfiMemorSize.DATA-OBJECT-PROP" OID="e26695ea-0683-468f-a6d5-0d1b29d3b3c0">
+                            <SHORT-NAME>DOP_WriteMemorByAddreECUConfiMemorSize</SHORT-NAME>
+                            <LONG-NAME TI="TI_1449567059">Write Memory By Address / ECU Configuration / Memory Size</LONG-NAME>
+                            <COMPU-METHOD>
+                                <CATEGORY>IDENTICAL</CATEGORY>
+                            </COMPU-METHOD>
+                            <DIAG-CODED-TYPE BASE-DATA-TYPE="A_UINT32" xsi:type="PARAM-LENGTH-INFO-TYPE">
+                                <LENGTH-KEY-REF ID-REF="ES_UDSECUConfi.REQ_WriteMemorByBigAddreECUConfi2.PA_SFI.PARAM"/>
+                            </DIAG-CODED-TYPE>
+                            <PHYSICAL-TYPE BASE-DATA-TYPE="A_UINT32" DISPLAY-RADIX="HEX"/>
+                        </DATA-OBJECT-PROP>
+                        <DATA-OBJECT-PROP
+                            ID="ES_UDSECUConfi.DOP_WriteMemorByBigAddreECUConfiMemorAddre.DATA-OBJECT-PROP" OID="019d1814-9224-441a-8508-d18ea0114baf">
+                            <SHORT-NAME>DOP_WriteMemorByBigAddreECUConfiMemorAddre</SHORT-NAME>
+                            <LONG-NAME TI="TI_1346665278">Write Memory By Big Address / ECU Configuration / Memory Address</LONG-NAME>
+                            <COMPU-METHOD>
+                                <CATEGORY>IDENTICAL</CATEGORY>
+                            </COMPU-METHOD>
+                            <DIAG-CODED-TYPE
+                                BASE-DATA-TYPE="A_BYTEFIELD" xsi:type="PARAM-LENGTH-INFO-TYPE">
+                                <LENGTH-KEY-REF ID-REF="ES_UDSECUConfi.REQ_WriteMemorByBigAddreECUConfi.PA_AFI.PARAM"/>
+                            </DIAG-CODED-TYPE>
+                            <PHYSICAL-TYPE BASE-DATA-TYPE="A_BYTEFIELD"/>
+                        </DATA-OBJECT-PROP>
+                        <DATA-OBJECT-PROP
+                            ID="ES_UDSECUConfi.DOP_WriteMemorByBigAddreECUConfiMemorSize.DATA-OBJECT-PROP" OID="dd79c2b4-0b4e-4193-a2eb-9ab1957e3601">
+                            <SHORT-NAME>DOP_WriteMemorByBigAddreECUConfiMemorSize</SHORT-NAME>
+                            <LONG-NAME TI="TI_2062360688">Write Memory By Big Address / ECU Configuration / Memory Size</LONG-NAME>
+                            <COMPU-METHOD>
+                                <CATEGORY>IDENTICAL</CATEGORY>
+                            </COMPU-METHOD>
+                            <DIAG-CODED-TYPE
+                                BASE-DATA-TYPE="A_BYTEFIELD" xsi:type="PARAM-LENGTH-INFO-TYPE">
+                                <LENGTH-KEY-REF ID-REF="ES_UDSECUConfi.REQ_WriteMemorByBigAddreECUConfi.PA_SFI.PARAM"/>
+                            </DIAG-CODED-TYPE>
+                            <PHYSICAL-TYPE BASE-DATA-TYPE="A_BYTEFIELD"/>
+                        </DATA-OBJECT-PROP>
+                    </DATA-OBJECT-PROPS>
+                </DIAG-DATA-DICTIONARY-SPEC>
+                <DIAG-COMMS>
+                    <DIAG-SERVICE
+                        ID="ES_UDSECUConfi.DC_ReadDataByIdentECUConfi.DIAG-SERVICE"
+                        OID="471ca9e9-268f-4840-99d1-3ba0d7fa2ba3" SEMANTIC="CONFIGURATION-READ">
+                        <SHORT-NAME>DC_ReadDataByIdentECUConfi</SHORT-NAME>
+                        <LONG-NAME TI="TI_1533183579">Read Data By Identifier / ECU Configuration</LONG-NAME>
+                        <FUNCT-CLASS-REFS>
+                            <FUNCT-CLASS-REF DOCREF="ES_UDSFunctClass"
+                                DOCTYPE="LAYER" ID-REF="ES_UDSFunctClass.FC_DataTrans.FUNCT-CLASS"/>
+                        </FUNCT-CLASS-REFS>
+                        <REQUEST-REF ID-REF="ES_UDSECUConfi.REQ_ReadDataByIdentECUConfi.REQUEST"/>
+                        <POS-RESPONSE-REFS>
+                            <POS-RESPONSE-REF ID-REF="ES_UDSECUConfi.PRE_ReadDataByIdentECUConfi.POS-RESPONSE"/>
+                        </POS-RESPONSE-REFS>
+                    </DIAG-SERVICE>
+                    <DIAG-SERVICE
+                        ID="ES_UDSECUConfi.DC_ReadMemorByAddreECUConfi.DIAG-SERVICE"
+                        OID="7edcfdfd-0445-4f51-8f1b-5023a0665f3e" SEMANTIC="CONFIGURATION-READ">
+                        <SHORT-NAME>DC_ReadMemorByAddreECUConfi</SHORT-NAME>
+                        <LONG-NAME TI="TI_792439041">Read Memory By Address / ECU Configuration</LONG-NAME>
+                        <FUNCT-CLASS-REFS>
+                            <FUNCT-CLASS-REF DOCREF="ES_UDSFunctClass"
+                                DOCTYPE="LAYER" ID-REF="ES_UDSFunctClass.FC_DataTrans.FUNCT-CLASS"/>
+                        </FUNCT-CLASS-REFS>
+                        <REQUEST-REF ID-REF="ES_UDSECUConfi.REQ_ReadMemorByAddreECUConfi.REQUEST"/>
+                        <POS-RESPONSE-REFS>
+                            <POS-RESPONSE-REF ID-REF="ES_UDSECUConfi.PRE_ReadMemorByAddreECUConfi.POS-RESPONSE"/>
+                        </POS-RESPONSE-REFS>
+                    </DIAG-SERVICE>
+                    <DIAG-SERVICE
+                        ID="ES_UDSECUConfi.DC_ReadMemorByBigAddreECUConfi.DIAG-SERVICE"
+                        OID="41fe5116-9f7f-4b71-a514-d04edc41570b" SEMANTIC="CONFIGURATION-READ">
+                        <SHORT-NAME>DC_ReadMemorByBigAddreECUConfi</SHORT-NAME>
+                        <LONG-NAME TI="TI_105268821">Read Memory By Big Address / ECU Configuration</LONG-NAME>
+                        <FUNCT-CLASS-REFS>
+                            <FUNCT-CLASS-REF DOCREF="ES_UDSFunctClass"
+                                DOCTYPE="LAYER" ID-REF="ES_UDSFunctClass.FC_DataTrans.FUNCT-CLASS"/>
+                        </FUNCT-CLASS-REFS>
+                        <REQUEST-REF ID-REF="ES_UDSECUConfi.REQ_ReadMemorByBigAddreECUConfi.REQUEST"/>
+                        <POS-RESPONSE-REFS>
+                            <POS-RESPONSE-REF ID-REF="ES_UDSECUConfi.PRE_ReadMemorByAddreECUConfi.POS-RESPONSE"/>
+                        </POS-RESPONSE-REFS>
+                    </DIAG-SERVICE>
+                    <DIAG-SERVICE
+                        ID="ES_UDSECUConfi.DC_WriteDataByIdentECUConfi.DIAG-SERVICE"
+                        OID="8c7358fa-c6b0-4f2b-8ea7-7475e61d2d41" SEMANTIC="CONFIGURATION-WRITE">
+                        <SHORT-NAME>DC_WriteDataByIdentECUConfi</SHORT-NAME>
+                        <LONG-NAME TI="TI_1263786959">Write Data By Identifier / ECU Configuration</LONG-NAME>
+                        <FUNCT-CLASS-REFS>
+                            <FUNCT-CLASS-REF DOCREF="ES_UDSFunctClass"
+                                DOCTYPE="LAYER" ID-REF="ES_UDSFunctClass.FC_DataTrans.FUNCT-CLASS"/>
+                        </FUNCT-CLASS-REFS>
+                        <REQUEST-REF ID-REF="ES_UDSECUConfi.REQ_WriteDataByIdentECUConfi.REQUEST"/>
+                        <POS-RESPONSE-REFS>
+                            <POS-RESPONSE-REF ID-REF="ES_UDSECUConfi.PRE_WriteDataByIdentECUConfi.POS-RESPONSE"/>
+                        </POS-RESPONSE-REFS>
+                    </DIAG-SERVICE>
+                    <DIAG-SERVICE
+                        ID="ES_UDSECUConfi.DC_WriteMemorByAddreECUConfi.DIAG-SERVICE"
+                        OID="b9d06ec8-0e16-464c-990d-6a89a20f7298" SEMANTIC="CONFIGURATION-WRITE">
+                        <SHORT-NAME>DC_WriteMemorByAddreECUConfi</SHORT-NAME>
+                        <LONG-NAME TI="TI_1410786875">Write Memory By Address / ECU Configuration</LONG-NAME>
+                        <FUNCT-CLASS-REFS>
+                            <FUNCT-CLASS-REF DOCREF="ES_UDSFunctClass"
+                                DOCTYPE="LAYER" ID-REF="ES_UDSFunctClass.FC_DataTrans.FUNCT-CLASS"/>
+                        </FUNCT-CLASS-REFS>
+                        <REQUEST-REF ID-REF="ES_UDSECUConfi.REQ_WriteMemorByAddreECUConfi.REQUEST"/>
+                        <POS-RESPONSE-REFS>
+                            <POS-RESPONSE-REF ID-REF="ES_UDSECUConfi.PRE_WriteMemorByAddreECUConfi.POS-RESPONSE"/>
+                        </POS-RESPONSE-REFS>
+                    </DIAG-SERVICE>
+                    <DIAG-SERVICE
+                        ID="ES_UDSECUConfi.DC_WriteMemorByBigAddreECUConfi.DIAG-SERVICE"
+                        OID="1537ae80-fea4-4a87-92a5-f2e0f5d6400d" SEMANTIC="CONFIGURATION-WRITE">
+                        <SHORT-NAME>DC_WriteMemorByBigAddreECUConfi</SHORT-NAME>
+                        <LONG-NAME TI="TI_1853511299">Write Memory By Big Address / ECU Configuration</LONG-NAME>
+                        <FUNCT-CLASS-REFS>
+                            <FUNCT-CLASS-REF DOCREF="ES_UDSFunctClass"
+                                DOCTYPE="LAYER" ID-REF="ES_UDSFunctClass.FC_DataTrans.FUNCT-CLASS"/>
+                        </FUNCT-CLASS-REFS>
+                        <REQUEST-REF ID-REF="ES_UDSECUConfi.REQ_WriteMemorByBigAddreECUConfi.REQUEST"/>
+                        <POS-RESPONSE-REFS>
+                            <POS-RESPONSE-REF ID-REF="ES_UDSECUConfi.PRE_WriteMemorByAddreECUConfi.POS-RESPONSE"/>
+                        </POS-RESPONSE-REFS>
+                    </DIAG-SERVICE>
+                </DIAG-COMMS>
+                <REQUESTS>
+                    <REQUEST
+                        ID="ES_UDSECUConfi.REQ_ReadDataByIdentECUConfi.REQUEST" OID="19545ee8-7fb4-4769-9746-c33e3b7c7e09">
+                        <SHORT-NAME>REQ_ReadDataByIdentECUConfi</SHORT-NAME>
+                        <LONG-NAME TI="TI_1533183579">Read Data By Identifier / ECU Configuration</LONG-NAME>
+                        <PARAMS>
+                            <PARAM
+                                OID="affae846-6a4d-4706-aa4c-9165c0001a14"
+                                SEMANTIC="SERVICE-ID" xsi:type="CODED-CONST">
+                                <SHORT-NAME>PA_ServiID</SHORT-NAME>
+                                <LONG-NAME TI="TI_1255122508">Service ID</LONG-NAME>
+                                <BYTE-POSITION>0</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <CODED-VALUE>34</CODED-VALUE>
+                                <DIAG-CODED-TYPE
+                                    BASE-DATA-TYPE="A_UINT32"
+                                    BASE-TYPE-ENCODING="NONE" xsi:type="STANDARD-LENGTH-TYPE">
+                                    <BIT-LENGTH>8</BIT-LENGTH>
+                                </DIAG-CODED-TYPE>
+                            </PARAM>
+                            <PARAM
+                                OID="a1b36e76-7c8e-4ab0-a8a7-294e59579ff7"
+                                SEMANTIC="DATA-ID" xsi:type="VALUE">
+                                <SHORT-NAME>PA_RecorDataIdent</SHORT-NAME>
+                                <LONG-NAME TI="TI_274466137">Record Data Identifier</LONG-NAME>
+                                <BYTE-POSITION>1</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <DOP-REF ID-REF="ES_UDSECUConfi.DOP_ReadWriteDataByIdentECUConfiRecorDataIdent.DATA-OBJECT-PROP"/>
+                            </PARAM>
+                        </PARAMS>
+                    </REQUEST>
+                    <REQUEST
+                        ID="ES_UDSECUConfi.REQ_ReadMemorByAddreECUConfi.REQUEST" OID="67b86dd1-e1ad-491d-88e5-b4efac39d786">
+                        <SHORT-NAME>REQ_ReadMemorByAddreECUConfi</SHORT-NAME>
+                        <LONG-NAME TI="TI_792439041">Read Memory By Address / ECU Configuration</LONG-NAME>
+                        <PARAMS>
+                            <PARAM
+                                OID="32dc721f-99c2-4a73-9662-65e60a8023aa"
+                                SEMANTIC="SERVICE-ID" xsi:type="CODED-CONST">
+                                <SHORT-NAME>PA_ServiID</SHORT-NAME>
+                                <LONG-NAME TI="TI_1255122508">Service ID</LONG-NAME>
+                                <BYTE-POSITION>0</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <CODED-VALUE>35</CODED-VALUE>
+                                <DIAG-CODED-TYPE
+                                    BASE-DATA-TYPE="A_UINT32"
+                                    BASE-TYPE-ENCODING="NONE" xsi:type="STANDARD-LENGTH-TYPE">
+                                    <BIT-LENGTH>8</BIT-LENGTH>
+                                </DIAG-CODED-TYPE>
+                            </PARAM>
+                            <PARAM
+                                ID="ES_UDSECUConfi.REQ_ReadMemorByBigAddreECUConfi2.PA_AFI.PARAM"
+                                OID="3d002a5a-7ed3-46ae-aa8b-06cff21438b9"
+                                SEMANTIC="FORMAT-ID" xsi:type="LENGTH-KEY">
+                                <SHORT-NAME>PA_AFI</SHORT-NAME>
+                                <LONG-NAME TI="TI_615293564">AFI</LONG-NAME>
+                                <BYTE-POSITION>1</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <DOP-REF ID-REF="ES_UDSECUConfi.DOP_LengtKeyFormaIdent14.DATA-OBJECT-PROP"/>
+                            </PARAM>
+                            <PARAM
+                                ID="ES_UDSECUConfi.REQ_ReadMemorByBigAddreECUConfi2.PA_SFI.PARAM"
+                                OID="a6d917fd-79c6-4fa9-b773-7c2e9700e291"
+                                SEMANTIC="FORMAT-ID" xsi:type="LENGTH-KEY">
+                                <SHORT-NAME>PA_SFI</SHORT-NAME>
+                                <LONG-NAME TI="TI_2026307209">SFI</LONG-NAME>
+                                <BYTE-POSITION>1</BYTE-POSITION>
+                                <BIT-POSITION>4</BIT-POSITION>
+                                <DOP-REF ID-REF="ES_UDSECUConfi.DOP_LengtKeyFormaIdent14.DATA-OBJECT-PROP"/>
+                            </PARAM>
+                            <PARAM
+                                OID="d3c6a97c-7441-4ba9-8832-fdf253470768"
+                                SEMANTIC="ADDRESS" xsi:type="VALUE">
+                                <SHORT-NAME>PA_MemorAddre</SHORT-NAME>
+                                <LONG-NAME TI="TI_1331096759">Memory Address</LONG-NAME>
+                                <BYTE-POSITION>2</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <DOP-REF ID-REF="ES_UDSECUConfi.DOP_ReadMemorByAddreECUConfiMemorAddre.DATA-OBJECT-PROP"/>
+                            </PARAM>
+                            <PARAM
+                                OID="948f80f1-a87b-49f4-9879-aa75a54c3e66"
+                                SEMANTIC="SIZE" xsi:type="VALUE">
+                                <SHORT-NAME>PA_MemorSize</SHORT-NAME>
+                                <LONG-NAME TI="TI_933812854">Memory Size</LONG-NAME>
+                                <DOP-REF ID-REF="ES_UDSECUConfi.DOP_ReadMemorByAddreECUConfiMemorSize.DATA-OBJECT-PROP"/>
+                            </PARAM>
+                        </PARAMS>
+                    </REQUEST>
+                    <REQUEST
+                        ID="ES_UDSECUConfi.REQ_ReadMemorByBigAddreECUConfi.REQUEST" OID="87ae68f7-70c4-4a74-a506-d031a79b99d7">
+                        <SHORT-NAME>REQ_ReadMemorByBigAddreECUConfi</SHORT-NAME>
+                        <LONG-NAME TI="TI_105268821">Read Memory By Big Address / ECU Configuration</LONG-NAME>
+                        <PARAMS>
+                            <PARAM
+                                OID="0f9c6785-2b34-475a-8d86-2c6a3cf4450e"
+                                SEMANTIC="SERVICE-ID" xsi:type="CODED-CONST">
+                                <SHORT-NAME>PA_ServiID</SHORT-NAME>
+                                <LONG-NAME TI="TI_1255122508">Service ID</LONG-NAME>
+                                <BYTE-POSITION>0</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <CODED-VALUE>35</CODED-VALUE>
+                                <DIAG-CODED-TYPE
+                                    BASE-DATA-TYPE="A_UINT32"
+                                    BASE-TYPE-ENCODING="NONE" xsi:type="STANDARD-LENGTH-TYPE">
+                                    <BIT-LENGTH>8</BIT-LENGTH>
+                                </DIAG-CODED-TYPE>
+                            </PARAM>
+                            <PARAM
+                                ID="ES_UDSECUConfi.REQ_ReadMemorByBigAddreECUConfi.PA_AFI.PARAM"
+                                OID="4637c8eb-e427-44be-ae7f-446587cfcb22"
+                                SEMANTIC="FORMAT-ID" xsi:type="LENGTH-KEY">
+                                <SHORT-NAME>PA_AFI</SHORT-NAME>
+                                <LONG-NAME TI="TI_615293564">AFI</LONG-NAME>
+                                <BYTE-POSITION>1</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <DOP-REF ID-REF="ES_UDSECUConfi.DOP_LengtKeyFormaIdent115.DATA-OBJECT-PROP"/>
+                            </PARAM>
+                            <PARAM
+                                ID="ES_UDSECUConfi.REQ_ReadMemorByBigAddreECUConfi.PA_SFI.PARAM"
+                                OID="9bc864fd-5888-4af3-8eea-42ed7d0272d7"
+                                SEMANTIC="FORMAT-ID" xsi:type="LENGTH-KEY">
+                                <SHORT-NAME>PA_SFI</SHORT-NAME>
+                                <LONG-NAME TI="TI_2026307209">SFI</LONG-NAME>
+                                <BYTE-POSITION>1</BYTE-POSITION>
+                                <BIT-POSITION>4</BIT-POSITION>
+                                <DOP-REF DOCREF="ES_UDSECUConfi"
+                                    DOCTYPE="LAYER" ID-REF="ES_UDSECUConfi.DOP_LengtKeyFormaIdent115.DATA-OBJECT-PROP"/>
+                            </PARAM>
+                            <PARAM
+                                OID="4bab2270-9341-4033-a2bf-69cf4ed44a39"
+                                SEMANTIC="ADDRESS" xsi:type="VALUE">
+                                <SHORT-NAME>PA_MemorAddre</SHORT-NAME>
+                                <LONG-NAME TI="TI_1331096759">Memory Address</LONG-NAME>
+                                <BYTE-POSITION>2</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <DOP-REF ID-REF="ES_UDSECUConfi.DOP_ReadMemorByBigAddreECUConfiMemorAddre.DATA-OBJECT-PROP"/>
+                            </PARAM>
+                            <PARAM
+                                OID="ce0adf92-261a-4adb-b59f-8d37c2c157b4"
+                                SEMANTIC="SIZE" xsi:type="VALUE">
+                                <SHORT-NAME>PA_MemorSize</SHORT-NAME>
+                                <LONG-NAME TI="TI_933812854">Memory Size</LONG-NAME>
+                                <DOP-REF ID-REF="ES_UDSECUConfi.DOP_ReadMemorByBigAddreECUConfiMemorSize.DATA-OBJECT-PROP"/>
+                            </PARAM>
+                        </PARAMS>
+                    </REQUEST>
+                    <REQUEST
+                        ID="ES_UDSECUConfi.REQ_WriteDataByIdentECUConfi.REQUEST" OID="12e3683f-923a-49ba-9046-169257409c20">
+                        <SHORT-NAME>REQ_WriteDataByIdentECUConfi</SHORT-NAME>
+                        <LONG-NAME TI="TI_1263786959">Write Data By Identifier / ECU Configuration</LONG-NAME>
+                        <PARAMS>
+                            <PARAM
+                                OID="b1f8a647-480c-4147-b38e-8174043c32b8"
+                                SEMANTIC="SERVICE-ID" xsi:type="CODED-CONST">
+                                <SHORT-NAME>PA_ServiID</SHORT-NAME>
+                                <LONG-NAME TI="TI_1255122508">Service ID</LONG-NAME>
+                                <BYTE-POSITION>0</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <CODED-VALUE>46</CODED-VALUE>
+                                <DIAG-CODED-TYPE
+                                    BASE-DATA-TYPE="A_UINT32"
+                                    BASE-TYPE-ENCODING="NONE" xsi:type="STANDARD-LENGTH-TYPE">
+                                    <BIT-LENGTH>8</BIT-LENGTH>
+                                </DIAG-CODED-TYPE>
+                            </PARAM>
+                            <PARAM
+                                OID="3c41d341-7578-4efb-9f74-ec901ca97cfe"
+                                SEMANTIC="DATA-ID" xsi:type="VALUE">
+                                <SHORT-NAME>PA_RecorDataIdent</SHORT-NAME>
+                                <LONG-NAME TI="TI_274466137">Record Data Identifier</LONG-NAME>
+                                <BYTE-POSITION>1</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <DOP-REF ID-REF="ES_UDSECUConfi.DOP_ReadWriteDataByIdentECUConfiRecorDataIdent.DATA-OBJECT-PROP"/>
+                            </PARAM>
+                            <PARAM
+                                OID="76ba54c7-c7ce-4c5d-9e7e-173095289e23"
+                                SEMANTIC="DATA" xsi:type="VALUE">
+                                <SHORT-NAME>PA_DataRecor</SHORT-NAME>
+                                <LONG-NAME TI="TI_677356520">Data Record</LONG-NAME>
+                                <BYTE-POSITION>3</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <DOP-REF ID-REF="ES_UDSECUConfi.DOP_ReadWriteECUConfiDataRecor.DATA-OBJECT-PROP"/>
+                            </PARAM>
+                        </PARAMS>
+                    </REQUEST>
+                    <REQUEST
+                        ID="ES_UDSECUConfi.REQ_WriteMemorByAddreECUConfi.REQUEST" OID="a0c7df21-40a7-40bf-be23-fdcc2194ac37">
+                        <SHORT-NAME>REQ_WriteMemorByAddreECUConfi</SHORT-NAME>
+                        <LONG-NAME TI="TI_1410786875">Write Memory By Address / ECU Configuration</LONG-NAME>
+                        <PARAMS>
+                            <PARAM
+                                OID="00c01225-8668-4305-8d5a-75a12b2de53b"
+                                SEMANTIC="SERVICE-ID" xsi:type="CODED-CONST">
+                                <SHORT-NAME>PA_ServiID</SHORT-NAME>
+                                <LONG-NAME TI="TI_1255122508">Service ID</LONG-NAME>
+                                <BYTE-POSITION>0</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <CODED-VALUE>61</CODED-VALUE>
+                                <DIAG-CODED-TYPE
+                                    BASE-DATA-TYPE="A_UINT32"
+                                    BASE-TYPE-ENCODING="NONE" xsi:type="STANDARD-LENGTH-TYPE">
+                                    <BIT-LENGTH>8</BIT-LENGTH>
+                                </DIAG-CODED-TYPE>
+                            </PARAM>
+                            <PARAM
+                                ID="ES_UDSECUConfi.REQ_WriteMemorByBigAddreECUConfi2.PA_AFI.PARAM"
+                                OID="51824b90-47c4-4738-ab4a-fa20d98b0d92"
+                                SEMANTIC="FORMAT-ID" xsi:type="LENGTH-KEY">
+                                <SHORT-NAME>PA_AFI</SHORT-NAME>
+                                <LONG-NAME TI="TI_615293564">AFI</LONG-NAME>
+                                <BYTE-POSITION>1</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <DOP-REF ID-REF="ES_UDSECUConfi.DOP_LengtKeyFormaIdent14.DATA-OBJECT-PROP"/>
+                            </PARAM>
+                            <PARAM
+                                ID="ES_UDSECUConfi.REQ_WriteMemorByBigAddreECUConfi2.PA_SFI.PARAM"
+                                OID="48909bcf-f8d7-4d48-b097-6d8eb424cfd5"
+                                SEMANTIC="FORMAT-ID" xsi:type="LENGTH-KEY">
+                                <SHORT-NAME>PA_SFI</SHORT-NAME>
+                                <LONG-NAME TI="TI_2026307209">SFI</LONG-NAME>
+                                <BYTE-POSITION>1</BYTE-POSITION>
+                                <BIT-POSITION>4</BIT-POSITION>
+                                <DOP-REF ID-REF="ES_UDSECUConfi.DOP_LengtKeyFormaIdent14.DATA-OBJECT-PROP"/>
+                            </PARAM>
+                            <PARAM
+                                OID="ed4e95c2-7e5f-496a-a5c4-ebf505b54425"
+                                SEMANTIC="ADDRESS" xsi:type="VALUE">
+                                <SHORT-NAME>PA_MemorAddre</SHORT-NAME>
+                                <LONG-NAME TI="TI_1331096759">Memory Address</LONG-NAME>
+                                <BYTE-POSITION>2</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <DOP-REF ID-REF="ES_UDSECUConfi.DOP_WriteMemorByAddreECUConfiMemorAddre.DATA-OBJECT-PROP"/>
+                            </PARAM>
+                            <PARAM
+                                OID="069943ee-66ce-437e-bacf-58a9842b4927"
+                                SEMANTIC="SIZE" xsi:type="VALUE">
+                                <SHORT-NAME>PA_MemorSize</SHORT-NAME>
+                                <LONG-NAME TI="TI_933812854">Memory Size</LONG-NAME>
+                                <DOP-REF ID-REF="ES_UDSECUConfi.DOP_WriteMemorByAddreECUConfiMemorSize.DATA-OBJECT-PROP"/>
+                            </PARAM>
+                            <PARAM
+                                OID="05da6960-bba4-47d3-a84a-252fcde2ab0d"
+                                SEMANTIC="DATA" xsi:type="VALUE">
+                                <SHORT-NAME>PA_DataRecor</SHORT-NAME>
+                                <LONG-NAME TI="TI_677356520">Data Record</LONG-NAME>
+                                <DOP-REF DOCREF="ES_UDSECUConfi"
+                                    DOCTYPE="LAYER" ID-REF="ES_UDSECUConfi.DOP_ReadWriteECUConfiDataRecor.DATA-OBJECT-PROP"/>
+                            </PARAM>
+                        </PARAMS>
+                    </REQUEST>
+                    <REQUEST
+                        ID="ES_UDSECUConfi.REQ_WriteMemorByBigAddreECUConfi.REQUEST" OID="9a92462e-4cbb-40f4-b363-c728fe1d8126">
+                        <SHORT-NAME>REQ_WriteMemorByBigAddreECUConfi</SHORT-NAME>
+                        <LONG-NAME TI="TI_1853511299">Write Memory By Big Address / ECU Configuration</LONG-NAME>
+                        <PARAMS>
+                            <PARAM
+                                OID="e870044b-5015-47da-a59e-5d4c5ff3def9"
+                                SEMANTIC="SERVICE-ID" xsi:type="CODED-CONST">
+                                <SHORT-NAME>PA_ServiID</SHORT-NAME>
+                                <LONG-NAME TI="TI_1255122508">Service ID</LONG-NAME>
+                                <BYTE-POSITION>0</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <CODED-VALUE>61</CODED-VALUE>
+                                <DIAG-CODED-TYPE
+                                    BASE-DATA-TYPE="A_UINT32"
+                                    BASE-TYPE-ENCODING="NONE" xsi:type="STANDARD-LENGTH-TYPE">
+                                    <BIT-LENGTH>8</BIT-LENGTH>
+                                </DIAG-CODED-TYPE>
+                            </PARAM>
+                            <PARAM
+                                ID="ES_UDSECUConfi.REQ_WriteMemorByBigAddreECUConfi.PA_AFI.PARAM"
+                                OID="54360402-e923-4b3c-aec5-334727924814"
+                                SEMANTIC="FORMAT-ID" xsi:type="LENGTH-KEY">
+                                <SHORT-NAME>PA_AFI</SHORT-NAME>
+                                <LONG-NAME TI="TI_615293564">AFI</LONG-NAME>
+                                <BYTE-POSITION>1</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <DOP-REF ID-REF="ES_UDSECUConfi.DOP_LengtKeyFormaIdent115.DATA-OBJECT-PROP"/>
+                            </PARAM>
+                            <PARAM
+                                ID="ES_UDSECUConfi.REQ_WriteMemorByBigAddreECUConfi.PA_SFI.PARAM"
+                                OID="de81d227-ce2c-405b-8e5e-cbb1407fc754"
+                                SEMANTIC="FORMAT-ID" xsi:type="LENGTH-KEY">
+                                <SHORT-NAME>PA_SFI</SHORT-NAME>
+                                <LONG-NAME TI="TI_2026307209">SFI</LONG-NAME>
+                                <BYTE-POSITION>1</BYTE-POSITION>
+                                <BIT-POSITION>4</BIT-POSITION>
+                                <DOP-REF ID-REF="ES_UDSECUConfi.DOP_LengtKeyFormaIdent115.DATA-OBJECT-PROP"/>
+                            </PARAM>
+                            <PARAM
+                                OID="66dfa63a-766d-4173-a28f-a6cd1cc1d2de"
+                                SEMANTIC="ADDRESS" xsi:type="VALUE">
+                                <SHORT-NAME>PA_MemorAddre</SHORT-NAME>
+                                <LONG-NAME TI="TI_1331096759">Memory Address</LONG-NAME>
+                                <BYTE-POSITION>2</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <DOP-REF ID-REF="ES_UDSECUConfi.DOP_WriteMemorByBigAddreECUConfiMemorAddre.DATA-OBJECT-PROP"/>
+                            </PARAM>
+                            <PARAM
+                                OID="dfa18367-baca-4693-9468-1a64db213d77"
+                                SEMANTIC="SIZE" xsi:type="VALUE">
+                                <SHORT-NAME>PA_MemorSize</SHORT-NAME>
+                                <LONG-NAME TI="TI_933812854">Memory Size</LONG-NAME>
+                                <DOP-REF ID-REF="ES_UDSECUConfi.DOP_WriteMemorByBigAddreECUConfiMemorSize.DATA-OBJECT-PROP"/>
+                            </PARAM>
+                            <PARAM
+                                OID="dae1966c-feab-4b2f-8dff-06149d791e03"
+                                SEMANTIC="DATA" xsi:type="VALUE">
+                                <SHORT-NAME>PA_DataRecor</SHORT-NAME>
+                                <LONG-NAME TI="TI_677356520">Data Record</LONG-NAME>
+                                <DOP-REF ID-REF="ES_UDSECUConfi.DOP_ReadWriteECUConfiDataRecor.DATA-OBJECT-PROP"/>
+                            </PARAM>
+                        </PARAMS>
+                    </REQUEST>
+                </REQUESTS>
+                <POS-RESPONSES>
+                    <POS-RESPONSE
+                        ID="ES_UDSECUConfi.PRE_ReadDataByIdentECUConfi.POS-RESPONSE" OID="01155599-dce9-48c1-bcbc-9efdcd14a50c">
+                        <SHORT-NAME>PRE_ReadDataByIdentECUConfi</SHORT-NAME>
+                        <LONG-NAME TI="TI_1533183579">Read Data By Identifier / ECU Configuration</LONG-NAME>
+                        <PARAMS>
+                            <PARAM
+                                OID="224c401f-4ab4-44d0-909d-f3a71f19036a"
+                                SEMANTIC="SERVICE-ID" xsi:type="CODED-CONST">
+                                <SHORT-NAME>PA_ServiID</SHORT-NAME>
+                                <LONG-NAME TI="TI_1255122508">Service ID</LONG-NAME>
+                                <BYTE-POSITION>0</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <CODED-VALUE>98</CODED-VALUE>
+                                <DIAG-CODED-TYPE
+                                    BASE-DATA-TYPE="A_UINT32"
+                                    BASE-TYPE-ENCODING="NONE" xsi:type="STANDARD-LENGTH-TYPE">
+                                    <BIT-LENGTH>8</BIT-LENGTH>
+                                </DIAG-CODED-TYPE>
+                            </PARAM>
+                            <PARAM
+                                OID="3777e436-c8e2-4338-9a6d-0c4c3b45b85a"
+                                SEMANTIC="DATA-ID" xsi:type="MATCHING-REQUEST-PARAM">
+                                <SHORT-NAME>PA_RecorDataIdentMatch</SHORT-NAME>
+                                <LONG-NAME TI="TI_517798863">Record Data Identifier Match</LONG-NAME>
+                                <BYTE-POSITION>1</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <REQUEST-BYTE-POS>1</REQUEST-BYTE-POS>
+                                <BYTE-LENGTH>2</BYTE-LENGTH>
+                            </PARAM>
+                            <PARAM
+                                OID="44fb05a2-e9f5-4baa-a3d4-8a868e9cddd9"
+                                SEMANTIC="DATA-ID" xsi:type="VALUE">
+                                <SHORT-NAME>PA_RecorDataIdent</SHORT-NAME>
+                                <LONG-NAME TI="TI_274466137">Record Data Identifier</LONG-NAME>
+                                <BYTE-POSITION>1</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <DOP-REF ID-REF="ES_UDSECUConfi.DOP_ReadWriteDataByIdentECUConfiRecorDataIdent.DATA-OBJECT-PROP"/>
+                            </PARAM>
+                            <PARAM
+                                OID="fd85a509-b89f-4172-af71-e4c50478dc08"
+                                SEMANTIC="DATA" xsi:type="VALUE">
+                                <SHORT-NAME>PA_DataRecor</SHORT-NAME>
+                                <LONG-NAME TI="TI_677356520">Data Record</LONG-NAME>
+                                <BYTE-POSITION>3</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <DOP-REF ID-REF="ES_UDSECUConfi.DOP_ReadWriteECUConfiDataRecor.DATA-OBJECT-PROP"/>
+                            </PARAM>
+                        </PARAMS>
+                    </POS-RESPONSE>
+                    <POS-RESPONSE
+                        ID="ES_UDSECUConfi.PRE_ReadMemorByAddreECUConfi.POS-RESPONSE" OID="cd8242c1-02dc-4fdd-8195-9ec8f882eb24">
+                        <SHORT-NAME>PRE_ReadMemorByAddreECUConfi</SHORT-NAME>
+                        <LONG-NAME TI="TI_792439041">Read Memory By Address / ECU Configuration</LONG-NAME>
+                        <PARAMS>
+                            <PARAM
+                                OID="f2f3ef6a-c7a3-4e04-b8d3-a48a64aeb658"
+                                SEMANTIC="SERVICE-ID" xsi:type="CODED-CONST">
+                                <SHORT-NAME>PA_ServiID</SHORT-NAME>
+                                <LONG-NAME TI="TI_1255122508">Service ID</LONG-NAME>
+                                <BYTE-POSITION>0</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <CODED-VALUE>99</CODED-VALUE>
+                                <DIAG-CODED-TYPE
+                                    BASE-DATA-TYPE="A_UINT32"
+                                    BASE-TYPE-ENCODING="NONE" xsi:type="STANDARD-LENGTH-TYPE">
+                                    <BIT-LENGTH>8</BIT-LENGTH>
+                                </DIAG-CODED-TYPE>
+                            </PARAM>
+                            <PARAM
+                                OID="f2fbc022-5acd-489a-b0a5-f261002ca7d7"
+                                SEMANTIC="DATA" xsi:type="VALUE">
+                                <SHORT-NAME>PA_DataRecor</SHORT-NAME>
+                                <LONG-NAME TI="TI_677356520">Data Record</LONG-NAME>
+                                <BYTE-POSITION>1</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <DOP-REF DOCREF="ES_UDSECUConfi"
+                                    DOCTYPE="LAYER" ID-REF="ES_UDSECUConfi.DOP_ReadWriteECUConfiDataRecor.DATA-OBJECT-PROP"/>
+                            </PARAM>
+                        </PARAMS>
+                    </POS-RESPONSE>
+                    <POS-RESPONSE
+                        ID="ES_UDSECUConfi.PRE_WriteDataByIdentECUConfi.POS-RESPONSE" OID="623f13db-ddcd-4bbb-98ce-bc002fa2051d">
+                        <SHORT-NAME>PRE_WriteDataByIdentECUConfi</SHORT-NAME>
+                        <LONG-NAME TI="TI_1263786959">Write Data By Identifier / ECU Configuration</LONG-NAME>
+                        <PARAMS>
+                            <PARAM
+                                OID="e7d07b4c-5673-4465-ae92-4f04f9d33a42"
+                                SEMANTIC="SERVICE-ID" xsi:type="CODED-CONST">
+                                <SHORT-NAME>PA_ServiID</SHORT-NAME>
+                                <LONG-NAME TI="TI_1255122508">Service ID</LONG-NAME>
+                                <BYTE-POSITION>0</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <CODED-VALUE>110</CODED-VALUE>
+                                <DIAG-CODED-TYPE
+                                    BASE-DATA-TYPE="A_UINT32"
+                                    BASE-TYPE-ENCODING="NONE" xsi:type="STANDARD-LENGTH-TYPE">
+                                    <BIT-LENGTH>8</BIT-LENGTH>
+                                </DIAG-CODED-TYPE>
+                            </PARAM>
+                            <PARAM
+                                OID="40c23a27-c316-463a-9ffb-0c2bb551f46b"
+                                SEMANTIC="DATA-ID" xsi:type="MATCHING-REQUEST-PARAM">
+                                <SHORT-NAME>PA_RecorDataIdentMatch</SHORT-NAME>
+                                <LONG-NAME TI="TI_517798863">Record Data Identifier Match</LONG-NAME>
+                                <BYTE-POSITION>1</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <REQUEST-BYTE-POS>1</REQUEST-BYTE-POS>
+                                <BYTE-LENGTH>2</BYTE-LENGTH>
+                            </PARAM>
+                            <PARAM
+                                OID="874aa25d-b968-4fad-939b-9afb1f62fc81"
+                                SEMANTIC="DATA-ID" xsi:type="VALUE">
+                                <SHORT-NAME>PA_RecorDataIdent</SHORT-NAME>
+                                <LONG-NAME TI="TI_274466137">Record Data Identifier</LONG-NAME>
+                                <BYTE-POSITION>1</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <DOP-REF ID-REF="ES_UDSECUConfi.DOP_ReadWriteDataByIdentECUConfiRecorDataIdent.DATA-OBJECT-PROP"/>
+                            </PARAM>
+                        </PARAMS>
+                    </POS-RESPONSE>
+                    <POS-RESPONSE
+                        ID="ES_UDSECUConfi.PRE_WriteMemorByAddreECUConfi.POS-RESPONSE" OID="9d0db37e-f317-472e-a196-ab1ed589e101">
+                        <SHORT-NAME>PRE_WriteMemorByAddreECUConfi</SHORT-NAME>
+                        <LONG-NAME TI="TI_1410786875">Write Memory By Address / ECU Configuration</LONG-NAME>
+                        <PARAMS>
+                            <PARAM
+                                OID="ec0c25c7-c90b-4709-9533-962ea41a1545"
+                                SEMANTIC="SERVICE-ID" xsi:type="CODED-CONST">
+                                <SHORT-NAME>PA_ServiID</SHORT-NAME>
+                                <LONG-NAME TI="TI_1255122508">Service ID</LONG-NAME>
+                                <BYTE-POSITION>0</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <CODED-VALUE>125</CODED-VALUE>
+                                <DIAG-CODED-TYPE
+                                    BASE-DATA-TYPE="A_UINT32"
+                                    BASE-TYPE-ENCODING="NONE" xsi:type="STANDARD-LENGTH-TYPE">
+                                    <BIT-LENGTH>8</BIT-LENGTH>
+                                </DIAG-CODED-TYPE>
+                            </PARAM>
+                            <PARAM
+                                OID="d0316b78-32db-4034-aa76-74a3ef86de80"
+                                SEMANTIC="FORMAT-ID" xsi:type="MATCHING-REQUEST-PARAM">
+                                <SHORT-NAME>PA_XFIMatch</SHORT-NAME>
+                                <LONG-NAME TI="TI_1068350083">xFI Match</LONG-NAME>
+                                <BYTE-POSITION>1</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <REQUEST-BYTE-POS>1</REQUEST-BYTE-POS>
+                                <BYTE-LENGTH>1</BYTE-LENGTH>
+                            </PARAM>
+                            <PARAM
+                                ID="ES_UDSECUConfi.PRE_WriteMemorByAddreECUConfi.PA_AFI.PARAM"
+                                OID="ab85f44d-5426-4fa1-b72e-06c9fb1a8407"
+                                SEMANTIC="FORMAT-ID" xsi:type="LENGTH-KEY">
+                                <SHORT-NAME>PA_AFI</SHORT-NAME>
+                                <LONG-NAME TI="TI_615293564">AFI</LONG-NAME>
+                                <BYTE-POSITION>1</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <DOP-REF DOCREF="ES_UDSECUConfi"
+                                    DOCTYPE="LAYER" ID-REF="ES_UDSECUConfi.DOP_LengtKeyFormaIdent115.DATA-OBJECT-PROP"/>
+                            </PARAM>
+                            <PARAM
+                                ID="ES_UDSECUConfi.PRE_WriteMemorByAddreECUConfi.PA_SFI.PARAM"
+                                OID="8d7039d7-b99c-4851-b2c9-29015fa81343"
+                                SEMANTIC="FORMAT-ID" xsi:type="LENGTH-KEY">
+                                <SHORT-NAME>PA_SFI</SHORT-NAME>
+                                <LONG-NAME TI="TI_2026307209">SFI</LONG-NAME>
+                                <BYTE-POSITION>1</BYTE-POSITION>
+                                <BIT-POSITION>4</BIT-POSITION>
+                                <DOP-REF DOCREF="ES_UDSECUConfi"
+                                    DOCTYPE="LAYER" ID-REF="ES_UDSECUConfi.DOP_LengtKeyFormaIdent115.DATA-OBJECT-PROP"/>
+                            </PARAM>
+                            <PARAM
+                                OID="68c3da3e-bd38-4f03-b31d-6046eaec94bb"
+                                SEMANTIC="DATA-ID" xsi:type="VALUE">
+                                <SHORT-NAME>PA_MemorAddreSize</SHORT-NAME>
+                                <LONG-NAME TI="TI_1451127891">Memory Address / Size</LONG-NAME>
+                                <BYTE-POSITION>2</BYTE-POSITION>
+                                <BIT-POSITION>0</BIT-POSITION>
+                                <DOP-REF DOCREF="ES_UDSECUConfi"
+                                    DOCTYPE="LAYER" ID-REF="ES_UDSECUConfi.DOP_ReadWriteECUConfiDataRecor.DATA-OBJECT-PROP"/>
+                            </PARAM>
+                        </PARAMS>
+                    </POS-RESPONSE>
+                </POS-RESPONSES>
+                <IMPORT-REFS>
+                    <IMPORT-REF DOCREF="ES_UDSFunctClass"
+                        DOCTYPE="LAYER" ID-REF="ES_UDSFunctClass"/>
+                </IMPORT-REFS>
+            </ECU-SHARED-DATA>
+        </ECU-SHARED-DATAS>
+    </DIAG-LAYER-CONTAINER>
+</ODX>
