@@ -1,0 +1,1389 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><CATALOG F-DTD-VERSION="ODX-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="odx-cc.xsd">
+    <SHORT-NAME>FM29</SHORT-NAME>
+    <COMPANY-DATAS>
+        <COMPANY-DATA ID="V_UDS.CD_DSA">
+            <SHORT-NAME>CD_DSA</SHORT-NAME>
+            <LONG-NAME>DSA</LONG-NAME>
+            <TEAM-MEMBERS>
+                <TEAM-MEMBER ID="V_UDS.CD_DSA.TM_Sc">
+                    <SHORT-NAME>TM_Sc</SHORT-NAME>
+                    <LONG-NAME>sc</LONG-NAME>
+                    <DEPARTMENT>DSACN</DEPARTMENT>
+                </TEAM-MEMBER>
+                <TEAM-MEMBER ID="V_UDS.CD_DSA.TM_FRAMEVERSION">
+                    <SHORT-NAME>TM_FRAMEVERSION</SHORT-NAME>
+                    <LONG-NAME TI="FILLME">FRAMEVERSION</LONG-NAME>
+                    <DEPARTMENT>DSACN</DEPARTMENT>
+                </TEAM-MEMBER>
+                <TEAM-MEMBER ID="V_UDS.CD_DSA.TM_jafto">
+                    <SHORT-NAME>TM_jafto</SHORT-NAME>
+                    <LONG-NAME TI="FILLME">jafto</LONG-NAME>
+                    <DEPARTMENT>DSACN</DEPARTMENT>
+                </TEAM-MEMBER>
+            </TEAM-MEMBERS>
+        </COMPANY-DATA>
+    </COMPANY-DATAS>
+    <ADMIN-DATA>
+        <DOC-REVISIONS>
+            <!-- ============================================================================================== -->
+            <!-- DOC-REVISIONs shall be added at the bottom, otherwise the P.Server will get the wrong version. -->
+            <!-- ============================================================================================== -->
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>2020.09.25</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2020-09-25T15:00:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>First Fisker ODX</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>2020.10.21</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2020-10-21T13:00:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>Using UTF-8 encoding, 
+						        added standalone='no' to the xml header, 
+								fixed TEAM-MEMBER ID (dangling reference), 
+								removed empty FILES token (although not necessary following the xsd)</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>2020.10.22 - V0.5.2</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2020-10-22T17:00:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>index.xml Fixed JAR Reference (No ODX SubFolder),
+                                removed unused FlashCusto ODX
+								FG : Fixed extra content on COMPUSCALE (dangling Text)
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V0.5.3</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2020-10-26T12:20:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>removed GlobalNegResponse odx file (not used)
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V0.6.2</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2020-12-07T14:20:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>Reworked the CAN / CANFD IDs based on the new input
+							    Implemented Disinheritance (for DIAG-COMMS)
+								Added ECUConfig Shared DATA
+								FlashJob now calculated the CRC32 Checksum (on the fly)
+								FlashJob : new Default for the LenAdrField (0x44)
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V0.7.0</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-02-11T20:20:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>CANFD Protocol referenced CAN Protocol. Thats forbidden. Now the CANFD protocol references the same ES
+								Fixed missing OIDs in ES_UDSFlash.odx-d (PA_ModeOfOpera)
+								FG and BV Template : Add OID Fields to the COMPANY-DATA and TEAM-MEMBER4
+								ISO_15765_2.odx-cs : Fixed Constraints for the TEXTTABLE_MaxDataLength
+								FL* : Wrong DATAFORMAT definition (empty USER-SELECTION) - Fixed the Creator
+								Fixed DUP OIDs (duer to BV Template usage)
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V0.7.1</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-03-03T14:20:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>Added ODXE-Examples (gw, icc, ohc, pkc)							
+								TIs now reused (instead of NON DUPS)
+								Fixed Table Constraints (overlap) for Read / Write Params / Ident
+								Added some VOD Rules (examples)
+								Fixed FG / TableRowRef problems (Asam179)
+								Fixed DC_generic service problems (REQ-SEMANTIC, FunctClassRef)
+								DTC Examples added (to each ECU with SDs for additional information) - Request Magna
+								FillMeDummy now a DOP in each ECU - Avoid Studio remove problems - Workarround.
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V0.8.0</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-03-07T14:20:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>Added ODXE- CDS Templates (all ECUs CDSs)
+								VOD completely now (Rules missing)
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V0.9.0</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-03-11T14:20:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>[FRAME_0.9.0]
+								Final ODX-E (VOD) changes
+								Fixed MeasureTable ID in the template
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V0.9.5</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-04-15T21:11:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>FG : Fixed OTA Coding / VOD Strings (both have only 1 byte Format)
+							    Fixed several missing TIs
+								Reworked inheritance structure (FG DISINHERITS now)
+								Fixed SecurityAccess Job Longname
+								Set Clear and Read DTC defaults
+								Added Routine for CheckCodingState
+								OPEN : VOD / CDS Change of length byte / reserve byte
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.0.1</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-05-05T10:41:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+								FG : SEJs one jar now
+							    Removed OTA Coding Services (VODOTA and VODCDS) - Magna Info
+							    Fixed a wrong mapping of Statu and Optio Table for StartRoutine
+								Added Fisker specific FlashRoutines
+								Added Fisker specific CheckReConditions and CheckCodingState Job( deal the the empty or non empty list) 
+								package structure for SEJs and FlashJob is now different (_flash and sejs)
+								  That avoids namespace clashes
+								ES_UDS : Modified the 'physonly' services from DIAG Spec (except the ClearDiagInfo - discussed in a phone call with Magna)
+								FG : All Jobs now have NEG-OUTPUT-PARAMS too
+								FG : Added Jobs for VOD Coding and CDS Coding
+								FG : Reworked SecurityAccessJob Response Params (now Status and Message)
+								FG : In case of Error the Jobs return 'Job Error' now instead of 'General Error'
+								Added EPS2 ECU (Redundancy Reques from Magna)
+								Disinherited DC_IOContrFreezCurreState (not used in this project) - We will use MeasureValues instead
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.1.0</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-05-20T18:41:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+								Added CDSVerify and VOD Verify Job
+								Reworked the Security Access Job to provide ASN.1 free Signatures (responses) - After CycurLib WS.
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.1.1</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-05-29T18:41:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+								Fixed SecurityAccess : Didnt return the created private Key.
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.3.0</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-06-12T10:41:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+								SecurityAccessJob : 0.9.12 : handles now the seed 0x00 00 00 00 (or similar) - Already unlocked
+								FlashJob : 0.9.9 : can handle the adressoffset now (for binary files)
+								FG_UDS : ASAM 115 (E2): LENGTH-KEY-REF : Solved problems referencing ES DOPs from LengthKey FG (ST_StrucEraseMemorReque)
+								eff3, eff4, eff5 : Was wrong ByteLength 15 : (Read&amp;Write). Now its 16
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.3.2</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-06-20T10:41:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+								TimeStanp Structure : with Explicit BytePos now
+								BV Template : ReadParam and WriteParam use different keydops now
+								BV Template : RoutiOptio and RoutiStats use different keydops now
+								AMP Flash is back in 
+								AMP Flash is back out 
+								DC_WriteDataByIdentECUIdent : In the disinherited list (FG)
+								Descriptions for the Write Parameters added
+								Reworked SecurityAccess to support dryrun=true (no valid Security Accesses in the vehicle).
+								Added encrypted FiskerKeyStore.jar to the Jobs Folder
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.3.3</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-06-28T11:41:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							Removed TDS and EAS (customer Info)
+							Disabled VSP CDS Coding
+							Reworked Write Service descriptions
+							FG Group gets FuncClass as ImportRef (was missing : The jobs reference the FuncClasses)
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.3.4</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-07-04T11:41:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							Security Access uses KeyStoreFactory now (speed up)
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.3.5</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-07-04T21:41:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							ES and FG - Removed more FUNCT-OR-PHYS attributes
+							FG : Read / WriteMemByAddress in Disinherited list now
+							FG : Upload DCs and ECUCOnfigByAdress disinherited
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.3.6</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-07-12T12:41:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							VOD : Now contains the Shortnames (and data from VOD 1.3.7)
+							VOD Coding and Verify Jobs adapted to the new names
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.3.8</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-07-13T17:41:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							FG : FingerPrint Structure Changed (using 3 single bytes now)
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.3.10</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-07-15T15:41:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							Removed CANFD LLs
+							Let ECUs overwrite the Default DIDs
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.3.11</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-07-17T10:21:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							VOD : Fixed some Start Positions (Some starts have not been bit 0)
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.5.0</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-07-20T11:45:46</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+						SecurityAccess Job has more logging
+						SecurityAccess Job now documents the NRC (PDU)
+						Fisker KeyStore contains the Engineering Keys for the GW
+                    </CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.5.1</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-07-26T21:45:46</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+						All SEJs now return proper NRC information
+						FlashJob counts BlockCounter from 0 when overrun
+						Fisker KeyStore contains the Engineering Keys for the EPS
+						ACU : Added Coding and Verify Jobs (1st version)
+                    </CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.5.2</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-07-27T12:45:46</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+						ShortName of the index.xml is now FM29
+                    </CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.5.3</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-07-27T21:45:46</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+						Acu Coding : Fixed Parameter Names and Profile
+                    </CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.5.4</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-08-01T12:39:46</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+						Fisker Key Store : Added a lot of Keys
+						Added FingerPrintJob (APPL, CODING) to allow SYS Param Usage and overwrite of the TesterID
+						      This Job uses the DC_WriteDataByIdentParam and appropriat TableRows to wrint Coding and Flash FingerPrint
+							  The Base information comes from the MCD Kernel (SYSPARAMS)
+                    </CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.5.5</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-08-01T15:39:46</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+						VOD : Latest version incl. BCM fixes
+						FG : Removed CANFD ParentRef (avoid Location Trouble)
+                    </CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.5.6</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-08-03T15:32:46</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+						VOD : First Version with Rules (from BB)
+						VODJobs : Adapted to fulfill the VHD Requirements from production.
+							      For testing we need 'real' production VHDs now
+                    </CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.5.7</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-08-04T14:32:46</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+						Removed f19b from non codable ECUs
+                    </CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.5.8</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-08-05T15:19:46</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+						ODXEJobs set FiskerUtils LL now
+						VOD : Fixe the UNK Rule (not compliant format). We set it to 'F'
+						VOD Job : Supports dryrun=true : Full Parsing with errors now (ACU not yet)
+                    </CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.5.9</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-08-09T10:41:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+						Remove 0xf183 from non flashable ECUs
+						VOD : VOD_CDS_MasterList_V1.3.7_20220728_ProdCode_match_Version_2.xlsx, customer fixed the problems of Rule.
+                    </CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.6.0</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-08-11T08:16:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+						VHDParser : 500 Option Codes (instead of 1000)
+						ODXE-Jobs all support dryrun=true now
+                    </CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.6.1</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-08-20T11:07:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+						FlashJob : replace AWT Timer by java.util.timer (headless usage)
+						An SEJs : Added more info to the Parameter Description
+						Added new Service DC_VariaIdentSupplIdent for Variant identification (AMP)'
+						AMP comes with 2 Variants now (Harman and Sonavox)
+						AMP SONAVOX has Flashing ...
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.6.2</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-08-24T09:52:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+						FlashJob : Reworked to not use Security any more
+								   Fixed NON final result, if Erase went wrong
+						AMP HARMAN and SONAVOX now are 2 BaseVariants with same CANIDs
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.6.3</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-08-26T17:11:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+						ODXE Handling : Better Exception catch and better Logging (VHD)
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.6.4</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-08-29T13:40:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+						VOD : VOD_CDS_MasterList_V1.3.8_20220823_ProdCode_match_Version_wtp.xlsx, we change name of column from "Coding Rule" to "Rules" based on customer input.
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.6.5</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-08-29T13:40:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+						FlashJob : Disabled the FlashSecurity parsing to avoid unnessesary MCDExceptions (Security must be CRC32)
+						FlashJob : Implemented flags : p3min=&lt;usec&gt; to allow slow down of flash process (GW) 
+						FlashJob : Fixed Problems which ocurred during the real GW flash
+								   34 Length info 1 byte too short
+								   Last Block was send with the wrong blocksize when it was shorter that the prior
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.6.6</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-09-01T15:40:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+						KeyStore : AMPHA and AMPSO use both AMP keys now (2 BVs)
+							       Dummies (FCM, MFSS and TRM) error log that Dummy now
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.6.7</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-09-15T13:49:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+						DISINHERITED unused Tables (FG and BVTemplates)
+						Security Access : RequestSeed  now 1 - 16 Bytes. New name is DOP_SeedBytefield
+						Security Access : SendKey 64 Byte now (before it was AnyDOP). New Name DOP_SendKeyBytefield
+						LLs template : Changes some Timings (CES compliant)
+						LLs template : Padding with 0xff instead of 0xaa now
+						FG LL Tenmplate : Padding with 0xff instead of 0xaa now
+						Security Access : Using self written DERValue impementation (prepared to remove the deprecated DERValue impl in SignTools)
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.6.8</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-09-22T11:49:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+						FiskerKeyStore : Added FCM, MFSS and TRM Keys (added from Fisker)
+						FG : Battery Voltage is 2 Bytes (in 4.1 Spec) - was 1 Byte in 4.0 Spec. Now we use 2 Bytes
+						FG : Milage has a new resolution now  (in 4.1 Spec) - Now resolution is 0.01
+					         Also we changed from 3 to 4 Bytes
+						FG : VehicleSpeed has a new resolution now  (in 4.1 Spec) - Now resolution is 0.1
+						index.xml : Added EC_RAC file
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.6.9</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-09-28T11:40:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+						CDS Coding and Verify Jobs didnt respect NON ItemValue OptionItems. Now they documents
+						    FCM : Modelyear and ModelYearVersion
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.7.0</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-10-12T09:34:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							FlashJob : Fixed misshandling of not existing Field EncryptionAndCompression mode.
+									   This has lead to not set active filesnames, which broke the flashing (VSP)
+							All Coding Jobs : Fixed length byte handling. Fisker found problems with the langth calculation
+									   For the BlueBinaries and DSA length bytes.
+									   VOD and CDS / ACUCDS Jobs are all adapted now to fit the CES
+									   Coding Jobs now also check the length bytepos and the CRC bytepos
+									   CDS Coding Job continues in dryrun, when the item was not found in the VOD
+					   </CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.7.1</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-10-13T09:25:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							VOD Coding now stores the Reserveds in the output too
+							RAC and OHC dont support Coding - Removed ... (EMail : Gergo Horvath 10/12/2022, 4:45 PM)
+					   </CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.7.2</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-10-14T09:28:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							Fix : CDS Coding Jobs : CRC Calculation was erroneously calculation the SHORTVIN as well. Now its fixed
+								  Verified with the ACU Coding
+							FlashJob : Debugging of the total Segment size was wrong (1 Byte missing)
+							Added version.txt for framework version documentation 
+							Read DTC Information / Report DTC Snapshot Record FF By DTC Number : Fixed SnapShotRecord Number wording (typo)
+							</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.7.3</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-10-18T09:30:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							Fix : Security AccessJob died, when keyfile2 was not found
+							      The Job now returns a proper Response Message
+							Fix : Security AccessJob Couldnt handle old style Seed/Key Param Names any more
+								  Thus the HotFix 2.2.0.2 didnt work - Support both ParamCombination now
+							Fix : ReadServices (Ident, Measure, Param) all are Phys or Func now
+							Fix : Coding FingerPrint did call the ApplServices instead of Coding service
+								  Thus the Coding Fingerprint didnt work at all
+							</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.7.4</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-10-18T21:10:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							Fix : Security AccessJob Signing the hash on MFT3 took a long while.
+								  SecureRandom should not generate a self seed.
+							</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.7.5</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-10-19T21:10:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							Fix : CDS Coding String and VOD Coding String (Read/Write) DOPs fixed for new length usage
+							</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.7.6</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-10-20T18:10:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							Fix : CDS Coding String (Read/Write) DOPs fixed for new length usage (former fix was not in the lib)
+							</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.7.7</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-11-04T11:30:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							1, remove WTC_H and WTC_B
+							2, change some ECU coding or flash status (no need coding or no need flash)
+							</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.7.8</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-11-11T11:00:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							new rules file: VOD_CDS_MasterList_V1.3.9_20221107_ProdCode_match_Version_V5.xlsx
+							</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.7.9</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-11-14T18:45:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							1,Commented out DC_TransDataUploa and DC_RequeUploa in DISINHERIT_FLASH
+							2, add not flashable bv: BV_DSMC|BV_ICC|BV_MFSS|BV_PSM in DISINHERIT_FLASH
+							</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.8.0</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-11-16T17:15:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							new rules file: VOD_CDS_MasterList_V1.3.9_20221107_ProdCode_match_Version_V6.xlsx
+							</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.8.1</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-11-16T18:00:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							new rules file: VOD_CDS_MasterList_V1.4.0_20221116_ProdCode_match_Version_V6.xlsx
+							</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.8.2</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-11-17T17:15:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							new rules file: VOD_CDS_MasterList_V1.4.1_20221117_ProdCode_match_Version_V6.xlsx
+							</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.8.3</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-11-23T12:15:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							CDS Coding Job dryrun results : ERROR info added if physconstant not found
+							VOD Coding Job : Prepared to handle the VersionInfo (COD_VersiInfo).
+								By default we read the VOD String now before manipulation
+							SecurityAccess : removed depreated, unsused DER code
+							</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.8.3</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-11-18T10:55:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							new rules file: VOD_CDS_MasterList_V1.4.1_20221117_ProdCode_match_Version_V6_wtp.xlsx
+							fixed the vod Rule in 170 byte
+							</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.8.4</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-11-23T12:15:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							CDS Coding Job dryrun results : ERROR info added if physconstant not found
+							VOD Coding Job : Prepared to handle the VersionInfo (COD_VersiInfo).
+								By default we read the VOD String now before manipulation
+							SecurityAccess : removed depreated, unsused DER code
+							</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.8.5</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-11-24T09:52:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							KeyStore and Security Access Job prepared for FRS350 keys
+							Keys not yet delivered by Fisker (Copy of the FRS90 keys)
+							</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.8.6</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-11-25T11:43:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							ODXE Jobs now report the position info
+							Fixed the VIN check in the CDSVerify Job
+							</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.8.7</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-11-25T17:50:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							new rule file:VOD_CDS_MasterList_V1.4.1_20221117_ProdCode_match_Version_wtp_V7.xlsx
+							Fixed the Rules value of Heating Steering Wheel at bytepos 90; 
+							</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.8.8</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-11-28T16:50:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							"DELETE CDSCODING": removed ECC and VSP 
+							</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.8.9</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-12-01T10:31:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							KeyStore now contains the new 'preprod' keys 
+							SecurityAccess now uses the FRS350 keys as default
+							</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.9.0</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-12-02T10:24:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							KeyStore now contains the new 'prod' keys (Gene Getsin).
+							The keys are not complete. Missing : 'AMP,BMS,CMRR_FL,CMRR_FR,CMRR_RL,CMRR_RR,ECC,MFSS,PDU,TRM,VCU,VSP'
+							</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.9.1</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2022-12-21T17:57:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							The FiskKeyStore.jar updated. The Keystore has all ECUs now (350 Keys).
+							</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.9.2</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2023-01-10T17:30:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							Magna_Graz_ODX_Guildeline\trunk\05_Customer_Requirement\__oceanjafto\odx_frame\ODXData\FG_UDSOnCAN.odx-d: 
+							1, change NOT-INHERITED-DIAG-COMM:DIAG-COMM-SNREF SHORT-NAME="DC_IOContrFreezCurreState" to NOT-INHERITED-DIAG-COMM:DIAG-COMM-SNREF SHORT-NAME="DC_IOContrReporCurreState";
+							2, add NOT-INHERITED-TABLE: "TA_IOContrReporCurreState";
+							</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.9.3</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2023-01-11T13:00:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							1, add UNIT Milli-Meter Per Second: mm/s
+							2, add UNIT Milli-Meter Per Radian: mm/rad
+							</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.9.4</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2023-01-13T11:05:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							new rule file: VOD_CDS_MasterList_V1.5_20230112_ProdCode_match_Version_V8.xlsx
+							</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.9.5</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2023-01-13T03:34:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							FlashJob : Added invertcrc feature (EPS request for testing only)
+							</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.9.6</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2023-01-17T09:47:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							- FG / EC / UnitLib : OIDs / TIs obviously not exported to the ocean_iddb_frame.xml properly
+							  That lead to problems in the joi frame check later ...
+							- IDDB Desc Texts had not the same content that ODX (HTML Tags missing)
+						      This is a fix in jafto
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.9.7</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2023-01-19T18:03:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							- VOD : Intergrated V10 (with VersiInfo)
+							- Flash : Job can supports invertcrc 
+							- VOD Coding Job : Supports VersiInfo
+							- VOD Excel Sheet V10 replaced 2 DUP Reserved (34 and 35)
+							- ACU Coding : Job didnt find the leni, vini, crci params any more (since a longer while)
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.9.8</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2023-02-20T18:00:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							Set be flashable of DSMC,PDU,PSM
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.9.9</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2023-02-21T03:33:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							VOD (V12) includes 255 Byte extension
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.9.10</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2023-03-03T02:33:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							VOD (V13) Added 3 more bytes (length now 258)
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.9.11</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2023-03-08T16:35:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							- iBooster not codable (any more)
+							- DSMC and PSM are not flashable (CRE says)
+							- SECOC can not be read
+							- FRS350 keystore contains the same keys for MRR and CMRR 
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.9.12</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2023-03-15T16:30:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							- remove EC_iBooster_cds.odx-e: iBooster not codable (any more)
+							- remove FL_DSMC.odx-f and FL_PSM.odx-f: DSMC and PSM are not flashable (CRE says) 
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_Sc"/>
+                <REVISION-LABEL>V1.9.13</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2023-03-17T18:15:00</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+							- using new vod rule file: VOD_CDS_MasterList_V2.0_20230317_ProdCode_match_Version_V14.xlsx
+						</CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_FRAMEVERSION"/>
+                <REVISION-LABEL>1.9.13</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2023-03-17T18:51:47</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>...
+                    </CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_jafto"/>
+                <REVISION-LABEL>V2.8.2</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2023-03-17T17:55:05</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+                    FixedESPEvacAndFillParams
+                    </CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+            <DOC-REVISION>
+                <TEAM-MEMBER-REF ID-REF="V_UDS.CD_DSA.TM_jafto"/>
+                <REVISION-LABEL>V2.8.2.1</REVISION-LABEL>
+                <STATE>DRAFT</STATE>
+                <DATE>2023-03-20T13:57:05</DATE>
+                <MODIFICATIONS>
+                    <MODIFICATION>
+                        <CHANGE>
+                    Fixed the 2.8.2 Timestamp (wrong version when converting)
+                    </CHANGE>
+                    </MODIFICATION>
+                </MODIFICATIONS>
+            </DOC-REVISION>
+        </DOC-REVISIONS>
+    </ADMIN-DATA>
+    <ABLOCKS>
+        <!--  -->
+        <!-- ODX-DATA -->
+        <!--  -->
+        <ABLOCK>
+            <SHORT-NAME>ODX_DATA</SHORT-NAME>
+            <CATEGORY>ODX-DATA</CATEGORY>
+            <FILES>
+                <!--  -->
+                <!-- ECU-SHARED-DATAS (ASAM Recommended Style) -->
+                <!--  -->
+                <FILE>ODX_RS_UNIT_LIB.odx-d</FILE>
+                <FILE>ODX_RS_DOP_LIB.odx-d</FILE>
+                <!--  -->
+                <!-- ECU-SHARED-DATAS (UDS) -->
+                <!--  -->
+                <FILE>ES_UDS.odx-d</FILE>
+                <FILE>ES_UDSFlash.odx-d</FILE>
+                <FILE>ES_UDSECUConfi.odx-d</FILE>
+                <FILE>ES_UDSGener.odx-d</FILE>
+                <FILE>ES_UDSFunctClass.odx-d</FILE>
+                <!--  -->
+                <!-- PROTOCOLS -->
+                <FILE>PR_ISOUDSOnCAN.odx-d</FILE>
+                <FILE>PR_ISOUDSOnCANFD.odx-d</FILE>
+                <!--  -->
+                <!-- FUNCTIONAL-GROUPS -->
+                <!--  -->
+                <FILE>FG_UDSOnCAN.odx-d</FILE>
+                <!--
+			    <FILE>FG_UDSOnISOBUS.odx-d</FILE>
+				-->
+                <!--  -->
+                <FILE>VIS_OCEAN.odx-v</FILE>
+                <!--  -->
+                <!-- COMPARAM-SPECS (STACK / ISO 15765-3 legacy) -->
+                <!--  -->
+                <FILE>ISO_11898_2_DWCAN.odx-cs</FILE>
+                <FILE>ISO_14229_3_on_ISO_15765_2.odx-c</FILE>
+                <FILE>ISO_14229_3.odx-cs</FILE>
+                <FILE>ISO_14229_5.odx-cs</FILE>
+                <FILE>ISO_15765_2.odx-cs</FILE>
+                <FILE>ISO_15765_3.odx-cs</FILE>
+                <FILE>ISO_15765_3_on_ISO_15765_2.odx-c</FILE>
+                <FILE>ISO_15765_4.odx-cs</FILE>
+                <!--  -->
+                <!-- ECU BVs -->
+                <!--  -->
+                <FILE>BV_BMS.odx-d</FILE>
+                <FILE>BV_VCU.odx-d</FILE>
+                <FILE>BV_ECC.odx-d</FILE>
+                <FILE>BV_MCU_F.odx-d</FILE>
+                <FILE>BV_MCU_R.odx-d</FILE>
+                <FILE>BV_PDU.odx-d</FILE>
+                <FILE>BV_EPS.odx-d</FILE>
+                <FILE>BV_EPS2.odx-d</FILE>
+                <FILE>BV_ESP.odx-d</FILE>
+                <FILE>BV_iBooster.odx-d</FILE>
+                <FILE>BV_SCM.odx-d</FILE>
+                <FILE>BV_ACU.odx-d</FILE>
+                <FILE>BV_AMPHA.odx-d</FILE>
+                <FILE>BV_AMPSO.odx-d</FILE>
+                <FILE>BV_ICC.odx-d</FILE>
+                <FILE>BV_MFSS.odx-d</FILE>
+                <FILE>BV_RAC.odx-d</FILE>
+                <FILE>BV_PWC_L.odx-d</FILE>
+                <FILE>BV_PWC_R.odx-d</FILE>
+                <FILE>BV_OHC.odx-d</FILE>
+                <FILE>BV_BCM.odx-d</FILE>
+                <FILE>BV_CIM.odx-d</FILE>
+                <FILE>BV_DSMC.odx-d</FILE>
+                <FILE>BV_PLGM.odx-d</FILE>
+                <FILE>BV_PSM.odx-d</FILE>
+                <FILE>BV_VSP.odx-d</FILE>
+                <FILE>BV_TRM.odx-d</FILE>
+                <FILE>BV_ADAS.odx-d</FILE>
+                <FILE>BV_CMRR_FL.odx-d</FILE>
+                <FILE>BV_CMRR_FR.odx-d</FILE>
+                <FILE>BV_CMRR_RL.odx-d</FILE>
+                <FILE>BV_CMRR_RR.odx-d</FILE>
+                <FILE>BV_FCM.odx-d</FILE>
+                <FILE>BV_MRR.odx-d</FILE>
+                <FILE>BV_PKC.odx-d</FILE>
+                <FILE>BV_GW.odx-d</FILE>
+                <FILE>BV_TBOX.odx-d</FILE>
+                <FILE>BV_PVIU.odx-d</FILE>
+                <!-- <FILE>BV_WTC_B.odx-d</FILE> -->
+                <!-- <FILE>BV_WTC_H.odx-d</FILE> -->
+                <!--  -->
+                <!-- Flashs -->
+                <FILE>FL_ADAS.odx-f</FILE>
+                <FILE>FL_AMPSO.odx-f</FILE>
+                <FILE>FL_BCM.odx-f</FILE>
+                <FILE>FL_BMS.odx-f</FILE>
+                <FILE>FL_CIM.odx-f</FILE>
+                <FILE>FL_CMRR_FL.odx-f</FILE>
+                <FILE>FL_CMRR_FR.odx-f</FILE>
+                <FILE>FL_CMRR_RL.odx-f</FILE>
+                <FILE>FL_CMRR_RR.odx-f</FILE>
+                <!-- <FILE>FL_DSMC.odx-f</FILE> -->
+                <FILE>FL_ECC.odx-f</FILE>
+                <FILE>FL_EPS.odx-f</FILE>
+                <FILE>FL_EPS2.odx-f</FILE>
+                <FILE>FL_ESP.odx-f</FILE>
+                <FILE>FL_FCM.odx-f</FILE>
+                <FILE>FL_GW.odx-f</FILE>
+                <FILE>FL_iBooster.odx-f</FILE>
+                <!-- <FILE>FL_ICC.odx-f</FILE> -->
+                <FILE>FL_MCU_F.odx-f</FILE>
+                <FILE>FL_MCU_R.odx-f</FILE>
+                <!-- <FILE>FL_MFSS.odx-f</FILE> -->
+                <FILE>FL_MRR.odx-f</FILE>
+                <FILE>FL_OHC.odx-f</FILE>
+                <FILE>FL_PDU.odx-f</FILE>
+                <FILE>FL_PKC.odx-f</FILE>
+                <FILE>FL_PLGM.odx-f</FILE>
+                <!-- <FILE>FL_PSM.odx-f</FILE> -->
+                <FILE>FL_PVIU.odx-f</FILE>
+                <FILE>FL_PWC_L.odx-f</FILE>
+                <FILE>FL_PWC_R.odx-f</FILE>
+                <FILE>FL_RAC.odx-f</FILE>
+                <FILE>FL_SCM.odx-f</FILE>
+                <FILE>FL_TBOX.odx-f</FILE>
+                <FILE>FL_VCU.odx-f</FILE>
+                <FILE>FL_VSP.odx-f</FILE>
+                <!-- <FILE>FL_WTC_B.odx-f</FILE> -->
+                <!-- <FILE>FL_WTC_H.odx-f</FILE> -->
+                <!-- ODXE -->
+                <FILE>EC_ALL_vod.odx-e</FILE>
+                <FILE>EC_ACU_cds.odx-e</FILE>
+                <FILE>EC_ADAS_cds.odx-e</FILE>
+                <FILE>EC_BCM_cds.odx-e</FILE>
+                <FILE>EC_DSMC_cds.odx-e</FILE>
+                <!-- <FILE>EC_ECC_cds.odx-e</FILE> -->
+                <FILE>EC_EPS_cds.odx-e</FILE>
+                <FILE>EC_EPS2_cds.odx-e</FILE>
+                <FILE>EC_ESP_cds.odx-e</FILE>
+                <FILE>EC_FCM_cds.odx-e</FILE>
+                <FILE>EC_GW_cds.odx-e</FILE>
+                <!-- <FILE>EC_iBooster_cds.odx-e</FILE> -->
+                <FILE>EC_ICC_cds.odx-e</FILE>
+                <FILE>EC_PDU_cds.odx-e</FILE>
+                <FILE>EC_PKC_cds.odx-e</FILE>
+                <FILE>EC_PLGM_cds.odx-e</FILE>
+                <FILE>EC_PSM_cds.odx-e</FILE>
+                <FILE>EC_SCM_cds.odx-e</FILE>
+                <FILE>EC_VCU_cds.odx-e</FILE>
+            </FILES>
+        </ABLOCK>
+        <!--  -->
+        <!-- LIBS -->
+        <!--  -->
+        <ABLOCK>
+            <SHORT-NAME>LIBS</SHORT-NAME>
+            <CATEGORY>LIB</CATEGORY>
+            <FILES>
+                <FILE>Jobs/FiskerKeyStore.jar</FILE>
+                <FILE>versions.txt</FILE>
+            </FILES>
+        </ABLOCK>
+        <!--  -->
+        <!-- JOBS -->
+        <!--  -->
+        <ABLOCK>
+            <SHORT-NAME>JOBS</SHORT-NAME>
+            <CATEGORY>ODX-JOB</CATEGORY>
+            <FILES>
+                <FILE>DSAUDSFlash.jar</FILE>
+                <FILE>FiskerOceanSingleECUJobs.jar</FILE>
+                <FILE>dummy.jar</FILE>
+            </FILES>
+        </ABLOCK>
+        <!--  -->
+        <!-- PROGRAMMING-DATA -->
+        <!--  -->
+        <!--ABLOCK>
+			<SHORT-NAME>PROGRAMMING-DATA</SHORT-NAME>
+			<CATEGORY>PROGRAMMING-DATA</CATEGORY>
+			<FILES>
+				<FILE>whatever</FILE>
+			</FILES>
+		</ABLOCK-->
+    </ABLOCKS>
+</CATALOG>

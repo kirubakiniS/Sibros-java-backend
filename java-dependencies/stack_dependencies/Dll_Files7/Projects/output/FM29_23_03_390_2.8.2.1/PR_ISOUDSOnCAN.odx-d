@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ODX MODEL-VERSION="2.2.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="odx220.xsd">
+    <DIAG-LAYER-CONTAINER ID="DLC_PR_ISOUDSOnCAN" OID="4379a2fe-9983-4364-9897-0663e034651b">
+        <SHORT-NAME>DLC_PR_ISOUDSOnCAN</SHORT-NAME>
+        <LONG-NAME TI="TI_410608635">PR ISO UDS on CAN</LONG-NAME>
+        <PROTOCOLS>
+            <PROTOCOL ID="PR_ISOUDSOnCAN" OID="09f92d12-bbc6-4ee0-b0a9-f34ce10527fe">
+                <SHORT-NAME>PR_ISOUDSOnCAN</SHORT-NAME>
+                <LONG-NAME TI="TI_410608635">PR ISO UDS on CAN</LONG-NAME>
+                <ADMIN-DATA>
+                    <DOC-REVISIONS>
+                        <DOC-REVISION>
+                            <TEAM-MEMBER-REF ID-REF="PR_ISOUDSOnCAN.CO_DSADatenUndSysteGmbH.TM_Syste.TEAM-MEMBER"/>
+                            <REVISION-LABEL>00.00.00</REVISION-LABEL>
+                            <STATE>NEW</STATE>
+                            <DATE>2015-06-14T11:15:28</DATE>
+                            <TOOL>DatabaseDesignerNG 2013 2.00.000</TOOL>
+                        </DOC-REVISION>
+                    </DOC-REVISIONS>
+                </ADMIN-DATA>
+                <COMPANY-DATAS>
+                    <COMPANY-DATA
+                        ID="PR_PRISOUDSOnCAN.CO_DSADatenUndSysteGmbH.COMPANY-DATA" OID="546f1b60-b9e7-4c91-b377-ab014b84a86c">
+                        <SHORT-NAME>CO_DSADatenUndSysteGmbH</SHORT-NAME>
+                        <LONG-NAME TI="TI_2135180869">DSA - Daten- und Systemtechnik GmbH</LONG-NAME>
+                        <TEAM-MEMBERS>
+                            <TEAM-MEMBER
+                                ID="PR_ISOUDSOnCAN.CO_DSADatenUndSysteGmbH.TM_Syste.TEAM-MEMBER" OID="dbf82700-2c24-45e5-95b5-a7eab8e64498">
+                                <SHORT-NAME>TM_Syste</SHORT-NAME>
+                                <LONG-NAME TI="TI_973842212">Systemsupplier</LONG-NAME>
+                                <DEPARTMENT>SAE</DEPARTMENT>
+                                <ADDRESS>Pascalstraße 28</ADDRESS>
+                                <ZIP>D-52076</ZIP>
+                                <CITY>Aachen</CITY>
+                                <PHONE>+49 (0)2408 9492-0</PHONE>
+                                <FAX>+49 (0)2408 9492-92</FAX>
+                                <EMAIL>dsa@dsa.de</EMAIL>
+                            </TEAM-MEMBER>
+                        </TEAM-MEMBERS>
+                        <COMPANY-SPECIFIC-INFO/>
+                    </COMPANY-DATA>
+                </COMPANY-DATAS>
+                <IMPORT-REFS>
+                    <IMPORT-REF DOCREF="ODX_RS_DOP_LIB" DOCTYPE="LAYER" ID-REF="ODX_RS_DOP_LIB"/>
+                    <IMPORT-REF DOCREF="ODX_RS_UNIT_LIB" DOCTYPE="LAYER" ID-REF="ODX_RS_UNIT_LIB"/>
+                </IMPORT-REFS>
+                <COMPARAM-REFS>
+                    <COMPARAM-REF DOCREF="ISO_15765_2"
+                        DOCTYPE="COMPARAM-SUBSET" ID-REF="ISO_15765_2.CP_RequestAddrMode">
+                        <SIMPLE-VALUE>Physical</SIMPLE-VALUE>
+                        <PROTOCOL-SNREF SHORT-NAME="PR_ISOUDSOnCAN"/>
+                        <PROT-STACK-SNREF SHORT-NAME="ISO_15765_3_on_ISO_15765_2_on_ISO_11898_2_DWCAN"/>
+                    </COMPARAM-REF>
+                    <COMPARAM-REF DOCREF="ISO_15765_3"
+                        DOCTYPE="COMPARAM-SUBSET" ID-REF="ISO_15765_3.CP_TesterPresentAddrMode">
+                        <SIMPLE-VALUE>Physical</SIMPLE-VALUE>
+                        <PROTOCOL-SNREF SHORT-NAME="PR_ISOUDSOnCAN"/>
+                        <PROT-STACK-SNREF SHORT-NAME="ISO_15765_3_on_ISO_15765_2_on_ISO_11898_2_DWCAN"/>
+                    </COMPARAM-REF>
+                    <COMPARAM-REF DOCREF="ISO_15765_3"
+                        DOCTYPE="COMPARAM-SUBSET" ID-REF="ISO_15765_3.CP_TesterPresentExpNegResp">
+                        <SIMPLE-VALUE>7F3E</SIMPLE-VALUE>
+                        <PROTOCOL-SNREF SHORT-NAME="PR_ISOUDSOnCAN"/>
+                        <PROT-STACK-SNREF SHORT-NAME="ISO_15765_3_on_ISO_15765_2_on_ISO_11898_2_DWCAN"/>
+                    </COMPARAM-REF>
+                    <COMPARAM-REF DOCREF="ISO_15765_3"
+                        DOCTYPE="COMPARAM-SUBSET" ID-REF="ISO_15765_3.CP_TesterPresentExpPosResp">
+                        <SIMPLE-VALUE>7E00</SIMPLE-VALUE>
+                        <PROTOCOL-SNREF SHORT-NAME="PR_ISOUDSOnCAN"/>
+                        <PROT-STACK-SNREF SHORT-NAME="ISO_15765_3_on_ISO_15765_2_on_ISO_11898_2_DWCAN"/>
+                    </COMPARAM-REF>
+                    <COMPARAM-REF DOCREF="ISO_15765_3"
+                        DOCTYPE="COMPARAM-SUBSET" ID-REF="ISO_15765_3.CP_TesterPresentHandling">
+                        <SIMPLE-VALUE>Enabled</SIMPLE-VALUE>
+                        <PROTOCOL-SNREF SHORT-NAME="PR_ISOUDSOnCAN"/>
+                        <PROT-STACK-SNREF SHORT-NAME="ISO_15765_3_on_ISO_15765_2_on_ISO_11898_2_DWCAN"/>
+                    </COMPARAM-REF>
+                    <COMPARAM-REF DOCREF="ISO_15765_3"
+                        DOCTYPE="COMPARAM-SUBSET" ID-REF="ISO_15765_3.CP_TesterPresentMessage">
+                        <SIMPLE-VALUE>3E00</SIMPLE-VALUE>
+                        <PROTOCOL-SNREF SHORT-NAME="PR_ISOUDSOnCAN"/>
+                        <PROT-STACK-SNREF SHORT-NAME="ISO_15765_3_on_ISO_15765_2_on_ISO_11898_2_DWCAN"/>
+                    </COMPARAM-REF>
+                    <COMPARAM-REF DOCREF="ISO_15765_3"
+                        DOCTYPE="COMPARAM-SUBSET" ID-REF="ISO_15765_3.CP_TesterPresentReqRsp">
+                        <SIMPLE-VALUE>Response expected</SIMPLE-VALUE>
+                        <PROTOCOL-SNREF SHORT-NAME="PR_ISOUDSOnCAN"/>
+                        <PROT-STACK-SNREF SHORT-NAME="ISO_15765_3_on_ISO_15765_2_on_ISO_11898_2_DWCAN"/>
+                    </COMPARAM-REF>
+                    <COMPARAM-REF DOCREF="ISO_15765_3"
+                        DOCTYPE="COMPARAM-SUBSET" ID-REF="ISO_15765_3.CP_TesterPresentSendType">
+                        <SIMPLE-VALUE>On idle</SIMPLE-VALUE>
+                        <PROTOCOL-SNREF SHORT-NAME="PR_ISOUDSOnCAN"/>
+                        <PROT-STACK-SNREF SHORT-NAME="ISO_15765_3_on_ISO_15765_2_on_ISO_11898_2_DWCAN"/>
+                    </COMPARAM-REF>
+                    <COMPARAM-REF DOCREF="ISO_15765_3"
+                        DOCTYPE="COMPARAM-SUBSET" ID-REF="ISO_15765_3.CP_TesterPresentTime">
+                        <SIMPLE-VALUE>2450000</SIMPLE-VALUE>
+                        <PROTOCOL-SNREF SHORT-NAME="PR_ISOUDSOnCAN"/>
+                        <PROT-STACK-SNREF SHORT-NAME="ISO_15765_3_on_ISO_15765_2_on_ISO_11898_2_DWCAN"/>
+                    </COMPARAM-REF>
+                    <COMPARAM-REF DOCREF="ISO_15765_3"
+                        DOCTYPE="COMPARAM-SUBSET" ID-REF="ISO_15765_3.CPM_TesterPresentSerialization.COMPARAM">
+                        <SIMPLE-VALUE>Disabled</SIMPLE-VALUE>
+                        <PROTOCOL-SNREF SHORT-NAME="PR_ISOUDSOnCAN"/>
+                        <PROT-STACK-SNREF SHORT-NAME="ISO_15765_3_on_ISO_15765_2_on_ISO_11898_2_DWCAN"/>
+                    </COMPARAM-REF>
+                    <COMPARAM-REF DOCREF="ISO_15765_3"
+                        DOCTYPE="COMPARAM-SUBSET" ID-REF="ISO_15765_3.CP_RC21CompletionTimeout">
+                        <SIMPLE-VALUE>60000000</SIMPLE-VALUE>
+                        <PROTOCOL-SNREF SHORT-NAME="PR_ISOUDSOnCAN"/>
+                        <PROT-STACK-SNREF SHORT-NAME="ISO_15765_3_on_ISO_15765_2_on_ISO_11898_2_DWCAN"/>
+                    </COMPARAM-REF>
+                    <COMPARAM-REF DOCREF="ISO_15765_3"
+                        DOCTYPE="COMPARAM-SUBSET" ID-REF="ISO_15765_3.CP_RC21Handling">
+                        <SIMPLE-VALUE>Continue until RC21 timeout</SIMPLE-VALUE>
+                        <PROTOCOL-SNREF SHORT-NAME="PR_ISOUDSOnCAN"/>
+                        <PROT-STACK-SNREF SHORT-NAME="ISO_15765_3_on_ISO_15765_2_on_ISO_11898_2_DWCAN"/>
+                    </COMPARAM-REF>
+                    <COMPARAM-REF DOCREF="ISO_15765_3"
+                        DOCTYPE="COMPARAM-SUBSET" ID-REF="ISO_15765_3.CP_RC21RequestTime">
+                        <SIMPLE-VALUE>1000000</SIMPLE-VALUE>
+                        <PROTOCOL-SNREF SHORT-NAME="PR_ISOUDSOnCAN"/>
+                        <PROT-STACK-SNREF SHORT-NAME="ISO_15765_3_on_ISO_15765_2_on_ISO_11898_2_DWCAN"/>
+                    </COMPARAM-REF>
+                    <COMPARAM-REF DOCREF="ISO_15765_3"
+                        DOCTYPE="COMPARAM-SUBSET" ID-REF="ISO_15765_3.CP_RC23CompletionTimeout">
+                        <SIMPLE-VALUE>60000000</SIMPLE-VALUE>
+                        <PROTOCOL-SNREF SHORT-NAME="PR_ISOUDSOnCAN"/>
+                        <PROT-STACK-SNREF SHORT-NAME="ISO_15765_3_on_ISO_15765_2_on_ISO_11898_2_DWCAN"/>
+                    </COMPARAM-REF>
+                    <COMPARAM-REF DOCREF="ISO_15765_3"
+                        DOCTYPE="COMPARAM-SUBSET" ID-REF="ISO_15765_3.CP_RC23Handling">
+                        <SIMPLE-VALUE>Continue until RC23 timeout</SIMPLE-VALUE>
+                        <PROTOCOL-SNREF SHORT-NAME="PR_ISOUDSOnCAN"/>
+                        <PROT-STACK-SNREF SHORT-NAME="ISO_15765_3_on_ISO_15765_2_on_ISO_11898_2_DWCAN"/>
+                    </COMPARAM-REF>
+                    <COMPARAM-REF DOCREF="ISO_15765_3"
+                        DOCTYPE="COMPARAM-SUBSET" ID-REF="ISO_15765_3.CP_RC23RequestTime">
+                        <SIMPLE-VALUE>1000000</SIMPLE-VALUE>
+                        <PROTOCOL-SNREF SHORT-NAME="PR_ISOUDSOnCAN"/>
+                        <PROT-STACK-SNREF SHORT-NAME="ISO_15765_3_on_ISO_15765_2_on_ISO_11898_2_DWCAN"/>
+                    </COMPARAM-REF>
+                    <COMPARAM-REF DOCREF="ISO_15765_3"
+                        DOCTYPE="COMPARAM-SUBSET" ID-REF="ISO_15765_3.CP_RC78CompletionTimeout">
+                        <SIMPLE-VALUE>25000000</SIMPLE-VALUE>
+                        <PROTOCOL-SNREF SHORT-NAME="PR_ISOUDSOnCAN"/>
+                        <PROT-STACK-SNREF SHORT-NAME="ISO_15765_3_on_ISO_15765_2_on_ISO_11898_2_DWCAN"/>
+                    </COMPARAM-REF>
+                    <COMPARAM-REF DOCREF="ISO_15765_3"
+                        DOCTYPE="COMPARAM-SUBSET" ID-REF="ISO_15765_3.CP_RC78Handling">
+                        <SIMPLE-VALUE>Continue unlimited</SIMPLE-VALUE>
+                        <PROTOCOL-SNREF SHORT-NAME="PR_ISOUDSOnCAN"/>
+                        <PROT-STACK-SNREF SHORT-NAME="ISO_15765_3_on_ISO_15765_2_on_ISO_11898_2_DWCAN"/>
+                    </COMPARAM-REF>
+                </COMPARAM-REFS>
+                <COMPARAM-SPEC-REF DOCREF="ISO_15765_3_on_ISO_15765_2"
+                    DOCTYPE="COMPARAM-SPEC" ID-REF="ISO_15765_3_on_ISO_15765_2"/>
+                <PROT-STACK-SNREF SHORT-NAME="ISO_15765_3_on_ISO_15765_2_on_ISO_11898_2_DWCAN"/>
+            </PROTOCOL>
+        </PROTOCOLS>
+    </DIAG-LAYER-CONTAINER>
+</ODX>
